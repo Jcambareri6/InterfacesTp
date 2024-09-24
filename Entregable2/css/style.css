@@ -1,24 +1,30 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    border: 0px;
-    display: flex;
-    flex-direction: column;
+* {
+    margin: 0;                
+    padding: 0;               
+    box-sizing: border-box;   
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-header {
+
+
+
+
+ /* desktop */
+@media (min-width: 900px) {
+header  {
     background-color:#180C39;
     position: absolute;
-    width: 1440px;
+    width: 100%;
     height: 105px;
-    left: 0px;
-    top: 0px;
+ 
     border-radius: 5px;
-}
-
-header > div {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    
 }
 
 
@@ -119,7 +125,7 @@ header > div {
 footer {
     background-color: grey;
 }
-
+}
 
 
 
