@@ -21,6 +21,7 @@ header,
 }
 .contenedorCarritoUsuario, .contenedorMenuLogo{
     margin: 10px;
+
 }
 .contenedorCarritoUsuario{
     padding: 5px;
@@ -48,6 +49,7 @@ header,
     height: inherit;
     width: inherit;
     object-fit: contain;
+    
 }
 
 
@@ -128,7 +130,7 @@ header,
 
 
     .contenedor {
-        color: aqua;
+        color: blue;
     }
 
     .contenedor>div {
