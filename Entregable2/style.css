@@ -1,0 +1,125 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color:#180C39;
+    position: absolute;
+    width: 1440px;
+    height: 105px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+}
+
+header > div {
+    display:flex;
+    flex-direction: row;
+}
+
+
+.barra_busqueda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    left: 39.58%;
+    right: 39.58%;
+    top: 17.65%;
+    bottom: 35.29%;
+
+    background: #9EA0B2;
+    border-radius: 20px;
+}
+
+.menu {
+    position: absolute;
+    left: 1.11%;
+    right: 96.67%;
+    top: 25.88%;
+    bottom: 47.06%;
+    border: 5px solid #E5C675;
+}
+.carrito {
+    position: absolute;
+    left: 89.65%;
+    right: 7.57%;
+    top: 17.65%;
+    bottom: 35.29%;
+}
+.usuario {
+    position: absolute;
+    left: 94.79%;
+    right: 2.36%;
+    top: 17.65%;
+    bottom: 34.12%;
+
+}
+
+
+
+
+
+.contenedor {
+    color: aqua;
+}
+.contenedor > div {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+.contenedor > .carrousel_grande{
+    position: absolute;
+    width: 1360px;
+    height: 328px;
+    left: 26px;
+    top: 182px;
+    overflow-x: scroll;
+}
+.contenedor > .carrousel_grande > .card_grande{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 350px;
+    height: 305px;
+    top: 3px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.contenedor > .carrousel_chico{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 3px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 1241px;
+    height: 268px;
+    left: 26px;
+    top: 587px;
+
+}
+
+
+footer {
+    background-color: grey;
+}
+
+
+
+
