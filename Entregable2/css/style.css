@@ -32,6 +32,13 @@ header,
     height: 70px;
     width: 70px;
 }
+.imgLogo {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+    
+}
+
 
 .usuario {
     border-radius: 100%;
@@ -45,12 +52,6 @@ header,
 }
 
 
-.imgLogo {
-    height: inherit;
-    width: inherit;
-    object-fit: contain;
-    
-}
 
 
 
