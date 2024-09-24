@@ -1,144 +1,175 @@
 * {
-    margin: 0;                
-    padding: 0;               
-    box-sizing: border-box;   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
 
-header {
-    width: 100%;
-    background-color:#180C39;
+header,
+.contenedorCarritoUsuario, .contenedorMenuLogo {
     display: flex;
     flex-direction: row;
     height: 70px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-   
-   }
-   
-   .barra_busqueda{display: none;}
-   
-   
 
+}
 
-
-
- /* desktop */
-@media (min-width: 900px) {
-header  {
-    background-color:#180C39;
-    position: absolute;
+header {
     width: 100%;
-    height: 105px;
- 
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-    
+    background-color: #180C39;
+
 }
 
-
-.barra_busqueda{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-
-    position: absolute;
-    left: 39.58%;
-    right: 39.58%;
-    top: 17.65%;
-    bottom: 35.29%;
-
-    background: #9EA0B2;
-    border-radius: 20px;
+.logo {
+    height: 70px;
+    width: 70px;
 }
 
-.menu {
-    position: absolute;
-    left: 1.11%;
-    right: 96.67%;
-    top: 25.88%;
-    bottom: 47.06%;
-    border: 5px solid #E5C675;
+.imgLogo {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
 }
-.carrito {
-    position: absolute;
-    left: 89.65%;
-    right: 7.57%;
-    top: 17.65%;
-    bottom: 35.29%;
-}
+
 .usuario {
-    position: absolute;
-    left: 94.79%;
-    right: 2.36%;
-    top: 17.65%;
-    bottom: 34.12%;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    background-color: aqua;
+   
+    object-fit: contain;
+}
 
+
+
+.barra_busqueda {
+    display: none;
 }
 
 
 
 
 
-.contenedor {
-    color: aqua;
+
+/* desktop */
+@media (min-width: 900px) {
+    header {
+        background-color: #180C39;
+        position: absolute;
+        width: 100%;
+        height: 105px;
+
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+
+    .barra_busqueda {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+
+        position: absolute;
+        left: 39.58%;
+        right: 39.58%;
+        top: 17.65%;
+        bottom: 35.29%;
+
+        background: #9EA0B2;
+        border-radius: 20px;
+    }
+
+    .menu {
+        position: absolute;
+        left: 1.11%;
+        right: 96.67%;
+        top: 25.88%;
+        bottom: 47.06%;
+        border: 5px solid #E5C675;
+    }
+
+    .carrito {
+        position: absolute;
+        left: 89.65%;
+        right: 7.57%;
+        top: 17.65%;
+        bottom: 35.29%;
+    }
+
+    .usuario {
+        position: absolute;
+        left: 94.79%;
+        right: 2.36%;
+        top: 17.65%;
+        bottom: 34.12%;
+
+    }
+
+
+
+
+
+    .contenedor {
+        color: aqua;
+    }
+
+    .contenedor>div {
+        display: flex;
+        flex-direction: row;
+        background-color: blue;
+    }
+
+    .contenedor>.carrousel_grande {
+        position: absolute;
+        width: 1360px;
+        height: 328px;
+        left: 26px;
+        top: 182px;
+        overflow-x: scroll;
+    }
+
+    .contenedor>.carrousel_grande>.card_grande {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 350px;
+        height: 305px;
+        top: 3px;
+
+        background: #FFFFFF;
+        border-radius: 20px;
+    }
+
+    .contenedor>.carrousel_chico {
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 3px;
+        isolation: isolate;
+
+        position: absolute;
+        width: 1241px;
+        height: 268px;
+        left: 26px;
+        top: 587px;
+
+    }
+
+
+    footer {
+        background-color: grey;
+    }
 }
-.contenedor > div {
-    display: flex;
-    flex-direction: row;
-    background-color: blue;
-}
-.contenedor > .carrousel_grande{
-    position: absolute;
-    width: 1360px;
-    height: 328px;
-    left: 26px;
-    top: 182px;
-    overflow-x: scroll;
-}
-.contenedor > .carrousel_grande > .card_grande{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 350px;
-    height: 305px;
-    top: 3px;
-
-    background: #FFFFFF;
-    border-radius: 20px;
-}
-
-.contenedor > .carrousel_chico{
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 3px;
-    isolation: isolate;
-
-    position: absolute;
-    width: 1241px;
-    height: 268px;
-    left: 26px;
-    top: 587px;
-
-}
-
-
-footer {
-    background-color: grey;
-}
-}
-
-
-
