@@ -76,16 +76,33 @@ header  {
 body{
     background-color: #101216;
 }
-
+.contenedor {
+    display: flex;
+    flex-direction: row
+}
 .categorias {
+    display: none ;
     position: relative;
     width: 202px;
     height: 1234px;
-    background-color: grey;
+    background-color: #2F3237;
 }
 
+.menu_usuario {
+    display: none;
+    background-color: white;
+    position: absolute;
+    width: 402px;
+    height: 550px;
+    left: 830px;
+    top: 80px;
+    border-radius: 20px;
+
+}
 
 .contenedor_carrouseles{
+    display: flex;
+    flex-direction: column;
     position: relative;
     left: 40px;
 }
@@ -99,7 +116,7 @@ body{
 .contenedor_carrouseles > .carrousel_grande{
     display: flex;
     flex-direction: row;
-    width: 590%;
+    width: auto;
     height: 328px;
     top: 182px;
 }
@@ -114,6 +131,7 @@ body{
     margin-left: 40px;
     background: #FFFFFF;
     border-radius: 20px;
+    flex: none;
 }
 
 .contenedor_carrouseles > .carrousel_chico{
@@ -124,7 +142,7 @@ body{
     gap: 3px;
     position: relative;
     left: 15px;
-    width: 100%;
+    width: auto;
     height: 268px;
 
 
@@ -149,19 +167,22 @@ body{
 }
 
 
-.contenedor {
-    display: flex;
+.detalles_juego {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 722px;
 }
 
+.juego, .descripcion_juego, h3{
+    margin-top: 20px;
+}
+}
 footer {
-    position: absolute;
-    width: 1440px;
+    width: auto;
     height: 165px;
-    right: -1px;
-    top: 1517px;
-    background-color: grey;
+    background-color: #2F3237;
 }
-}
+
 
 
 
