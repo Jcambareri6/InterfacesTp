@@ -77,19 +77,23 @@ body{
     background-color: #101216;
 }
 .contenedor {
+    margin-left: 61px;
+    margin-right: 62px;
     display: flex;
     flex-direction: row
 }
 .categorias {
-    display: none ;
-    position: relative;
-    width: 202px;
-    height: 1234px;
     background-color: #2F3237;
+    position: absolute;
+    width: 202px;
+    left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: none ;
+    height: 1234px;
 }
 
-.menu_usuario {
-    display: none;
+#menu_usuario {
     background-color: white;
     position: absolute;
     width: 402px;
@@ -97,74 +101,90 @@ body{
     left: 830px;
     top: 80px;
     border-radius: 20px;
-
+}
+#menu_usuario ::backdrop{
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .contenedor_carrouseles{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 40px;
 }
 
 .contenedor_carrouseles > h1 {
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 15px;
-    margin-left: 100px;
+    margin-left: 61px;
+}
+.contenedor_carrouseles > h2 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    margin-left: 61px;
 }
 
 .contenedor_carrouseles > .carrousel_grande{
+
     display: flex;
-    flex-direction: row;
-    width: auto;
-    height: 328px;
-    top: 182px;
+    width: 1317px;
+    height: 337px;
+    top: 191px;
+
 }
-.contenedor_carrouseles > .carrousel_grande > .card_grande{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.contenedor_carrouseles > .carrousel_grande > .card_grande, .card_grande2 , .card_grande_fuminado{
+    margin-left: 62px;
     width: 350px;
     height: 305px;
-    margin-left: 40px;
+    top: 3px;
     background: #FFFFFF;
     border-radius: 20px;
-    flex: none;
+}
+
+.card_grande_fuminado {
+    margin-left: 0px;
+    width: 69px;
+}
+
+.contenedor_carrouseles > .carrousel_grande > .card_grande2{
+    margin-left: 0px;
 }
 
 .contenedor_carrouseles > .carrousel_chico{
+
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 3px;
-    position: relative;
-    left: 15px;
-    width: auto;
-    height: 268px;
+    width: 1317px;
+    height: 356px;
 
 
 }
 
-.contenedor_carrouseles > .carrousel_chico > .card_chica {
+.contenedor_carrouseles > .carrousel_chico > .card_chica , .card_chica2 , .card_chica_fuminado {
+    
+    margin-left: 41px;
     width: 184px;
-    height: 268px;
-    background: #FFFFFF;
+    height: 320px;
+    background-color: white;
+    top: 10.11%;
+    bottom: 0%;
     border-radius: 20px;
-    flex: none;
 }
 
-.flecha_grande,.flecha_chica{
+.card_chica_fuminado {
+    width: 117px;
+    margin-left: 0px;
+}
+.card_chica2 {
+    margin-left: 0px;
+}
+
+.flecha_izq,.flecha_der{
     width: 58px;
     height: 113px;
     opacity: 0.4;
     border-radius: 0px 30px 30px 0px;
+
 }
-.flecha_chica {
-    margin-right: 20px;
-}
+
 
 
 .detalles_juego {
@@ -178,9 +198,11 @@ body{
 }
 }
 footer {
-    width: auto;
-    height: 165px;
-    background-color: #2F3237;
+
+width: auto;
+height: 235px;
+background: #2F3237;
+
 }
 
 
