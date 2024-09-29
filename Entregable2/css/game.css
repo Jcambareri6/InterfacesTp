@@ -1,0 +1,9 @@
+.detalles_juego {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 722px;
+}
+
+.juego, .descripcion_juego, h3{
+    margin-top: 20px;
+}
