@@ -11,6 +11,12 @@ h2  {
     margin-top: 8px;
 }
 
+img {
+    width: 113px;
+    /* Ajusta el tamaño del logo */
+    margin-bottom: 52px;
+}
+
 input {
     margin-top: 2px;
     border-radius: 8px;
@@ -22,12 +28,28 @@ input {
     color: rgba(47, 50, 55, 0.5);
     filter: drop-shadow(-2px 2px 15px rgba(47, 50, 55, 0.3));
     width: 430px;
+<<<<<<< Updated upstream
     height: 55px;
     background-color: #D9D9D9;
+=======
+    height: 52px;
+>>>>>>> Stashed changes
 }
 
 .boton_inicio {
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
 
+<<<<<<< Updated upstream
+=======
+
+
+    /* parrafo */
+>>>>>>> Stashed changes
     height: 55px;
     width: 430px;
     font-family: 'Roboto';
@@ -42,6 +64,7 @@ input {
 
 }
 
+<<<<<<< Updated upstream
 a{
     margin-left: 110px;
     margin-top: 16px;
@@ -53,4 +76,65 @@ a{
 
 .logo {
     margin-left: 100px;
+=======
+footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    width: 1440px;
+    height: 304px;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    width: 113px;
+    height: 52px;
+    margin-bottom: 15px;
+}
+
+.footer-logo h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-logo-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-logo-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.footer-Sección ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-Sección li {
+    margin-bottom: 8px;
+}
+
+.footer-Sección a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-Sección a:hover {
+    text-decoration: underline;
+>>>>>>> Stashed changes
 }
