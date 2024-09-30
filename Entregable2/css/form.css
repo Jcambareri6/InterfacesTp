@@ -1,18 +1,33 @@
 .form_inicio {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    margin-left: 125px;
+    margin-left: 50px;
     margin-right: 125px;
+    
+}
+
+h2  {
+    margin-top: 8px;
 }
 
 input {
+    margin-top: 2px;
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(47, 50, 55, 0.5);
+    filter: drop-shadow(-2px 2px 15px rgba(47, 50, 55, 0.3));
     width: 430px;
     height: 55px;
+    background-color: #D9D9D9;
 }
 
 .boton_inicio {
 
-
-/* parrafo */
     height: 55px;
     width: 430px;
     font-family: 'Roboto';
@@ -20,9 +35,22 @@ input {
     font-weight: 500;
     font-size: 19px;
     line-height: 16px;
-
+    margin-top: 38px;
     color: #FFFFFF;
     background: #7B62CB;
     border-radius: 8px;
 
+}
+
+a{
+    margin-left: 110px;
+    margin-top: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(149, 123, 230, 0.5));
+}
+.atras{
+    margin-left: 183px;
+}
+
+.logo {
+    margin-left: 100px;
 }

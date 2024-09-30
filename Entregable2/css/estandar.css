@@ -35,7 +35,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;  
+  
 }
 
 .barra_busqueda{
@@ -43,10 +43,8 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 200px;
     padding: 0px;
-    position: absolute;
-    left: 39.58%;
-    right: 39.58%;
     height: 40px;
     width: 300px;
     background: #9EA0B2;
@@ -54,28 +52,24 @@ header{
 }
 
 .menu {
-    position: absolute;
-    left: 1.11%;
-    right: 96.67%;
+    margin-left: 10px;
     border: 5px solid #E5C675;
 }
 
 .carrito {
-    position: absolute;
-    left: 89.65%;
-    right: 7.57%;
+    margin-left: 380px;
 }
 
 .usuario {
-    position: absolute;
-    left: 94.79%;
-    right: 2.36%;
+    margin-left: 30px;
+}
+
+.logo {
+    margin-left: 40px;
 }
 
 .nombre_pagina{
-    position: absolute;
-    left: 12.99%;
-    right: 73.68%;
+    margin-left: 80px;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
@@ -102,8 +96,8 @@ body{
     position: absolute;
     width: 402px;
     height: 550px;
-    left: 830px;
-    top: 80px;
+    left: 1080px;
+    top: 100px;
     border-radius: 20px;
 }
 #menu_usuario ::backdrop{
