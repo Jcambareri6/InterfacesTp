@@ -9,8 +9,18 @@
 </head>
 <body>
     <header>
+        <div class="menu">Menu</div>
         <div class="logo">Logo</div>
         <div class="nombre_pagina">Nombre Pagina</div>
+        <div class="barra_busqueda">Barra de busqueda</div>
+        <div class="carrito">Carrito</div>
+
+
+        <button class="usuario" popovertarget="menu_usuario">Usuario</button>
+        <div id="menu_usuario" popover ="manual">
+            <H1>MENU</H1>
+            <button popovertarget="menu_usuario">Cerrar</button>
+        </div>
     </header>
     <section class="contenedor_row">
         <div class="categorias">
@@ -19,25 +29,25 @@
         <section class="contenedor_column">
             <div class="form_inicio">
                 <h1>Registrarse</h1>
-                <h2>Nombre</h2>
-                <input type="text"> </input>
-                <h2>Apellido</h2>
-                <input type="text"> </input>
-                <h2>Nickname</h2>
-                <input type="text"> </input>
-                <h2>Fecha de nacimiento</h2>
-                <input type="text"> </input>
-                <h2>Contraseña</h2>
-                <input type="text"> </input>
-                <h2>Repetir Contraseña</h2>
-                <input type="text"> </input>
-                <button class="captcha">
-                    Captcha
-                </button>
-                <button class="boton_inicio">
-                    <p>Registrarse</p>
-                </button>
-                <a class="atras" href=""> << Atras</a>
+                <form class="form_inicio">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                    <label for="nombre_usuario">Nombre de usuario</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                    <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+                    <label for="repetir_contraseña">Repetir Contraseña</label>
+                    <input type="password" id="repetir_contraseña" name="repetir_contraseña" required>
+                    <label for="captcha">Captcha</label>
+                    <button class="boton_inicio">
+                        <p>Registrarse</p>
+                    </button>
+                    <a class="a_registro" href=""><< Atras </a>
+                </form>
             </div>
             <div class="imagen">
 
@@ -45,7 +55,52 @@
         </section>
     </section>
     <footer>
-        <div>FOOTER</div>
+        <div class="footer logo">
+            <img src="../img/santi logo  (1).png" alt="">
+            <h3>MALASIA GAMES</h3>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-google-play"></i>
+
+        </div>
+        <!-- Sección de navegación -->
+        <div class="footer-Sección ">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Juegos Populares</a></li>
+                <li><a href="#">Nuevos Lanzamientos</a></li>
+            </ul>
+        </div>
+        <!-- Sección de nosotros -->
+        <div class="footer-Sección">
+            <h4>Nosotros</h4>
+            <ul>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Datos breves</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </div>
+        <!-- Sección de ayuda -->
+        <div class="footer-Sección">
+            <h4>Ayuda</h4>
+            <ul>
+                <li><a href=" #">Preguntas frecuentes</a></li>
+                <li><a href="#">Sobre Copyright</a></li>
+                <li><a href="#">Envíanos tu problema</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección de privacidad -->
+        <div class="footer-Sección">
+            <h4>Privacidad</h4>
+            <ul>
+                <li><a href="#">Información sobre cookies</a></li>
+                <li><a href="#">Políticas de Privacidad</a></li>
+                <li><a href="#">Términos y uso</a></li>
+            </ul>
     </footer>
 </body>
 </html>
