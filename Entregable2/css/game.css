@@ -4,6 +4,24 @@
     width: 722px;
 }
 
-.juego, .descripcion_juego, h3{
+.juego,
+.descripcion_juego,
+h3 {
     margin-top: 20px;
+}
+
+.pantallajuego {
+    width: 1000px;
+    height: 600px;
+    background-image: url(../../img/pantalladejuego.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 5px black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(1.5px);
 }

@@ -4,22 +4,23 @@
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 125px;
-}
 
-.a_inicio {
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-bottom: 50px;
-}
-
-.a_registro {
-    margin-top: 30px;
-    margin-left: 180px;
-    margin-bottom: 50px;
 }
 
 label {
-    margin-top: 18px;
+    margin-top: 8px;
+}
+
+img {
+    width: 113px;
+    /* Ajusta el tamaño del logo */
+    margin-bottom: 52px;
+}
+
+img {
+    width: 113px;
+    /* Ajusta el tamaño del logo */
+    margin-bottom: 52px;
 }
 
 input {

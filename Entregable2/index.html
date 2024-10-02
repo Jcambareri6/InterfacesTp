@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/home.css">
     <title>Inicio</title>
 </head>
+
 <body>
     <header>
         <div class="menu">Menu</div>
@@ -17,52 +19,98 @@
 
 
         <button class="usuario" popovertarget="menu_usuario">Usuario</button>
-        <div id="menu_usuario" popover ="manual">
+        <div id="menu_usuario" popover="manual">
             <H1>MENU</H1>
             <button popovertarget="menu_usuario">Cerrar</button>
         </div>
     </header>
     <section class="contenedor_row">
         <div class="categorias">
-                CATEGORIAS
+            CATEGORIAS
         </div>
         <section class="contenedor_carrouseles">
-                <h1 class="titulo_categoria">Nuevos</h1>
-                <div class="carrousel_grande">
-                    <div class="flecha_izq">FLECHA IZQUIERDA</div>
-                    <div class="card_grande2">Card1</div>
-                    <div class="card_grande">Card2</div>
-                    <div class="card_grande">Card3</div>
-                    <div class="flecha_der">FLECHA DERECHA</div>
-                    <div class="card_grande_fuminado">Card4</div>
-                </div>
-                <h2 class="titulo_categoria">Categoria</h2>
-                <div class="carrousel_chico">
-                    <div class="flecha_izq">FLECHA IZQUIERDA</div>
-                    <div class="card_chica2">Card1</div>
-                    <div class="card_chica">Card2</div>
-                    <div class="card_chica">Card3</div>
-                    <div class="card_chica">Card4</div>
-                    <div class="card_chica">Card5</div>
-                    <div class="flecha_der">FLECHA DERECHA</div>
-                    <div class="card_chica_fuminado">Card6</div>
-                </div>
-                <h2 class="titulo_categoria">Categoria</h2>
-                <div class="carrousel_chico">
-                    <div class="flecha_izq">FLECHA IZQUIERDA</div>
-                    <div class="card_chica2">Card1</div>
-                    <div class="card_chica">Card2</div>
-                    <div class="card_chica">Card3</div>
-                    <div class="card_chica">Card4</div>
-                    <div class="card_chica">Card5</div>
-                    <div class="flecha_der">FLECHA DERECHA</div>
-                    <div class="card_chica_fuminado">Card6</div>
-                </div>
-            </section>
+            <h1 class="titulo_categoria">Nuevos</h1>
+            <div class="carrousel_grande">
+                <div class="flecha_izq">FLECHA IZQUIERDA</div>
+                <div class="card_grande2">Card1</div>
+                <div class="card_grande">Card2</div>
+                <div class="card_grande">Card3</div>
+                <div class="flecha_der">FLECHA DERECHA</div>
+                <div class="card_grande_fuminado">Card4</div>
+            </div>
+            <h2 class="titulo_categoria">Categoria</h2>
+            <div class="carrousel_chico">
+                <div class="flecha_izq">FLECHA IZQUIERDA</div>
+                <div class="card_chica2">Card1</div>
+                <div class="card_chica">Card2</div>
+                <div class="card_chica">Card3</div>
+                <div class="card_chica">Card4</div>
+                <div class="card_chica">Card5</div>
+                <div class="flecha_der">FLECHA DERECHA</div>
+                <div class="card_chica_fuminado">Card6</div>
+            </div>
+            <h2 class="titulo_categoria">Categoria</h2>
+            <div class="carrousel_chico">
+                <button class="flecha_izq"><i class="fa-solid fa-chevron-left"></i> </button>
+                <div class="card_chica2">Card1</div>
+                <div class="card_chica">Card2</div>
+                <div class="card_chica">Card3</div>
+                <div class="card_chica">Card4</div>
+                <div class="card_chica">Card5</div>
+                <button class="flecha_der"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="card_chica_fuminado">Card6</div>
+            </div>
+        </section>
     </section>
     <footer>
-        <div>FOOTER</div>
+        <div class="footer logo">
+            <img src="../img/santi logo  (1).png" alt="">
+            <h3>MALASIA GAMES</h3>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-google-play"></i>
+
+        </div>
+        <!-- Sección de navegación -->
+        <div class="footer-Sección ">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Juegos Populares</a></li>
+                <li><a href="#">Nuevos Lanzamientos</a></li>
+            </ul>
+        </div>
+        <!-- Sección de nosotros -->
+        <div class="footer-Sección">
+            <h4>Nosotros</h4>
+            <ul>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Datos breves</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </div>
+        <!-- Sección de ayuda -->
+        <div class="footer-Sección">
+            <h4>Ayuda</h4>
+            <ul>
+                <li><a href=" #">Preguntas frecuentes</a></li>
+                <li><a href="#">Sobre Copyright</a></li>
+                <li><a href="#">Envíanos tu problema</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección de privacidad -->
+        <div class="footer-Sección">
+            <h4>Privacidad</h4>
+            <ul>
+                <li><a href="#">Información sobre cookies</a></li>
+                <li><a href="#">Políticas de Privacidad</a></li>
+                <li><a href="#">Términos y uso</a></li>
+            </ul>
     </footer>
 </body>
 <script src="js/menu.js"></script>
+
 </html>
