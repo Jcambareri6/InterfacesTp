@@ -11,16 +11,14 @@ label {
     margin-top: 8px;
 }
 
-img {
-    width: 113px;
-    /* Ajusta el tamaño del logo */
-    margin-bottom: 52px;
+.a_inicio , .a_registro {
+    margin-top: 15px;
+    margin-left: 100px;
+    margin-bottom: 100px;
 }
 
-img {
-    width: 113px;
-    /* Ajusta el tamaño del logo */
-    margin-bottom: 52px;
+.a_registro {
+    margin-left: 180px;
 }
 
 input {
