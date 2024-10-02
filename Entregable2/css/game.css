@@ -1,9 +1,15 @@
 .detalles_juego {
-    margin-top: 10px;
-    margin-left: 100px;
-    width: 722px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 180px;
+    margin-right: 180px;
+    width: auto;
 }
 
+.breadcumbs {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 .juego,.descripcion_juego,h3 {
     margin-top: 20px;
 }
