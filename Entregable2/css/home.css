@@ -60,7 +60,7 @@
 .contenedor_carrouseles > .carrousel_chico{
 
     display: flex;
-    width: 1317px;
+    width: auto;
     height: 356px;
 
 

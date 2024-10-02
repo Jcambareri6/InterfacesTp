@@ -29,7 +29,7 @@
    
 header{
     background-color:#180C39; 
-    width: 100%;
+    width: auto;
     height: 85px;
     border-radius: 5px;
     display: flex;
