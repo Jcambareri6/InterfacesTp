@@ -6,24 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estandar.css">
     <link rel="stylesheet" href="css/home.css">
+    <script src="https://kit.fontawesome.com/5bbc4115cb.js" crossorigin="anonymous"></script>
     <title>Inicio</title>
 </head>
 
 <body>
-    <nav>
-        <div class="menu">Menu</div>
-        <div class="logo">Logo</div>
+    <header>
+        <div class="contenedorLogoMenu">
+            <div class="menu"><i class="fa-solid fa-bars fa-2xl"></i></div>
+            <div class="logo">Logo</div>
+        </div>
+      
         <div class="nombre_pagina">Malas</div>
         <div class="barra_busqueda">Barra de busqueda</div>
         <div class="contenedor_menuCarrito">
-            <a class="carrito">Carrito</a>
+            <a class="carrito"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
             <button class="usuario" popovertarget="menu_usuario"></button>
         </div>
         <div id="menu_usuario" popover="manual">
             <H1>MENU</H1>
             <button popovertarget="menu_usuario">Cerrar</button>
         </div>
-    </nav>
+    </header>
+       
+    
     <section class="contenedor_row">
         <nav class="categorias">
             <li>Accion</li>
