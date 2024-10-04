@@ -6,23 +6,6 @@
     color: white;
 }
 
-header>div {
-    margin: 0 10px 10px 0px;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.logo {
-    height: 70px;
-    width: 70px;
-}
-
-.imgLogo {
-    height: inherit;
-    width: inherit;
-    object-fit: contain;
-
-}
 
 .contenedor_carrouseles {
     margin: 1rem;
@@ -69,7 +52,7 @@ header>div {
 
 .titulo_carrousel {
     font-size: 20px;
-    margin: 10px;
+  
 }
 
 
@@ -83,6 +66,7 @@ header>div {
         display: flex;
         flex-direction: column;
         position: relative;
+        
     }
 
     .contenedor_carrouseles>h1 {
@@ -99,7 +83,7 @@ header>div {
 
     .flecha_der,
     .flecha_izq {
-        display: blo;
+        display: block;
     }
 
     .card_grande_fuminado,
@@ -227,6 +211,7 @@ header>div {
             height: 113px;
             opacity: 0.4;
             border-radius: 0px 30px 30px 0px;
+
 
         }
 
