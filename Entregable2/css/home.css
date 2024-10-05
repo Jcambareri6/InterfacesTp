@@ -10,13 +10,14 @@
 .contenedor_carrouseles {
     margin: 1rem;
     padding: 0.5rem;
+    
 }
 
 .contenedor_carrouseles>div {
 
     display: flex;
     width: 100%;
-    gap: 10px;
+    gap: 1rem;
     flex-direction: row;
 
 
@@ -52,7 +53,11 @@
 
 .titulo_carrousel {
     font-size: 20px;
+    margin: 0.5rem;
   
+}
+.carrousel_chico,.carrousel_grande{
+    margin-bottom: 2rem;
 }
 
 
@@ -62,8 +67,56 @@
 
 /* desktop */
 @media (min-width: 900px) {
-    .contenedor_carrouseles {
+
+    .contenedor_row{
+        width: auto;
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        margin-left: 62px;
+        margin-right: 62px;    
+    }
+    .contenedor_carrouseles{
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 62px;
+        margin-right: 62px;
+ 
+    }
+   
+    .carrousel_grande,.carrousel_chico{
+        width: auto;
+        justify-content: center;
+        margin: 0px;
+        
+        
+    }
+    
+  
+    .card_grande{
+        width: 350px;
+        height: 305px;
+    }
+    .card_chica{
+        width: 184px;
+        height: 324px;
+    }
+    .card_grande_fuminado,
+    .card_chica2,
+    .card_chica_fuminado {
+        display: block;
+    }
+       .flecha_der,
+    .flecha_izq {
+        display: block;
+    }
+
+    /* .contenedor_carrouseles {
+        display: flex   ;
         flex-direction: column;
         position: relative;
         
@@ -79,53 +132,27 @@
         margin-top: 50px;
         margin-bottom: 15px;
         margin-left: 61px;
-    }
+    } */
 
-    .flecha_der,
-    .flecha_izq {
-        display: block;
-    }
+  
+   
 
-    .card_grande_fuminado,
-    .card_chica2,
-    .card_chica_fuminado {
-        display: block;
-    }
-
-    .contenedor_carrouseles>.carrousel_grande {
-
-        display: flex;
-        width: 1317px;
-        height: 337px;
-        top: 191px;
-
-    }
+   
 
     .contenedor_carrouseles>.carrousel_grande>.card_grande,
     .card_grande2,
     .card_grande_fuminado {
-        margin-left: 62px;
+      
         width: 350px;
         height: 305px;
-        top: 3px;
+       
         background: #FFFFFF;
         border-radius: 20px;
     }
 
-    .card_grande_fuminado {
-        margin-left: 0px;
-        width: 69px;
-    }
+  
 
-    .contenedor_carrouseles>.carrousel_grande>.card_grande2 {
-        margin-left: 0px;
-    }
-
-    .contenedor_carrouseles>.carrousel_chico {
-
-        display: flex;
-        width: auto;
-        height: 356px;
+    
 
         .contenedor_carrouseles {
             display: flex;
@@ -215,5 +242,5 @@
 
         }
 
-    }
+    
 }
