@@ -67,8 +67,6 @@ header>div {
 
 
 
-
-
 .categorias {
     background-color: #2F3237;
     position: absolute;
@@ -80,6 +78,7 @@ header>div {
     flex-direction: row;
     height: 1234px;
 }
+
 
 
 
@@ -186,8 +185,10 @@ header>div {
         color: #ffffff;
         padding: 40px 60px;
         display: flex;
-        justify-content: center;
-        gap: 122px;
+        justify-content: space-evenly;
+        /* Espaciado uniforme entre secciones */
+        align-items: center;
+
     }
 
     .footer-logo {
@@ -195,11 +196,14 @@ header>div {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-right: 10px;
     }
 
     .footer-logo img {
+        height: 100px;
         width: 100px;
-        height: auto;
+
+
     }
 
     .footer-logo h3 {
