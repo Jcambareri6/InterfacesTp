@@ -95,12 +95,18 @@ h3 {
   height: 689px;
   background-color: #2f3237;
   border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+   grid-template-areas: "descripcion multimedia"
+                          "FotosDelJuego";
+  grid-template-columns: 391px 572px;
+  grid-template-rows: 387px 182px ;
+  column-gap: 20px;
+  row-gap: 18px;
+ 
+
 }
 .ContenedorDescripcion {
+  grid-area: "descripcion";
   margin-left: 50px;
   margin-top: 59px;
 }
@@ -117,6 +123,7 @@ h3 {
   font-style: normal;
   font-weight: 300;
   margin-bottom: 26px;
+  
  
 }
 .ContenedorDescripcion>p{
@@ -124,4 +131,47 @@ h3 {
     line-height: 20px;
     margin-bottom: 5px;
 }
+.videoDelJuego{
+  grid-area: "multimedia";
+}
+.videoDelJuego>{
+ 
+ margin: 78px 29.5px 33px 61.5px;
+ align-items: center;
+}
+.video{
+  margin-top: 78px;
+  transition: 0.3s ease-in;
+  border-radius: 8px;
+}
+.video:hover{
+  border-radius: 0px;
+}
+.fotoDelJuego{
+ 
+  margin-left: 50px;
+  margin-top: 17px;
+  grid-area:"FotosDelJuego" ;
+  width: 1000px;
+  height: 182px;
+}
+.fotoDelJuego>.carrouselMultimedia{
+  display: flex;
+
+}
+.carrouselMultimedia{
+  margin: 50px 31px 34px 0px;
+  gap: 20px;
+ 
+}
+.carrouselMultimedia>img{
+ 
+  width: 293px;
+  height: 182px;
+  background-color: #7b62cb;
+  border-radius: 4px;
+
+}
+
+
 
