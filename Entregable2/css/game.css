@@ -1,4 +1,4 @@
-.detalles_juego {
+.contenedor_juego {
   margin: 20px auto;
   max-width: 1000px;
   display: flex;
@@ -39,7 +39,7 @@ h3 {
 .pantallajuego {
   width: 1000px;
   height: 600px;
-  background-image: url(../../img/pantalladejuego.webp);
+  background-image: url(../img/pantalladejuego.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -133,16 +133,20 @@ h3 {
 }
 .videoDelJuego{
   grid-area: "multimedia";
-}
-.videoDelJuego>{
- 
- margin: 78px 29.5px 33px 61.5px;
- align-items: center;
-}
-.video{
+  display: flex;
+  justify-content: center;
   margin-top: 78px;
+  margin-left: 33px;
+  margin-right: 29px;
+ 
+}
+
+.video{
+ 
+  min-width: 330px;
   transition: 0.3s ease-in;
   border-radius: 8px;
+  
 }
 .video:hover{
   border-radius: 0px;
@@ -160,7 +164,7 @@ h3 {
 
 }
 .carrouselMultimedia{
-  margin: 50px 31px 34px 0px;
+  margin: 33px 31px 34px 0px;
   gap: 20px;
  
 }
@@ -170,6 +174,7 @@ h3 {
   height: 182px;
   background-color: #7b62cb;
   border-radius: 4px;
+  object-fit: cover;
 
 }
 
