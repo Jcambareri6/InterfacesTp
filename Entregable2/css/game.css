@@ -172,10 +172,21 @@ h3 {
  
   width: 293px;
   height: 182px;
-  background-color: #7b62cb;
   border-radius: 4px;
   object-fit: cover;
 
+}
+.carrousel_chico{
+  width: auto;
+  justify-content: center;
+  margin-top: 88px;
+  gap: 11px;
+  display: flex;
+ 
+}
+.card_chica{
+  width: 184px;
+  height: 324px;
 }
 
 

@@ -101,6 +101,11 @@
         width: 350px;
         height: 305px;
     }
+   
+       .flecha_der,
+    .flecha_izq {
+        display: block;
+    }
     .card_chica{
         width: 184px;
         height: 324px;
@@ -110,11 +115,6 @@
     .card_chica_fuminado {
         display: block;
     }
-       .flecha_der,
-    .flecha_izq {
-        display: block;
-    }
-
     /* .contenedor_carrouseles {
         display: flex   ;
         flex-direction: column;
