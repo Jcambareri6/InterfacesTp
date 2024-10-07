@@ -10,33 +10,46 @@
 </head>
 
 <body>
-    <nav>
-        <div class="menu">Menu</div>
-        <div class="logo">Logo</div>
-        <div class="nombre_pagina">Nombre Pagina</div>
-        <div class="barra_busqueda">Barra de busqueda</div>
-        <button><i class="fa-solid fa-cart-shopping"></i></button>
+    <header>
+        <div class="contenedorLogoMenu">
+            <div class="menu"><i class="fa-solid fa-bars fa-2xl"></i></div>
+            <div class="logo"><a href="./index.html"><img class="imgLogo" src="./img/Logo.png" alt="Logo de la pagina"
+                        srcset=""></a></div>
+            <div class="nombre_pagina">MalasiaGames</div>
+        </div>
 
 
-        <button class="usuario" popovertarget="menu_usuario">Usuario</button>
+        <div class="barra_busqueda">
+            <input type="text" placeholder="search">
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="contenedor_menuCarrito">
+            <a class="carrito"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+            <button class="usuario" popovertarget="menu_usuario"></button>
+        </div>
         <div id="menu_usuario" popover="manual">
             <H1>MENU</H1>
             <button popovertarget="menu_usuario">Cerrar</button>
         </div>
-    </nav>
+    </header>
+
+
     <section class="contenedor_row">
         <nav class="categorias">
-            <li>Accion</li>
-            <li>Aventura</li>
-            <li>Autos</li>
-            <li>Basquet</li>
-            <li>Billar</li>
-            <li>Disparos</li>
-            <li>Futbool</li>
-            <li>Multijugador</li>
-            <li>Minecraft</li>
-            <li>Motos</li>
-            <li>Terror</li>
+            <button>Accion</button>
+            <button>Aventura</button>
+            <button>Autos</button>
+            <button>Basquet</button>
+            <button>Billar</button>
+            <button>Disparos</button>
+            <button>Futbol</button>
+            <button>Multijugador</button>
+            <button>Minecraft</button>
+            <button>Motos</button>
+            <button>Terror</button>
         </nav>
         <section class="detalles_juego">
             <div class="breadcumbs">
