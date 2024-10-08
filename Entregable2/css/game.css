@@ -39,7 +39,7 @@ h3 {
 .pantallajuego {
   width: 1000px;
   height: 600px;
-  background-image: url(../img/pantalladejuego.webp);
+ 
   background-size: cover;
   background-position: center;
   position: relative;
@@ -49,7 +49,21 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+ z-index: 0;
 }
+.background-blur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/pantalladejuego.webp);
+  background-size: contain;
+  background-position: center;
+  filter: blur(5px); /* Desenfoque */
+  z-index: 0; /* Está debajo del botón */
+}
+
 
 .play-button {
   display: flex;
@@ -58,10 +72,19 @@ h3 {
   background-color: #7b62cb;
   border-radius: 32px;
   width: 267px;
-
+  z-index: 1000;
   height: 69px;
   gap: 10px;
   padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+ 
 }
 
 .play-button > span,
@@ -110,7 +133,7 @@ h3 {
   margin-left: 50px;
   margin-top: 59px;
 }
-.ContenedorDescripcion>h2{
+.ContenedorDescripcion>.SubtituloSeccion{
     margin-bottom: 35px;
     font-style: Medium;
     font-weight: 500;
@@ -176,10 +199,22 @@ h3 {
   object-fit: cover;
 
 }
+.seccionRecomendado {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.seccionRecomendado>.SubtituloSeccion{
+  margin-top: 42px;
+ 
+  font-style: Medium;
+  font-weight: 500;
+  font-size: 24px;
+}
 .carrousel_chico{
   width: auto;
   justify-content: center;
-  margin-top: 88px;
+  margin-top: 15px;
   gap: 11px;
   display: flex;
  
@@ -187,7 +222,117 @@ h3 {
 .card_chica{
   width: 184px;
   height: 324px;
+  background-color: #7b62cb;
+  border-radius: 20px;
+
+}
+.baseJuego{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+margin-top: inherit;
+width: 184px;
+height: 100px;
+margin-top:213px ;
+border-radius: 0px 0px 20px 20px ;
+background: #FFFFFF;
+gap: 14px;
+
+
 }
 
+.baseJuego> .nombreDelJuego , .parrafoJuego>p{
+ color: #000;
+ margin-left: 14px;
+ 
+
+}
+.nombreDelJuego{
+  white-space: nowrap;           
+  overflow: hidden;              
+  text-overflow: ellipsis;       
+  max-width: 95%; 
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; 
+  font-size: 16px;
+
+
+}
+.card-title:hover::after {
+  content: attr(title); 
+  position: absolute;
+  background-color:#2f3237;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px;            
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.nombreDelJuego:hover::after {
+  transition: opacity 0.3s ease;
+}
+
+.nombreDelJuego::after {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+.parrafoJuego {
+  width: inherit;
+  border-top: 1px solid #000; 
+
+}
+.parrafoJuego>p{
+  margin-top: 5px;
+}
+.comunidad{
+  display: flex;
+  flex-direction: column;
+  height: 677px;
+}
+.encabezadoComentarios{
+  display: flex;
+  width: 1000px;
+  flex-direction: row;
+  align-items: center ;
+  justify-content: space-between;
+  border-bottom: #FFFFFF solid 1px;
+  margin-top: 82px;
+  margin-bottom: 48px;
+}
+.encabezadoComentarios>p{
+  margin-left: 32px;
+ 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+.parrafoOrdenarPor{
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  gap: 7px;
+}
+.box-comentarios{
+  width: inherit;
+  height: 210px;
+  background-color: #7b62cb
+}
+.box-comentarios>form{
+  width: 934px;
+  height: 210px;
+  background-color: #2f3237;
+  margin-left: 65px;
+  border-radius: 8px;
+}
 
 
