@@ -21,7 +21,7 @@ label {
     margin-left: 183px;
 }
 
-input {
+form > input {
     margin-top: 8px;
     border-radius: 8px;
     font-family: 'Roboto';
