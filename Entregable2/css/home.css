@@ -134,19 +134,11 @@
     }
 
     .contenedor_carrouseles>.carrousel_grande>.card_grande,
-    .card_grande2,
-    .card_grande_fuminado {
-
+    .card_grande2{
         width: 350px;
         height: 305px;
         background: #FFFFFF;
         border-radius: 20px;
-    }
-
-    .contenedor_carrouseles {
-        display: flex;
-        flex-direction: column;
-        position: relative;
     }
 
     .contenedor_carrouseles>h1 {
@@ -181,27 +173,29 @@
         margin-left: 0px;
     }
 
-    .carrousel_grande div>img {
+    .carrousel_grande > .card_grande > img , .carrousel_grande > .card_grande2 > img , 
+    .carrousel_grande > .card_grande_fuminado > img{
         object-fit: cover;
         width: 350px;
         height: 305px;
         border-radius: 20px;
     }
 
-    .carrousel_chico div>img {
+    .carrousel_grande > .card_grande_fuminado > img{
+        margin-left: 0px;
+        width: 69px;
+        filter: blur(1.5px);
+    }
+
+    .carrousel_chico > .card_chica > img , .carrousel_chico > .card_chica2 > img ,
+    .carrousel_chico > .card_chica_fuminado > img{
         object-fit: cover;
         width: 184px;
         height: 320px;
         border-radius: 10px;
     }
 
-    .card_grande_fuminado img {
-        margin-left: 0px;
-        width: 69px;
-        filter: blur(1.5px);
-    }
-
-    .card_chica_fuminado img {
+    .carrousel_chico > .card_chica_fuminado > img {
         width: 117px;
         margin-left: 0px;
         filter: blur(1.5px);
