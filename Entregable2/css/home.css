@@ -10,7 +10,7 @@
 .contenedor_carrouseles {
     margin: 1rem;
     padding: 0.5rem;
-    
+
 }
 
 .contenedor_carrouseles>div {
@@ -54,13 +54,20 @@
 .titulo_carrousel {
     font-size: 20px;
     margin: 0.5rem;
-  
+
 }
-.carrousel_chico,.carrousel_grande{
+
+.carrousel_chico,
+.carrousel_grande {
     margin-bottom: 2rem;
 }
 
-
+.carrousel_grande div>img {
+    width: 123px;
+    height: 152px;
+    border-radius: 20px;
+    object-fit: cover;
+}
 
 
 
@@ -68,56 +75,59 @@
 /* desktop */
 @media (min-width: 900px) {
 
-    .contenedor_row{
+    .contenedor_row {
         width: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         margin-left: 62px;
-        margin-right: 62px;    
+        margin-right: 62px;
     }
-    .contenedor_carrouseles{
+
+    .contenedor_carrouseles {
         width: inherit;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items:normal;
+        align-items: normal;
         margin-left: 62px;
         margin-right: 62px;
- 
+
     }
-   
-    .carrousel_grande,.carrousel_chico{
+
+    .carrousel_grande,
+    .carrousel_chico {
         width: auto;
         justify-content: center;
-        margin: 0px;  
+        margin: 0px;
     }
+
     .carrousel_grande {
         margin-bottom: 100px;
     }
-    
+
     .card_grande_fuminado,
     .card_chica2,
     .card_chica_fuminado {
         display: block;
     }
 
-       .flecha_der,
+    .flecha_der,
     .flecha_izq {
         display: block;
     }
-   
+
     .contenedor_carrouseles>.carrousel_grande>.card_grande,
     .card_grande2,
     .card_grande_fuminado {
-      
+
         width: 350px;
         height: 305px;
         background: #FFFFFF;
         border-radius: 20px;
     }
-    
+
     .contenedor_carrouseles {
         display: flex;
         flex-direction: column;
@@ -156,6 +166,25 @@
         margin-left: 0px;
     }
 
+    .carrousel_grande div>img {
+        object-fit: cover;
+        width: 350px;
+        height: 305px;
+        border-radius: 20px;
+    }
+
+    .carrousel_chico div>img {
+        object-fit: cover;
+        width: 184px;
+        height: 320px;
+        border-radius: 10px;
+    }
+
+    .card_grande_fuminado,
+    .card_chica_fuminado img {
+        filter: blur(1.5px);
+    }
+
     .contenedor_carrouseles>.carrousel_chico>.card_chica,
     .card_chica2,
     .card_chica_fuminado {
@@ -184,5 +213,5 @@
         opacity: 0.4;
         border-radius: 0px 30px 30px 0px;
     }
-    
+
 }
