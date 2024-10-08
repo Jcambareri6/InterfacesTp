@@ -280,8 +280,8 @@ footer {
         position: absolute;
         width: 402px;
         height: 550px;
-        left: 1080px;
-        top: 100px;
+        left: 1063px;
+        top: 80px;
         border-radius: 20px;
     }
     .cerrar {
@@ -294,11 +294,16 @@ footer {
     }
 
     .datos_usuario1 {
-       margin-top: 30px;
        margin-left: 80px; 
        margin-bottom: 20px;
     }
 
+    .cerrar {
+        width: 23px;
+        height: 23px;
+        margin-top: 10px;
+        margin-left: 344px;
+    }
     .datos_usuario1 > button {
         margin-left: 100px;
     }
@@ -332,8 +337,17 @@ footer {
         font-size: 16px;
         line-height: 19px;
     }
+    .datos_usuario2 > div > a:hover , .datos_usuario3 > div > a:hover{
+        color: #F7BA1F;
+    }
     .datos_usuario2 > div {
         margin-top: 10px;
+    }
+    .datos_usuario3 > .a1 {
+        margin-top: 20px;
+    }
+    .datos_usuario3 > .a2 {
+        margin-bottom: 20px;
     }
     .datos_usuario3 > div {
         margin-top: 10px;
