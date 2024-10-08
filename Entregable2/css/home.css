@@ -29,7 +29,6 @@
 }
 
 
-
 .card_grande {
     width: 123px;
     height: 152px;
@@ -66,9 +65,25 @@
     width: 123px;
     height: 152px;
     border-radius: 20px;
+    max-width: 100%;
+    /* Asegúrate de que no exceda el tamaño del contenedor */
+    max-height: 100%;
+    /* Asegúrate de que no exceda el tamaño del contenedor */
+    border-radius: 20px;
     object-fit: cover;
 }
 
+.carrousel_chico div>img {
+    max-width: 100%;
+    /* Asegúrate de que no exceda el tamaño del contenedor */
+    max-height: 100%;
+    /* Asegúrate de que no exceda el tamaño del contenedor */
+    border-radius: 30px;
+    object-fit: cover;
+    width: 90px;
+    height: 134px;
+    border-radius: 10px;
+}
 
 
 
