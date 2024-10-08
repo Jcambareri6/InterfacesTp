@@ -180,8 +180,15 @@
         border-radius: 10px;
     }
 
-    .card_grande_fuminado,
+    .card_grande_fuminado img {
+        margin-left: 0px;
+        width: 69px;
+        filter: blur(1.5px);
+    }
+
     .card_chica_fuminado img {
+        width: 117px;
+        margin-left: 0px;
         filter: blur(1.5px);
     }
 
