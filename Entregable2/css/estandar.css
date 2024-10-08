@@ -177,6 +177,14 @@ footer {
         height: 69px;
     }
 
+    .contenedor_menuCarrito {
+        margin-right: 30px;
+    }
+
+    .contenedorLogoMenu > .logo{
+        margin-left: 20px;
+    }
+
     .barra_busqueda {
         display: flex;
         flex-direction: row;
@@ -185,8 +193,8 @@ footer {
         padding: 0px;
         width: 300px;
         height: 40px;
-        left: 48px;
-        top: 2365px;
+        margin-right: 250px;
+        margin-top: 7px;
         background: #9EA0B2;
         border-radius: 20px;
 
@@ -267,7 +275,8 @@ footer {
     }
 
     #menu_usuario {
-        background-color: white;
+        background-color: #2F3237;
+        border: none;
         position: absolute;
         width: 402px;
         height: 550px;
@@ -275,9 +284,66 @@ footer {
         top: 100px;
         border-radius: 20px;
     }
+    .cerrar {
+        margin-left: 344px;
+       
+    }
 
     #menu_usuario ::backdrop {
         background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .datos_usuario1 {
+       margin-top: 30px;
+       margin-left: 80px; 
+       margin-bottom: 20px;
+    }
+
+    .datos_usuario1 > button {
+        margin-left: 100px;
+    }
+    .datos_usuario1 > h1 {
+        margin-top: 2px;
+        margin-left: 60px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 16px;
+    }
+    .datos_usuario1 > p{
+        margin-top: 7px;
+        margin-right: 70px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+
+    }
+    .datos_usuario2 > div > a , .datos_usuario3 > div > a{    
+        margin-left: 40px;
+        outline: none;
+        text-decoration: none;
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .datos_usuario2 > div {
+        margin-top: 10px;
+    }
+    .datos_usuario3 > div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .datos_usuario3 {
+        border-top: white solid 3px;
+        border-bottom: white solid 3px;
+        margin-top: 30px;
     }
 
     footer {
