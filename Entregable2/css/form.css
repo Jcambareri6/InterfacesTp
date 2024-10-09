@@ -11,7 +11,8 @@ label {
     margin-top: 20px;
 }
 
-.a_inicio , .a_registro {
+.a_inicio,
+.a_registro {
     margin-top: 20px;
     margin-left: 100px;
     margin-bottom: 100px;
@@ -21,7 +22,7 @@ label {
     margin-left: 183px;
 }
 
-form > input {
+form>input {
     margin-top: 8px;
     border-radius: 8px;
     font-family: 'Roboto';
@@ -35,13 +36,11 @@ form > input {
     height: 55px;
 }
 
+
 .boton_inicio {
-
-
-    /* parrafo */
     height: 55px;
     width: 430px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 19px;
@@ -50,5 +49,8 @@ form > input {
     color: #FFFFFF;
     background: #7B62CB;
     border-radius: 8px;
-
+    display: inline-block;
+    text-align: center;
+    line-height: 55px;
+    text-decoration: none;
 }

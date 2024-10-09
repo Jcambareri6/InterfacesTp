@@ -61,9 +61,21 @@
     margin-bottom: 2rem;
 }
 
-.carrousel_grande div>img {
+.carrousel_grande>div>img {
     width: 123px;
     height: 152px;
+    border-radius: 20px;
+    max-width: 100%;
+    /* Asegúrate de que no exceda el tamaño del contenedor */
+    max-height: 100%;
+    /* Asegúrate de que no exceda el tamaño del contenedor */
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.carrousel_grande>div>a>img {
+    width: 350px;
+    height: 305px;
     border-radius: 20px;
     max-width: 100%;
     /* Asegúrate de que no exceda el tamaño del contenedor */
@@ -134,7 +146,7 @@
     }
 
     .contenedor_carrouseles>.carrousel_grande>.card_grande,
-    .card_grande2{
+    .card_grande2 {
         width: 350px;
         height: 305px;
         background: #FFFFFF;
@@ -173,29 +185,31 @@
         margin-left: 0px;
     }
 
-    .carrousel_grande > .card_grande > img , .carrousel_grande > .card_grande2 > img , 
-    .carrousel_grande > .card_grande_fuminado > img{
+    .carrousel_grande>.card_grande>img,
+    .carrousel_grande>.card_grande2>img,
+    .carrousel_grande>.card_grande_fuminado>img {
         object-fit: cover;
         width: 350px;
         height: 305px;
         border-radius: 20px;
     }
 
-    .carrousel_grande > .card_grande_fuminado > img{
+    .carrousel_grande>.card_grande_fuminado>img {
         margin-left: 0px;
         width: 69px;
         filter: blur(1.5px);
     }
 
-    .carrousel_chico > .card_chica > img , .carrousel_chico > .card_chica2 > img ,
-    .carrousel_chico > .card_chica_fuminado > img{
+    .carrousel_chico>.card_chica>img,
+    .carrousel_chico>.card_chica2>img,
+    .carrousel_chico>.card_chica_fuminado>img {
         object-fit: cover;
         width: 184px;
         height: 320px;
         border-radius: 10px;
     }
 
-    .carrousel_chico > .card_chica_fuminado > img {
+    .carrousel_chico>.card_chica_fuminado>img {
         width: 117px;
         margin-left: 0px;
         filter: blur(1.5px);
