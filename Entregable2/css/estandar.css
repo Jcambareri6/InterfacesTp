@@ -303,10 +303,21 @@ footer {
         left: 1063px;
         top: 80px;
         border-radius: 20px;
+        z-index: 100;
     }
 
     .cerrar {
         margin-left: 344px;
+        position: absolute;
+        top: 10px;
+        /* Ajusta la distancia desde la parte superior del menú */
+        right: 15px;
+        /* Ajusta la distancia desde la parte derecha del menú */
+        background: none;
+        /* Sin fondo para el botón */
+        border: none;
+        /* Sin borde */
+        cursor: pointer;
 
     }
 
@@ -397,7 +408,7 @@ footer {
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
-        
+
     }
 
     .datos_usuario2 svg,
