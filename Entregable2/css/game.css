@@ -13,20 +13,20 @@
   width: 100%;
 }
 
-.breadcumbs > h2 {
- 
+.breadcumbs>h2 {
+
   font-weight: 500;
   font-style: Condensed Medium;
   font-size: 18px;
-  
+
 }
 
-.breadcumbs > h2 > a {
+.breadcumbs>h2>a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.breadcumbs > h2 > a:hover {
+.breadcumbs>h2>a:hover {
   color: #f7ba1f;
 }
 
@@ -39,7 +39,7 @@ h3 {
 .pantallajuego {
   width: 1000px;
   height: 600px;
- 
+
   background-size: cover;
   background-position: center;
   position: relative;
@@ -49,9 +49,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
- z-index: 0;
+  z-index: 0;
 }
-.background-blur{
+
+.background-blur {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,8 +61,10 @@ h3 {
   background-image: url(../img/pantalladejuego.webp);
   background-size: contain;
   background-position: center;
-  filter: blur(5px); /* Desenfoque */
-  z-index: 0; /* Está debajo del botón */
+  filter: blur(5px);
+  /* Desenfoque */
+  z-index: 0;
+  /* Está debajo del botón */
 }
 
 
@@ -84,15 +87,16 @@ h3 {
   border: none;
   cursor: pointer;
   font-size: 1.5em;
- 
+
 }
 
-.play-button > span,
+.play-button>span,
 .fa-circle-play {
   font-weight: 500;
   font-size: 32px;
   cursor: pointer;
 }
+
 .BarraAyuda {
   width: 1000px;
   height: 54px;
@@ -100,6 +104,7 @@ h3 {
   position: absolute;
   top: 550px;
 }
+
 .BarraAyuda,
 .ContenedorTituloYlogo,
 .MenuAyudaUser {
@@ -107,19 +112,21 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+
 .MenuAyudaUser {
   margin-right: 20px;
   font-size: 29px;
   gap: 15px;
 }
 
-.MenuAyudaUser>button{
-  all: unset; 
+.MenuAyudaUser>button {
+  all: unset;
   cursor: pointer;
   background-color: #010101;
 }
+
 .menu_compartir {
-position: absolute;
+  position: absolute;
   width: 600px;
   height: 120px;
   border-radius: 8px;
@@ -128,23 +135,26 @@ position: absolute;
   align-items: center;
   margin-left: 650px;
   top: 560px;
- 
+
 }
-.menu_compartir>h1{
+
+.menu_compartir>h1 {
   margin-left: 223px;
 }
-.menu_compartir>.redes{
+
+.menu_compartir>.redes {
   margin-left: 195px;
 }
 
-.menu_compartir>h1{
+.menu_compartir>h1 {
   font-size: 36px;
-font-weight: 500;
-font-size: 36px;
-line-height: 42px;
-margin-top: 10px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 10px;
 }
-.redes{
+
+.redes {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -153,7 +163,8 @@ margin-top: 10px;
   margin-left: 10px;
   gap: 5px;
 }
-.redes>.btn_redes{
+
+.redes>.btn_redes {
   height: 45px;
   width: 42px;
   border-radius: 100%;
@@ -163,28 +174,33 @@ margin-top: 10px;
   align-items: center;
 
 }
-.menuControles{
+
+.menuControles {
   height: 300px;
   margin-left: 630px;
   top: 380px;
 }
-.menuControles>h1{
-  margin-top:30px
- 
+
+.menuControles>h1 {
+  margin-top: 30px
 }
-.menuControles>.controles{
- display: flex;
- justify-content: center;
- margin-top: 30px;
- gap: 22px;
-margin-left: 20px;
+
+.menuControles>.controles {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 22px;
+  margin-left: 20px;
 }
-.controles>.controlMover,.controlSeleccionar{
+
+.controles>.controlMover,
+.controlSeleccionar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
+
 .presentacionDelJuego {
   margin-top: 30px;
   width: 1000px;
@@ -192,156 +208,181 @@ margin-left: 20px;
   background-color: #2f3237;
   border-radius: 10px;
   display: grid;
-   grid-template-areas: "descripcion multimedia"
-                          "FotosDelJuego";
+  grid-template-areas: "descripcion multimedia"
+    "FotosDelJuego";
   grid-template-columns: 391px 572px;
-  grid-template-rows: 387px 182px ;
+  grid-template-rows: 387px 182px;
   column-gap: 20px;
   row-gap: 18px;
- 
+
 
 }
+
 .ContenedorDescripcion {
   grid-area: "descripcion";
   margin-left: 50px;
   margin-top: 59px;
 }
-.ContenedorDescripcion>.SubtituloSeccion{
-    margin-bottom: 35px;
-    font-style: Medium;
-    font-weight: 500;
-    font-size: 26px;
+
+.ContenedorDescripcion>.SubtituloSeccion {
+  margin-bottom: 35px;
+  font-style: Medium;
+  font-weight: 500;
+  font-size: 26px;
 }
-.presentacionDelJuego > .ContenedorDescripcion > .parrafoDescripcion {
+
+.presentacionDelJuego>.ContenedorDescripcion>.parrafoDescripcion {
   height: 240px;
   width: 299px;
   line-height: 20px;
   font-style: normal;
   font-weight: 300;
   margin-bottom: 26px;
-  
- 
+
+
 }
-.ContenedorDescripcion>p{
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 5px;
+
+.ContenedorDescripcion>p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 5px;
 }
-.videoDelJuego{
+
+.videoDelJuego {
   grid-area: "multimedia";
   display: flex;
   justify-content: center;
   margin-top: 78px;
   margin-left: 33px;
   margin-right: 29px;
- 
+
 }
 
-.video{
- 
+.video {
+
   min-width: 330px;
   transition: 0.3s ease-in;
   border-radius: 8px;
-  
+
 }
-.video:hover{
+
+.video:hover {
   border-radius: 0px;
 }
-.fotoDelJuego{
- 
+
+.fotoDelJuego {
+
   margin-left: 50px;
   margin-top: 17px;
-  grid-area:"FotosDelJuego" ;
+  grid-area: "FotosDelJuego";
   width: 1000px;
   height: 182px;
 }
-.fotoDelJuego>.carrouselMultimedia{
+
+.fotoDelJuego>.carrouselMultimedia {
   display: flex;
 
 }
-.carrouselMultimedia{
+
+.carrouselMultimedia {
   margin: 33px 31px 34px 0px;
   gap: 20px;
- 
+
 }
-.carrouselMultimedia>img{
- 
+
+.carrouselMultimedia>img {
+
   width: 293px;
   height: 182px;
   border-radius: 4px;
   object-fit: cover;
 
 }
+
 .seccionRecomendado {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
 }
-.seccionRecomendado>.SubtituloSeccion{
+
+.seccionRecomendado>.SubtituloSeccion {
   margin-top: 42px;
- 
+
   font-style: Medium;
   font-weight: 500;
   font-size: 24px;
 }
-.carrousel_chico{
+
+.carrousel_chico {
   width: auto;
   justify-content: center;
   margin-top: 15px;
   gap: 11px;
   display: flex;
- 
+
 }
-.card_chica{
+
+.card_chica {
   width: 184px;
   height: 324px;
-  background-color: #7b62cb;
   border-radius: 20px;
 
 }
-.baseJuego{
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-margin-top: inherit;
-width: 184px;
-height: 100px;
-margin-top:213px ;
-border-radius: 0px 0px 20px 20px ;
-background: #FFFFFF;
-gap: 14px;
+.card_chica>img {
+  width: 184px;
+  height: 224px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+
+}
+
+.baseJuego {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: inherit;
+  width: 184px;
+  height: 100px;
+  margin-top: 213px;
+  border-radius: 0px 0px 20px 20px;
+  background: #FFFFFF;
+  gap: 14px;
+  z-index: 1000;
+  margin-top: 0px;
+
+}
+
+.baseJuego>.nombreDelJuego,
+.parrafoJuego>p {
+  color: #000;
+  margin-left: 14px;
 
 
 }
 
-.baseJuego> .nombreDelJuego , .parrafoJuego>p{
- color: #000;
- margin-left: 14px;
- 
-
-}
-.nombreDelJuego{
-  white-space: nowrap;           
-  overflow: hidden;              
-  text-overflow: ellipsis;       
-  max-width: 95%; 
+.nombreDelJuego {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  font-weight: 900; 
+  font-weight: 900;
   font-size: 16px;
 
 
 }
+
 .card-title:hover::after {
-  content: attr(title); 
+  content: attr(title);
   position: absolute;
-  background-color:#2f3237;
+  background-color: #2f3237;
   color: #fff;
   padding: 5px;
   border-radius: 5px;
-  top: -30px;            
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
@@ -360,120 +401,137 @@ gap: 14px;
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
+
 .parrafoJuego {
   width: inherit;
-  border-top: 1px solid #000; 
+  border-top: 1px solid #000;
 
 }
-.parrafoJuego>p{
+
+.parrafoJuego>p {
   margin-top: 5px;
 }
-.comunidad{
+
+.comunidad {
   display: flex;
   flex-direction: column;
   height: 877px;
 }
-.encabezadoComentarios{
+
+.encabezadoComentarios {
   display: flex;
   width: 1000px;
   flex-direction: row;
-  align-items: center ;
+  align-items: center;
   justify-content: space-between;
   border-bottom: #FFFFFF solid 1px;
   margin-top: 82px;
   margin-bottom: 48px;
 }
-.encabezadoComentarios>p{
+
+.encabezadoComentarios>p {
   margin-left: 32px;
- 
+
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
-.parrafoOrdenarPor{
+
+.parrafoOrdenarPor {
   display: flex;
   align-items: center;
   margin-right: 32px;
   gap: 7px;
 }
-.box-comentarios{
+
+.box-comentarios {
   width: inherit;
   height: 210px;
   background-color: #101216;
 }
-.box-comentarios>form,.input-area,.comentario{
+
+.box-comentarios>form,
+.input-area,
+.comentario {
   width: 934px;
   height: 210px;
   margin-left: 65px;
   border-radius: 8px;
-  background-color:#2f3237;;
-  
+  background-color: #2f3237;
+  ;
+
 
 }
 
 
 
 
-.comentario{
+.comentario {
   height: 160px;
   width: inherit;
   margin: 0;
 
-  
+
 }
-.box-comentarios > form > input.comentario {
-  width: 80%; 
-  text-align: left; 
-  padding: 10px; 
+
+.box-comentarios>form>input.comentario {
+  width: 80%;
+  text-align: left;
+  padding: 10px;
   border: none;
-  
+
 
 }
 
-.box-comentarios > form > input.comentario::placeholder {
-  text-align: left; 
+.box-comentarios>form>input.comentario::placeholder {
+  text-align: left;
   padding-left: 23px;
   position: absolute;
   top: 30px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300; 
+  font-weight: 300;
   font-size: 16px;
 
 }
-.box-comentarios>form>.configuracionDeTexto{
+
+.box-comentarios>form>.configuracionDeTexto {
   border-top: 1px solid #FFFFFF;
   display: flex;
   gap: 20px;
   align-items: center;
- 
+
 }
-.btn_Texto{
+
+.btn_Texto {
   margin-left: 23px;
   display: flex;
   align-items: center;
 }
-.btn_Texto>a{
+
+.btn_Texto>a {
   margin-right: 5px;
   margin-top: 13px;
 
 
 }
-.btn_Texto>a:nth-child(2){
+
+.btn_Texto>a:nth-child(2) {
   margin-right: 31px;
   margin-top: 14px;
 }
 
-.box-comentarios>form>.configuracionDeTexto>.btnSubmit>button{
-      margin-left: 553px;
-      margin-top: 6px;
-      margin-bottom: 8px;
-      background-color: #7b62cb;
-      width: 135px;
-      height: 36px;
-      border-radius: 10px;
-      border: none;
+.box-comentarios>form>.configuracionDeTexto>.btnSubmit>button {
+  margin-left: 553px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  background-color: #7b62cb;
+  width: 135px;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
 
 }
-.box-comentarios>form>.configuracionDeTexto>.btnSubmit>button:hover{
+
+.box-comentarios>form>.configuracionDeTexto>.btnSubmit>button:hover {
   margin-left: 553px;
   margin-top: 6px;
   margin-bottom: 8px;
@@ -483,67 +541,72 @@ gap: 14px;
   border-radius: 10px;
   border: none;
   text-decoration: underline;
-  
+
 }
-.usuario_foro{
+
+.usuario_foro {
   position: absolute;
   margin-left: 11px;
   height: 100px;
 }
-.comentarios-externos{
+
+.comentarios-externos {
   height: 120px;
- 
+
   margin-top: 33px;
 }
-.comentarios-externos>.nombreUserYtexto{
+
+.comentarios-externos>.nombreUserYtexto {
   display: flex;
   flex-direction: column;
   margin-left: 70px;
   margin-top: 29px;
 }
-.nombreUserYtexto>.NombreUser{
-  
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 16px;
-color: #FAFAFA;
-}
-.nombreUserYtexto{
 
+.nombreUserYtexto>.NombreUser {
 
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 200;
-font-size: 16px;
-line-height: 20px;
-
-
-color: #FFFFFF;
-
-
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FAFAFA;
 }
 
-.like-dislike{
-  margin-left:70px ;
+.nombreUserYtexto {
+
+
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 20px;
+
+
+  color: #FFFFFF;
+
+
+}
+
+.like-dislike {
+  margin-left: 70px;
   margin-top: 11px;
   display: flex;
   align-items: center;
   gap: 4.62px;
 }
-.usuario_comentarioExterno{
+
+.usuario_comentarioExterno {
   position: absolute;
   margin-top: 20px;
   margin-left: 10px;
-  
+
 }
-.configuracionComentario{
- 
+
+.configuracionComentario {
+
   float: right;
-  right:  523px;
+  right: 523px;
   margin-right: 14px;
-margin-top: -70px;
+  margin-top: -70px;
 }
-
-
