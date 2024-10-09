@@ -332,12 +332,11 @@ h3 {
 .card_chica>img {
   width: 184px;
   height: 224px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-
+  border-radius: 20px;
 }
 
 .baseJuego {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -345,12 +344,10 @@ h3 {
   margin-top: inherit;
   width: 184px;
   height: 100px;
-  margin-top: 213px;
+  margin-top: 0;
   border-radius: 0px 0px 20px 20px;
   background: #FFFFFF;
   gap: 14px;
-  z-index: 1000;
-  margin-top: 0px;
 
 }
 
@@ -461,7 +458,6 @@ h3 {
 
 
 }
-
 
 
 
