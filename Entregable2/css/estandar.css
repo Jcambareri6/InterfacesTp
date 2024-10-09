@@ -73,13 +73,41 @@ header>div {
 .categorias {
     background-color: #2F3237;
     position: absolute;
+    top: 70px;
     width: 100px;
-    left: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
     display: none;
-    flex-direction: row;
-    height: 1234px;
+    flex-direction: column;
+    height: 669px;
+}
+
+.categorias>button p {
+    display: none;
+}
+
+.categorias>button {
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 10px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    background-color: #2F3237;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categorias>button:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.categorias>button>img {
+    width: 60px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 footer {
@@ -259,13 +287,21 @@ footer {
         display: none;
         flex-direction: column;
         height: 1234px;
+        z-index: 1000;
+    }
+
+    .categorias>button p {
+        display: block;
     }
 
     .categorias>button {
         height: 35px;
         display: inline-flex;
         align-items: center;
+        justify-content: left;
+        padding: 0;
         gap: 33px;
+        border: none;
         padding-left: 10px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -285,13 +321,15 @@ footer {
         color: white;
     }
 
-    .categorias>button:hover {
+    .categorias>button p:hover {
         color: #F7BA1F;
     }
 
     .categorias>button>img {
         width: 60px;
         height: 20px;
+        display: block;
+        max-width: 0 auto;
     }
 
     #menu_usuario {
@@ -310,13 +348,9 @@ footer {
         margin-left: 344px;
         position: absolute;
         top: 17px;
-        /* Ajusta la distancia desde la parte superior del menú */
         right: 15px;
-        /* Ajusta la distancia desde la parte derecha del menú */
         background: none;
-        /* Sin fondo para el botón */
         border: none;
-        /* Sin borde */
         cursor: pointer;
 
     }
@@ -367,7 +401,7 @@ footer {
     .datos_usuario2>div>a,
     .datos_usuario3>div>a {
         display: flex;
-        align-content:last baseline;
+        align-content: last baseline;
         margin-left: 40px;
         outline: none;
         text-decoration: none;
@@ -384,7 +418,7 @@ footer {
     }
 
     .datos_usuario2>div {
-        
+
         margin-top: 10px;
     }
 
