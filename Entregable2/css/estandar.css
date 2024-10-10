@@ -559,17 +559,30 @@ footer {
         max-width: 0 auto;
     }
 
-    .card_chica.card_chica_ultima {
-        width: 184px;
+
+    .card_chica {
+        <<<<<<< HEAD object-fit: cover;
+        width: 211px;
+        height: 300px;
+        border-radius: 10px;
+
+    }
+
+    .card_chica>img {
+        width: 211px;
+        height: 300px;
+        border-radius: 20px;
+        =======width: 184px;
         height: 324px;
 
     }
 
-    .card_chica>img .card_chica_ultima {
+    .card_chica>img {
         width: 184px;
         height: 224px;
         border-radius: 20px 20px 0px 0px;
 
+        >>>>>>>e978a16478d7662e148851dde285709e2de5268a
     }
 
     .baseJuego {
@@ -579,8 +592,9 @@ footer {
         justify-content: center;
         align-items: flex-start;
         margin-top: inherit;
+
         width: auto;
-        height: 100px;
+        >>>>>>>e978a16478d7662e148851dde285709e2de5268a height: 100px;
         margin-top: 0;
         border-radius: 0px 0px 20px 20px;
         background: #FFFFFF;
@@ -858,5 +872,5 @@ footer {
     }
 
 
-
+}
 }
