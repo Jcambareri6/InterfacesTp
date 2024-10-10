@@ -135,8 +135,7 @@
     }
 
     .card_grande_fuminado,
-    .card_chica2,
-    .card_chica_fuminado {
+    .card_chica2{
         display: block;
     }
 
@@ -166,19 +165,13 @@
     }
 
     .contenedor_carrouseles>.carrousel_grande>.card_grande,
-    .card_grande2,
-    .card_grande_fuminado {
+    .card_grande2{
         margin-left: 62px;
-        width: 350px;
+        width: 360px;
         height: 305px;
         top: 3px;
         background: #FFFFFF;
         border-radius: 20px;
-    }
-
-    .card_grande_fuminado {
-        margin-left: 0px;
-        width: 69px;
     }
 
     .contenedor_carrouseles>.carrousel_grande>.card_grande2 {
@@ -187,53 +180,32 @@
 
     .carrousel_grande>.card_grande>img,
     .carrousel_grande>.card_grande2>img,
-    .carrousel_grande>.card_grande_fuminado>img {
+    .carrousel_grande>.card_grande>a>img{
         object-fit: cover;
-        width: 350px;
+        width: 360px;
         height: 305px;
         border-radius: 20px;
     }
 
-    .carrousel_grande>.card_grande_fuminado>img {
-        margin-left: 0px;
-        width: 69px;
-        filter: blur(1.5px);
-    }
-
     .carrousel_chico>.card_chica>img,
-    .carrousel_chico>.card_chica2>img,
-    .carrousel_chico>.card_chica_fuminado>img {
+    .carrousel_chico>.card_chica2>img {
         object-fit: cover;
-        width: 184px;
-        height: 320px;
+        width: 211px;
+        height: 300px;
         border-radius: 10px;
     }
-
-    .carrousel_chico>.card_chica_fuminado>img {
-        width: 117px;
-        margin-left: 0px;
-        filter: blur(1.5px);
-    }
-
     
     .contenedor_carrouseles>.carrousel_chico>.card_chica,
-    .card_chica2,
-    .card_chica_fuminado {
-        margin-left: 41px;
-        width: 184px;
-        height: 320px;
+    .card_chica2{
+        margin-left: 29px;
+        width: 211px;
+        height: 300px;
         background-color: white;
         top: 10.11%;
         bottom: 0%;
         border-radius: 20px;
     }
 
-
-
-    .card_chica_fuminado {
-        width: 117px;
-        margin-left: 0px;
-    }
 
     .card_chica2 {
         margin-left: 0px;
