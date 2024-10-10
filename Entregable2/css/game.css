@@ -447,8 +447,7 @@ h3 {
 }
 
 .box-comentarios>form,
-.input-area,
-.comentario {
+.input-area {
   width: 934px;
   height: 210px;
   margin-left: 65px;
@@ -461,51 +460,40 @@ h3 {
 
 
 
-.comentario {
-  height: 160px;
-  width: inherit;
-  margin: 0;
+.comentario-textArea {
+height: 160px;
+margin-left: 0px;
+background-color: #2f3237 ;
+width: inherit;
 
 
 }
 
-.box-comentarios>form>input.comentario {
-  width: 80%;
-  text-align: left;
-  padding: 10px;
-  border: none;
 
 
-}
 
-.box-comentarios>form>input.comentario::placeholder {
-  text-align: left;
-  padding-left: 23px;
-  position: absolute;
-  top: 30px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-
-}
 
 .box-comentarios>form>.configuracionDeTexto {
   border-top: 1px solid #FFFFFF;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
+  position: inherit;
 
+ 
 }
 
 .btn_Texto {
   margin-left: 23px;
   display: flex;
   align-items: center;
+  margin-bottom:10px ;
 }
 
 .btn_Texto>a {
   margin-right: 5px;
   margin-top: 13px;
+  text-decoration: none;
 
 
 }
