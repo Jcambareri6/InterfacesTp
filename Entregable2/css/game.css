@@ -330,6 +330,7 @@ h3 {
   margin-bottom: 70PX;
 }
 
+<<<<<<< HEAD
 
 .baseJuego {
 
@@ -355,6 +356,8 @@ h3 {
 
 }
 
+=======
+>>>>>>> e978a16478d7662e148851dde285709e2de5268a
 .nombreDelJuego {
   white-space: nowrap;
   overflow: hidden;
@@ -366,43 +369,6 @@ h3 {
   font-size: 16px;
 
 
-}
-
-.card-title:hover::after {
-  content: attr(title);
-  position: absolute;
-  background-color: #2f3237;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 10;
-  opacity: 1;
-  visibility: visible;
-}
-
-
-.nombreDelJuego:hover::after {
-  transition: opacity 0.3s ease;
-}
-
-.nombreDelJuego::after {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-.parrafoJuego {
-  width: inherit;
-  border-top: 1px solid #000;
-
-}
-
-.parrafoJuego>p {
-  margin-top: 5px;
 }
 
 .comunidad {
