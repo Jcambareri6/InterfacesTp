@@ -561,7 +561,7 @@ footer {
 
 
     .card_chica {
-        <<<<<<< HEAD object-fit: cover;
+        object-fit: cover;
         width: 211px;
         height: 300px;
         border-radius: 10px;
@@ -572,7 +572,7 @@ footer {
         width: 211px;
         height: 300px;
         border-radius: 20px;
-        =======width: 184px;
+        width: 184px;
         height: 324px;
 
     }
@@ -582,7 +582,6 @@ footer {
         height: 224px;
         border-radius: 20px 20px 0px 0px;
 
-        >>>>>>>e978a16478d7662e148851dde285709e2de5268a
     }
 
     .baseJuego {
@@ -594,7 +593,7 @@ footer {
         margin-top: inherit;
 
         width: auto;
-        >>>>>>>e978a16478d7662e148851dde285709e2de5268a height: 100px;
+        height: 100px;
         margin-top: 0;
         border-radius: 0px 0px 20px 20px;
         background: #FFFFFF;
@@ -872,5 +871,4 @@ footer {
     }
 
 
-}
 }
