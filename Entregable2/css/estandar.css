@@ -488,13 +488,13 @@ footer {
       .card_chica {
         width: 184px;
         height: 324px;
-        border-radius: 20px;
       
       }
       .card_chica>img {
         width: 184px;
         height: 224px;
-        border-radius: 20px;
+        border-radius: 20px 20px 0px 0px;
+
       }
       
       .baseJuego {
@@ -504,7 +504,7 @@ footer {
         justify-content: center;
         align-items: flex-start;
         margin-top: inherit;
-        width: 184px;
+        width: auto;
         height: 100px;
         margin-top: 0;
         border-radius: 0px 0px 20px 20px;
@@ -562,7 +562,7 @@ footer {
       }
       
       .parrafoJuego {
-        width: inherit;
+        width: 100%;
         border-top: 1px solid #000;
       
       }
@@ -580,7 +580,7 @@ footer {
         width: 402px;
         max-width: 402%;
         height: 550px;
-        left: 1063;
+        left: 980px;
         top: 80px;
         border-radius: 20px;
         z-index: 100;

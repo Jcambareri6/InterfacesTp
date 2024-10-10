@@ -327,43 +327,6 @@ h3 {
 
 }
 
-.card_chica {
-  width: 184px;
-  height: 324px;
-  border-radius: 20px;
-
-}
-
-.card_chica>img {
-  width: 184px;
-  height: 224px;
-  border-radius: 20px;
-}
-
-.baseJuego {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: inherit;
-  width: 184px;
-  height: 100px;
-  margin-top: 0;
-  border-radius: 0px 0px 20px 20px;
-  background: #FFFFFF;
-  gap: 14px;
-
-}
-
-.baseJuego>.nombreDelJuego,
-.parrafoJuego>p {
-  color: #000;
-  margin-left: 14px;
-
-
-}
-
 .nombreDelJuego {
   white-space: nowrap;
   overflow: hidden;
@@ -375,43 +338,6 @@ h3 {
   font-size: 16px;
 
 
-}
-
-.card-title:hover::after {
-  content: attr(title);
-  position: absolute;
-  background-color: #2f3237;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 10;
-  opacity: 1;
-  visibility: visible;
-}
-
-
-.nombreDelJuego:hover::after {
-  transition: opacity 0.3s ease;
-}
-
-.nombreDelJuego::after {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-.parrafoJuego {
-  width: inherit;
-  border-top: 1px solid #000;
-
-}
-
-.parrafoJuego>p {
-  margin-top: 5px;
 }
 
 .comunidad {
