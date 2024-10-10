@@ -206,11 +206,15 @@ footer {
     }
 
     .contenedor_menuCarrito {
-        margin-right: 30px;
+        margin-right: 57px;
     }
 
     .contenedorLogoMenu>.logo {
         margin-left: 20px;
+    }
+
+    .contenedorLogoMenu{
+        margin-left: 62px;
     }
 
     .barra_busqueda {
