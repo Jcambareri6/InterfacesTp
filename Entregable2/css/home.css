@@ -37,8 +37,7 @@
 }
 
 
-.card_chica,
-.card_chica_ultima {
+.card_chica {
     width: 90px;
     height: 134px;
     background: #FFFFFF;
@@ -47,7 +46,7 @@
 
 .card_grande_fuminado,
 .card_chica2,
-.card_chica_fuminado {
+.card_chica_ultima {
     display: none;
 }
 
