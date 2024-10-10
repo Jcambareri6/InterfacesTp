@@ -1,4 +1,4 @@
-* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -324,8 +324,7 @@ footer {
 @media (min-width: 900px) {
 
     .contenedor_row {
-        margin-left: 61px;
-        margin-right: 62px;
+        
         display: flex;
         flex-direction: row;
     }
@@ -486,18 +485,6 @@ footer {
    
    
       .card_chica {
-<<<<<<< HEAD
-        object-fit: cover;
-        width: 211px;
-        height: 300px;
-        border-radius: 10px;
-      
-      }
-      .card_chica>img {
-        width: 211px;
-        height: 300px;
-        border-radius: 20px;
-=======
         width: 184px;
         height: 324px;
       
@@ -507,7 +494,6 @@ footer {
         height: 224px;
         border-radius: 20px 20px 0px 0px;
 
->>>>>>> e978a16478d7662e148851dde285709e2de5268a
       }
       
       .baseJuego {
@@ -517,11 +503,7 @@ footer {
         justify-content: center;
         align-items: flex-start;
         margin-top: inherit;
-<<<<<<< HEAD
-        width: 211px;
-=======
         width: auto;
->>>>>>> e978a16478d7662e148851dde285709e2de5268a
         height: 100px;
         margin-top: 0;
         border-radius: 0px 0px 20px 20px;
