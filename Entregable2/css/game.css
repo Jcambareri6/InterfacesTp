@@ -1,6 +1,7 @@
+
 .contenedor_juego {
-  margin: 20px auto;
-  max-width: 1000px;
+
+  width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +38,7 @@ h3 {
 }
 
 .pantallajuego {
-  width: 1000px;
+  width: 1400px;
   height: 600px;
 
   background-size: cover;
@@ -98,7 +99,7 @@ h3 {
 }
 
 .BarraAyuda {
-  width: 1000px;
+  width: 1400px;
   height: 54px;
   background-color: #010101;
   position: absolute;
@@ -133,8 +134,8 @@ h3 {
   background-color: #2f3237;
   border: none;
   align-items: center;
-  margin-left: 650px;
-  top: 560px;
+  margin-left: 850px;
+  top: 540px;
 
 }
 
@@ -177,8 +178,8 @@ h3 {
 
 .menuControles {
   height: 300px;
-  margin-left: 630px;
-  top: 380px;
+  margin-left: 850px;
+  top: 360px;
 }
 
 .menuControles>h1 {
@@ -203,64 +204,68 @@ h3 {
 
 .presentacionDelJuego {
   margin-top: 30px;
-  width: 1000px;
+  width: 1400px;
   height: 689px;
   background-color: #2f3237;
   border-radius: 10px;
   display: grid;
   grid-template-areas: "descripcion multimedia"
     "FotosDelJuego";
-  grid-template-columns: 391px 572px;
-  grid-template-rows: 387px 182px;
-  column-gap: 20px;
-  row-gap: 18px;
+  grid-template-columns: 391px 872px;
+  grid-template-rows: 387px 300px;
+  column-gap: 60px;
+  row-gap: 30px;
+  
 
 
 }
 
 .ContenedorDescripcion {
   grid-area: "descripcion";
-  margin-left: 50px;
-  margin-top: 59px;
+  margin-left: 90px;
+  margin-top: 39px;
 }
 
 .ContenedorDescripcion>.SubtituloSeccion {
   margin-bottom: 35px;
   font-style: Medium;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .presentacionDelJuego>.ContenedorDescripcion>.parrafoDescripcion {
   height: 240px;
-  width: 299px;
+  width: 300px;
   line-height: 20px;
   font-style: normal;
   font-weight: 300;
-  margin-bottom: 26px;
+  margin-bottom: 60px;
+  font-size: 18px; 
+ 
 
 
 }
 
-.ContenedorDescripcion>p {
+.ContenedorDescripcion>.parradoCreadorJuego,.parrafoLinkPaginaOficial {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 15px;
   margin-bottom: 5px;
+
 }
 
 .videoDelJuego {
   grid-area: "multimedia";
   display: flex;
   justify-content: center;
-  margin-top: 78px;
-  margin-left: 33px;
-  margin-right: 29px;
+  margin-top: 85px;
+  
+
 
 }
 
 .video {
 
-  min-width: 330px;
+
   transition: 0.3s ease-in;
   border-radius: 8px;
 
@@ -272,27 +277,27 @@ h3 {
 
 .fotoDelJuego {
 
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 17px;
   grid-area: "FotosDelJuego";
-  width: 1000px;
+  width: 1400px;
   height: 182px;
 }
 
 .fotoDelJuego>.carrouselMultimedia {
   display: flex;
-
+  
 }
 
 .carrouselMultimedia {
-  margin: 33px 31px 34px 0px;
+  margin: 53px 31px 34px 0px;
   gap: 20px;
 
 }
 
 .carrouselMultimedia>img {
 
-  width: 293px;
+  width: 400px;
   height: 182px;
   border-radius: 4px;
   object-fit: cover;
