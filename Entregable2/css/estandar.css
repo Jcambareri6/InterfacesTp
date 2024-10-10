@@ -68,7 +68,146 @@ header>div {
 
 }
 
+#menu_usuario {
+    background-color: #2F3237;
+    border: none;
+    position: absolute;
+    width: 100%;
+    max-width: 270px;
+    height: 76%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 70px;
+    border-radius: 20px;
+    z-index: 100;
+}
 
+.cerrar {
+    margin-left: 344px;
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+#menu_usuario ::backdrop {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+.datos_usuario1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+
+.cerrar {
+    width: 23px;
+    height: 23px;
+    margin-top: 10px;
+    margin-right: 14px
+}
+
+.datos_usuario1>button {
+    margin-left: 0;
+}
+
+.datos_usuario1>h1 {
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 16px;
+    text-align: right;
+}
+
+.datos_usuario1>p {
+    margin-top: 7px;
+    margin-right: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+.datos_usuario2>div>a,
+.datos_usuario3>div>a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: auto;
+    margin-left: 27px;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+.datos_usuario2>div>a:hover,
+.datos_usuario3>div>a:hover {
+    color: #F7BA1F;
+}
+
+.datos_usuario2>div {
+
+    margin-top: 10px;
+}
+
+.datos_usuario3>.a1 {
+    margin-top: 25px;
+}
+
+.datos_usuario3>.a2 {
+    margin-bottom: 25px;
+}
+
+.datos_usuario3>div {
+    margin-bottom: 5px;
+}
+
+.datos_usuario3 {
+    border-top: white solid 3px;
+    border-bottom: white solid 3px;
+    margin-top: 30px;
+}
+
+.datos_usuario2,
+.datos_usuario3 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.datos_usuario2 svg,
+.datos_usuario3 svg {
+    margin-right: 6px;
+}
+
+.redes-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 52px;
+    gap: 11px;
+}
 
 .categorias {
     background-color: #2F3237;
@@ -359,6 +498,7 @@ footer {
         background-color: rgba(0, 0, 0, 0.25);
     }
 
+
     .datos_usuario1 {
         margin-top: 30px;
         margin-left: 80px;
@@ -373,7 +513,7 @@ footer {
     }
 
     .datos_usuario1>button {
-        margin-left: 100px;
+        margin-left: 0;
     }
 
     .datos_usuario1>h1 {
@@ -388,7 +528,7 @@ footer {
 
     .datos_usuario1>p {
         margin-top: 7px;
-        margin-right: 70px;
+        margin-right: 0px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 300;
@@ -410,6 +550,7 @@ footer {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
+
     }
 
     .datos_usuario2>div>a:hover,
@@ -447,6 +588,7 @@ footer {
         display: flex;
         flex-direction: column;
 
+
     }
 
     .datos_usuario2 svg,
@@ -457,13 +599,9 @@ footer {
     .redes-usuario {
         display: flex;
         justify-content: center;
-        /* Centra los íconos horizontalmente */
         align-items: center;
-        /* Centra los íconos verticalmente */
         margin-top: 52px;
-        /* Ajusta el margen superior si es necesario */
         gap: 11px;
-        /* Espacio entre los íconos */
     }
 
     footer {
