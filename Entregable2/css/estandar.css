@@ -485,15 +485,16 @@ footer {
    
    
       .card_chica {
-        width: 184px;
-        height: 324px;
+        object-fit: cover;
+        width: 211px;
+        height: 300px;
+        border-radius: 10px;
       
       }
       .card_chica>img {
-        width: 184px;
-        height: 224px;
-        border-radius: 20px 20px 0px 0px;
-
+        width: 211px;
+        height: 300px;
+        border-radius: 20px;
       }
       
       .baseJuego {
@@ -503,12 +504,24 @@ footer {
         justify-content: center;
         align-items: flex-start;
         margin-top: inherit;
-        width: auto;
+        width: 211px;
         height: 100px;
         margin-top: 0;
         border-radius: 0px 0px 20px 20px;
         background: #FFFFFF;
         gap: 14px;
+      
+      }
+      .nombreDelJuego {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 95%;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+      
       
       }
       

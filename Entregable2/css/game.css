@@ -330,18 +330,7 @@ h3 {
   margin-bottom: 70PX;
 }
 
-.nombreDelJuego {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 95%;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 16px;
 
-
-}
 
 .comunidad {
   display: flex;
