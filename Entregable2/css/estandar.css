@@ -216,14 +216,12 @@ header>div {
     row-gap: 20px;
     top: 70px;
     width: 100px;
-    height: 100px;
+    height: 699px;
     flex-direction: column;
     z-index: 1000;
 }
 
-.categorias>button p {
-    display: none;
-}
+
 
 .categorias>button {
     height: 35px;
