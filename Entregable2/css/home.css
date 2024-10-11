@@ -30,24 +30,25 @@
 
 
 .card_grande {
-    width: 123px;
+    width: 140px;
     height: 152px;
     background: #FFFFFF;
     border-radius: 20px;
+    margin: 10px;
 }
 
 
-.card_chica,
-.card_chica_ultima {
-    width: 90px;
+.card_chica {
+    width: 110px;
     height: 134px;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
+    margin: 10px;
 }
 
 .card_grande_fuminado,
 .card_chica2,
-.card_chica_fuminado {
+.card_chica_ultima {
     display: none;
 }
 
@@ -59,17 +60,23 @@
 
 .carrousel_chico,
 .carrousel_grande {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    /* Asegura que las cartas se distribuyan en filas */
+    justify-content: center;
+    /* Centra las cartas dentro del carrusel */
+}
+
+.card_chica,
+.card_chica2 {
+    margin-bottom: 4rem;
 }
 
 .carrousel_grande>div>img {
-    width: 123px;
+    width: 140px;
     height: 152px;
-    border-radius: 20px;
     max-width: 100%;
-    /* Asegúrate de que no exceda el tamaño del contenedor */
     max-height: 100%;
-    /* Asegúrate de que no exceda el tamaño del contenedor */
     border-radius: 20px;
     object-fit: cover;
 }
@@ -77,25 +84,19 @@
 .carrousel_grande>div>a>img {
     width: 350px;
     height: 305px;
-    border-radius: 20px;
     max-width: 100%;
-    /* Asegúrate de que no exceda el tamaño del contenedor */
     max-height: 100%;
-    /* Asegúrate de que no exceda el tamaño del contenedor */
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     object-fit: cover;
 }
 
 .carrousel_chico div>img {
     max-width: 100%;
-    /* Asegúrate de que no exceda el tamaño del contenedor */
     max-height: 100%;
-    /* Asegúrate de que no exceda el tamaño del contenedor */
-    border-radius: 30px;
+    border-radius: 20px 20px 0px 0px;
     object-fit: cover;
-    width: 90px;
+    width: 110px;
     height: 134px;
-    border-radius: 10px;
 }
 
 
