@@ -30,11 +30,16 @@
 
 
 .card_grande {
-    width: 140px;
-    height: 152px;
+    width: 200px;
+    height: 230px;
     background: #FFFFFF;
     border-radius: 20px;
-    margin: 10px;
+    margin: -2px;
+    
+}
+
+.card_grande2 {
+    display: none;
 }
 
 
@@ -43,7 +48,7 @@
     height: 134px;
     background: #FFFFFF;
     border-radius: 20px 20px 0px 0px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .card_grande_fuminado,
@@ -60,7 +65,7 @@
 
 .carrousel_chico,
 .carrousel_grande {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     display: flex;
     /* Asegura que las cartas se distribuyan en filas */
     justify-content: center;
@@ -73,8 +78,8 @@
 }
 
 .carrousel_grande>div>img {
-    width: 140px;
-    height: 152px;
+    width: 200px;
+    height: 230px;
     max-width: 100%;
     max-height: 100%;
     border-radius: 20px;
@@ -86,7 +91,7 @@
     height: 305px;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
     object-fit: cover;
 }
 
@@ -97,6 +102,10 @@
     object-fit: cover;
     width: 110px;
     height: 134px;
+}
+
+.nombreDelJuego {
+    font-size: 12px;
 }
 
 
@@ -142,7 +151,8 @@
 
     .card_grande_fuminado,
     .card_chica2,
-    .card_chica_ultima {
+    .card_chica_ultima,
+    .card_grande2 {
         display: block;
     }
 
@@ -151,12 +161,11 @@
         display: block;
     }
 
-    .contenedor_carrouseles>.carrousel_grande>.card_grande,
-    .card_grande2 {
-        width: 350px;
-        height: 305px;
-        background: #FFFFFF;
-        border-radius: 20px;
+    .nombreDelJuego {
+        font-size: 18px;
+    }
+    .parrafoJuego>p {
+        font-size: 16px;
     }
 
     .contenedor_carrouseles>h1 {
@@ -173,6 +182,7 @@
 
     .contenedor_carrouseles>.carrousel_grande>.card_grande,
     .card_grande2 {
+        margin: 0;
         margin-left: 62px;
         width: 360px;
         height: 305px;
@@ -206,6 +216,7 @@
     .card_chica2,
     .card_chica_ultima {
         margin-left: 29px;
+        margin: 13px;
         width: 211px;
         height: 300px;
         background-color: white;

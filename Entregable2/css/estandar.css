@@ -335,14 +335,16 @@ header>div {
 
 .parrafoJuego>p {
     margin-top: 5px;
+    font-size: 12px;
 }
 
+.card_chica2>div>.carrito,
 .card_chica>div>.carrito,
 .card_chica_ultima>div>.carrito {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
+    margin-top: 5px;
     /* Mantiene el carrito al final */
     background-color: green;
     width: 100%;
@@ -456,7 +458,7 @@ footer {
 
 
     .contenedorLogoMenu {
-        margin-left: 62px;
+        margin-left: 60px;
     }
 
     .barra_busqueda {
