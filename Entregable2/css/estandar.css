@@ -210,25 +210,24 @@ header>div {
 }
 
 .categorias {
+    display: flex;
     background-color: #2F3237;
-   /* position: absolute;*/
+    align-items: flex-start;
+    row-gap: 20px;
     top: 70px;
     width: 100px;
-    display: none;
+    height: 100px;
     flex-direction: column;
-    height: 669px;
+    z-index: 1000;
 }
 
-.categorias>button p {
-    display: none;
-}
 
 .categorias>button {
     height: 35px;
     display: inline-flex;
     align-items: center;
-    padding-left: 10px;
     text-align: center;
+    column-gap: 10px;
     justify-content: center;
     border: none;
     background-color: #2F3237;
@@ -241,6 +240,22 @@ header>div {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+.menuCategorias {
+
+    width: 100px;
+    height: 75%;
+    background-color: #2F3237;
+    position: absolute;
+    border: none;
+    top: 70px;
+    transition: 0.3s ease-out;
+
+}
+
+.btn_barra {
+    all: unset;
+    cursor: pointer;
+}
 
 .categorias>button>img {
     width: 60px;
@@ -324,7 +339,7 @@ footer {
 @media (min-width: 900px) {
 
     .contenedor_row {
-        
+
         display: flex;
         flex-direction: row;
     }
@@ -346,8 +361,8 @@ footer {
     .contenedor_menuCarrito {
         margin-right: 57px;
     }
-    
-  
+
+
 
     .contenedorLogoMenu {
         margin-left: 62px;
@@ -415,29 +430,30 @@ footer {
     body {
         background-color: #101216;
     }
-    .btn_barra{
+
+    .btn_barra {
         all: unset;
         cursor: pointer;
     }
-    .menuCategorias{
-   
-     width: 200px;
-     position: absolute;
-     border: none;
-     top: 70px;
-     transition:  0.3s ease-out;
-    
+
+    .menuCategorias {
+
+        width: 200px;
+        position: absolute;
+        border: none;
+        top: 70px;
+        transition: 0.3s ease-out;
+
     }
 
     .categorias {
         display: flex;
         background-color: #2F3237;
-       
         top: 70px;
         width: 100%;
         height: 1600px;
         flex-direction: column;
-        
+
         z-index: 1000;
     }
 
@@ -482,23 +498,24 @@ footer {
         display: block;
         max-width: 0 auto;
     }
-   
-   
-      .card_chica {
+
+
+    .card_chica {
         object-fit: cover;
         width: 211px;
         height: 300px;
         border-radius: 10px;
-      
-      }
-      .card_chica>img {
+
+    }
+
+    .card_chica>img {
         width: 211px;
         height: 300px;
         border-radius: 20px;
-      }
-      
-      .baseJuego {
-      
+    }
+
+    .baseJuego {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -510,9 +527,10 @@ footer {
         border-radius: 0px 0px 20px 20px;
         background: #FFFFFF;
         gap: 14px;
-      
-      }
-      .nombreDelJuego {
+
+    }
+
+    .nombreDelJuego {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -521,19 +539,19 @@ footer {
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
         font-size: 16px;
-      
-      
-      }
-      
-      .baseJuego>.nombreDelJuego,
-      .parrafoJuego>p {
+
+
+    }
+
+    .baseJuego>.nombreDelJuego,
+    .parrafoJuego>p {
         color: #000;
         margin-left: 14px;
-      
-      
-      }
-      
-      .nombreDelJuego {
+
+
+    }
+
+    .nombreDelJuego {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -542,11 +560,11 @@ footer {
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
         font-size: 16px;
-      
-      
-      }
-      
-      .card-title:hover::after {
+
+
+    }
+
+    .card-title:hover::after {
         content: attr(title);
         position: absolute;
         background-color: #2f3237;
@@ -560,30 +578,30 @@ footer {
         z-index: 10;
         opacity: 1;
         visibility: visible;
-      }
-      
-      
-      .nombreDelJuego:hover::after {
+    }
+
+
+    .nombreDelJuego:hover::after {
         transition: opacity 0.3s ease;
-      }
-      
-      .nombreDelJuego::after {
+    }
+
+    .nombreDelJuego::after {
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease;
-      }
-      
-      .parrafoJuego {
+    }
+
+    .parrafoJuego {
         width: 100%;
         border-top: 1px solid #000;
-      
-      }
-      
-      .parrafoJuego>p {
+
+    }
+
+    .parrafoJuego>p {
         margin-top: 5px;
-      }
-      
-      
+    }
+
+
 
     #menu_usuario {
         background-color: #2F3237;
