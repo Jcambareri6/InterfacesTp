@@ -1,261 +1,371 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
-
 
 .contenedor_carrouseles {
-    margin: 1rem;
-    padding: 0.5rem;
-
+  margin: 1rem;
+  padding: 0.5rem;
 }
 
-.contenedor_carrouseles>div {
-
-    display: flex;
-    width: 100%;
-    gap: 1rem;
-    flex-direction: row;
-
-
+.contenedor_carrouseles > div {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: row;
 }
 
 .flecha_der,
 .flecha_izq {
-    display: none;
+
+  display: none;
 }
 
-
 .card_grande {
-    width: 200px;
-    height: 230px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    margin: -2px;
-    
+  width: 200px;
+  height: 230px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: -2px;
 }
 
 .card_grande2 {
-    display: none;
+  display: none;
 }
 
-
 .card_chica {
-    width: 110px;
-    height: 134px;
-    background: #FFFFFF;
-    border-radius: 20px 20px 0px 0px;
-    margin: 5px;
+  width: 110px;
+  height: 134px;
+  background: #ffffff;
+  border-radius: 20px 20px 0px 0px;
+  margin: 5px;
+}
+.carrousel_chico>.card_grande>.baseJuegoCardGrande{
+    display: none;
 }
 
 .card_grande_fuminado,
 .card_chica2,
 .card_chica_ultima {
-    display: none;
+  display: none;
 }
 
 .titulo_carrousel {
-    font-size: 20px;
-    margin: 0.5rem;
-
+  font-size: 20px;
+  margin: 0.5rem;
 }
 
 .carrousel_chico,
 .carrousel_grande {
-    margin-bottom: 4rem;
-    display: flex;
-    /* Asegura que las cartas se distribuyan en filas */
-    justify-content: center;
-    /* Centra las cartas dentro del carrusel */
+  margin-bottom: 4rem;
+  display: flex;
+  /* Asegura que las cartas se distribuyan en filas */
+  justify-content: center;
+  /* Centra las cartas dentro del carrusel */
 }
 
 .card_chica,
 .card_chica2 {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+.carrousel_grande > .card_grande>.baseJuegoCardGrande,
+.carrousel_grande>.card_grande2 > .baseJuegoCardGrande {
+    display: none;
 }
 
-.carrousel_grande>div>img {
-    width: 200px;
-    height: 230px;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
+.carrousel_grande > div > img {
+  width: 200px;
+  height: 230px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-.carrousel_grande>div>a>img {
-    width: 350px;
-    height: 305px;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 20px 20px 20px 20px;
-    object-fit: cover;
+
+.carrousel_grande > div > a > img {
+  width: 350px;
+  height: 305px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px 20px 20px 20px;
+  object-fit: cover;
 }
 
-.carrousel_chico div>img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 20px 20px 0px 0px;
-    object-fit: cover;
-    width: 110px;
-    height: 134px;
+.carrousel_chico div > img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px 20px 0px 0px;
+  object-fit: cover;
+  width: 110px;
+  height: 134px;
 }
 
 .nombreDelJuego {
-    font-size: 12px;
+  font-size: 12px;
+}
+
+/* desktop */
+@media (min-width: 900px) {
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-container {
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay {
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(47, 50, 55,0.8);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-container {
+    text-align: center;
 }
 
 
 
-/* desktop */
-@media (min-width: 900px) {
 
-    .contenedor_row {
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-left: 62px;
-        margin-right: 62px;
+#progress-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    top: 390px; 
+    right: 823px;
+}
+
+
+
+.loader {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: rotate(45deg);
+    overflow: hidden;
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    margin: auto;
+    background:rgba(47, 50, 55,0.8) ;
+  }
+  .loader:before{
+    content: '';
+    position: absolute;
+    inset: -15px;
+    margin: auto;
+    background: #7B62CB;
+    animation: diamondLoader 1.3s linear infinite;
+  }
+  @keyframes diamondLoader {
+    0%  ,10% {
+      transform: translate(-64px , -64px) rotate(-45deg)
     }
-
-    .contenedor_carrouseles {
-        width: inherit;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: normal;
-        margin-left: 62px;
-        margin-right: 62px;
-
+    90% , 100% {
+      transform: translate(0px , 0px) rotate(-45deg)
     }
+  }
+  .contenedor_row {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 62px;
+    margin-right: 62px;
+  }
 
-    .carrousel_grande,
-    .carrousel_chico {
-        width: auto;
-        justify-content: center;
-        margin: 0px;
-    }
+  .contenedor_carrouseles {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    margin-left: 62px;
+    margin-right: 62px;
+  }
 
-    .carrousel_chico {
-        margin-bottom: 130px;
-    }
+  .carrousel_grande,
+  .carrousel_chico {
+    width: auto;
+    justify-content: center;
+    margin: 0px;
+  }
 
-    .carrousel_grande {
-        margin-bottom: 100px;
-    }
+  .carrousel_chico {
+    margin-bottom: 130px;
+  }
 
-    .card_grande_fuminado,
-    .card_chica2,
-    .card_chica_ultima,
-    .card_grande2 {
-        display: block;
-    }
-
-    .flecha_der,
-    .flecha_izq {
-        display: block;
-    }
-
-    .nombreDelJuego {
-        font-size: 18px;
-    }
-    .parrafoJuego>p {
-        font-size: 16px;
-    }
-
-    .contenedor_carrouseles>h1 {
-        margin-top: 100px;
-        margin-bottom: 15px;
-        margin-left: 75px;
-    }
-
-    .contenedor_carrouseles>h2 {
-        margin-top: 50px;
-        margin-bottom: 15px;
-        margin-left: 79px;
-    }
-
-    .contenedor_carrouseles>.carrousel_grande>.card_grande,
-    .card_grande2 {
-        margin: 0;
-        margin-left: 62px;
-        width: 360px;
-        height: 305px;
-        top: 3px;
-        background: #FFFFFF;
-        border-radius: 20px;
-    }
-
-    .contenedor_carrouseles>.carrousel_grande>.card_grande2 {
-        margin-left: 0px;
-    }
-
-    .carrousel_grande>.card_grande>img,
-    .carrousel_grande>.card_grande2>img,
-    .carrousel_grande>.card_grande>a>img {
-        object-fit: cover;
-        width: 360px;
-        height: 305px;
-    }
-
-    .carrousel_chico>.card_chica>img,
-    .carrousel_chico>.card_chica2>img,
-    .carrousel_chico>.card_chica_ultima>img {
-        object-fit: cover;
-        width: 211px;
-        height: 300px;
-        border-radius: 20px 20px 0px 0px;
-    }
-
-    .contenedor_carrouseles>.carrousel_chico>.card_chica,
-    .card_chica2,
-    .card_chica_ultima {
-        margin-left: 29px;
-        margin: 13px;
-        width: 211px;
-        height: 300px;
-        background-color: white;
-        top: 10.11%;
-        bottom: 0%;
-        border-radius: 20px 20px 0px 0px;
-    }
+  .carrousel_grande {
+    margin-bottom: 100px;
+  }
+  .carrousel_grande > .card_grande>.baseJuegoCardGrande,
+  .carrousel_grande>.card_grande2 > .baseJuegoCardGrande {
+    width: 100%;
+    height: 37px;
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  .carrousel_grande > .card_grande>.baseJuegoCardGrande>p,
+  .carrousel_grande>.card_grande2 > .baseJuegoCardGrande>p {
+  
 
 
-    .card_chica2 {
-        margin-left: 0px;
-    }
+    width: 308px;
+    height: 29px;
 
-    .flecha_der,
-    .flecha_izq {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 5px;
+    text-align: center;
+    color: #101216;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-        margin-top: 80px;
-        width: 58px;
-        height: 113px;
-        border-radius: 0px 30px 30px 0px;
-        background: rgba(0, 0, 0, 0.8);
-        font-family: 'Inika';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 50px;
-        line-height: 83px;
-        color: #FFFFFF;
-        border: 1px solid #FFFFFF;
+  
+  }
 
-    }
+  .card_grande_fuminado,
+  .card_chica2,
+  .card_chica_ultima,
+  .card_grande2 {
+    display: block;
+  }
 
-    .flecha_izq {
-        border-radius: 30px 0px 0px 30px;
-    }
+  .flecha_der,
+  .flecha_izq {
+    display: block;
+  }
 
-    .flecha_der:hover,
-    .flecha_izq:hover {
-        background: rgba(253, 253, 253, 0.212);
-    }
+  .nombreDelJuego {
+    font-size: 18px;
+  }
+  .parrafoJuego > p {
+    font-size: 16px;
+  }
 
+  .contenedor_carrouseles > h1 {
+    margin-top: 100px;
+    margin-bottom: 15px;
+    margin-left: 75px;
+    font-size: 24px;
+    font-weight: 900;
+  }
 
+  .contenedor_carrouseles > h2 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    margin-left: 79px;
+  }
+
+  .contenedor_carrouseles > .carrousel_grande > .card_grande,
+  .card_grande2 {
+    margin: 0;
+    margin-left: 62px;
+    width: 360px;
+    height: 305px;
+    top: 3px;
+    background: #ffffff;
+    border-radius: 20px;
+  }
+
+  .contenedor_carrouseles > .carrousel_grande > .card_grande2 {
+    margin-left: 0px;
+  }
+
+  .carrousel_grande > .card_grande > img,
+  .carrousel_grande > .card_grande2 > img,
+  .carrousel_grande > .card_grande > a > img {
+    object-fit: cover;
+    width: 360px;
+    height: 305px;
+  }
+
+  .carrousel_chico > .card_chica > img,
+  .carrousel_chico > .card_chica2 > img,
+  .carrousel_chico > .card_chica_ultima > img {
+    object-fit: cover;
+    width: 211px;
+    height: 300px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .contenedor_carrouseles > .carrousel_chico > .card_chica,
+  .card_chica2,
+  .card_chica_ultima {
+    margin-left: 29px;
+    margin: 13px;
+    width: 211px;
+    height: 300px;
+    background-color: white;
+    top: 10.11%;
+    bottom: 0%;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .card_chica2 {
+    margin-left: 0px;
+  }
+
+  .flecha_der,
+  .flecha_izq {
+    margin-top: 80px;
+    width: 58px;
+    height: 113px;
+    border-radius: 0px 30px 30px 0px;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 83px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .flecha_izq {
+    border-radius: 30px 0px 0px 30px;
+  }
+
+  .flecha_der:hover,
+  .flecha_izq:hover {
+    background: rgba(253, 253, 253, 0.212);
+  }
 }
