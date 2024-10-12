@@ -43,6 +43,9 @@
   border-radius: 20px 20px 0px 0px;
   margin: 5px;
 }
+.carrousel_chico>.card_grande>.baseJuegoCardGrande{
+    display: none;
+}
 
 .card_grande_fuminado,
 .card_chica2,
@@ -68,6 +71,10 @@
 .card_chica2 {
   margin-bottom: 4rem;
 }
+.carrousel_grande > .card_grande>.baseJuegoCardGrande,
+.carrousel_grande>.card_grande2 > .baseJuegoCardGrande {
+    display: none;
+}
 
 .carrousel_grande > div > img {
   width: 200px;
@@ -77,6 +84,7 @@
   border-radius: 20px;
   object-fit: cover;
 }
+
 
 .carrousel_grande > div > a > img {
   width: 350px;
