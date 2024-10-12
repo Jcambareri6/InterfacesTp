@@ -87,6 +87,29 @@ form>input::placeholder{
     line-height: 55px;
     text-decoration: none;
     margin-left: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.boton_inicio::before, .boton_inicio::after {
+    content: '';
+    position: absolute;
+    left: -370px; 
+    top: 50%; /* Centra el rectángulo verticalmente */
+    width: 40%;
+    height: 80%;
+    background-color: rgba(255, 255, 255,0.7);
+    opacity: 0.2;
+    transform: rotate(45deg);
+    transition: all ease 0.5s;
+   
+}
+
+.boton_inicio::after {
+    transition-delay: 0.2s;
+}
+
+.boton_inicio:hover::before, .boton_inicio:hover::after {
+    left: 100%; 
 }
 .contenedor_socialmedia{
  display: flex;
