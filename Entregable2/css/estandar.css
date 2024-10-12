@@ -548,17 +548,11 @@ footer {
     .categorias {
         display: flex;
         background-color: #2F3237;
-
         top: 70px;
         width: 100%;
-        height: 1870px;
+        height: max-content;
         flex-direction: column;
-
         z-index: 1000;
-    }
-
-    .categorias>button p {
-        display: block;
     }
 
     .categorias>button {
@@ -576,6 +570,7 @@ footer {
     .categorias>button:hover {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         transform: translateY(-1px);
+        width: 100%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         color: #F7BA1F;
     }
