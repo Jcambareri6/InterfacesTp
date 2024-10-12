@@ -243,7 +243,7 @@ header>div {
 
 .menuCategorias {
 
-   
+
     background-color: #2F3237;
     position: absolute;
     border: none;
@@ -256,7 +256,8 @@ header>div {
     all: unset;
     cursor: pointer;
 }
-.categorias{
+
+.categorias {
     width: 200px;
     height: 975px;
 }
@@ -364,10 +365,12 @@ header>div {
 footer {
     background-color: #2c2c2c;
     color: #ffffff;
-    padding: 30px 20px;
+    padding: 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+
 }
 
 .footer-logo {
@@ -626,43 +629,48 @@ footer {
         gap: 14px;
 
     }
-.card_chica>.baseJuego>.contenedorParrafoCarrito{
-    display: flex;
-    gap: 10x;
-    
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid black;
-    width: 100%;
 
-   
-}
-     /* acomodando el carrito de arriba */
-    
-     
-.card_chica>.baseJuego>.contenedorParrafoCarrito>.carrito{
-    background-color: #00A455;
-    margin-right: 30px;
-    width: 32px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 10px;
-    position: absolute;
-    top: 1765px;
-    margin-left: 150px;
-   
+    .card_chica>.baseJuego>.contenedorParrafoCarrito {
+        display: flex;
+        gap: 10x;
 
-    
-}
-.card_chica>.baseJuego>.carritoSeccionAutos{
-   display: flex;
-    width: 100%;
-}
-.card_chica>.baseJuego>.carritoSeccionAutos>.carrito{
-    top: 1165px;
-  
-}
- .nombreDelJuego {
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 100%;
+
+
+    }
+
+    /* acomodando el carrito de arriba */
+
+
+    .card_chica>.baseJuego>.contenedorParrafoCarrito>.carrito {
+        background-color: #00A455;
+        margin-right: 30px;
+        width: 32px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        position: absolute;
+        top: 1765px;
+        margin-left: 150px;
+
+
+
+    }
+
+    .card_chica>.baseJuego>.carritoSeccionAutos {
+        display: flex;
+        width: 100%;
+    }
+
+    .card_chica>.baseJuego>.carritoSeccionAutos>.carrito {
+        top: 1165px;
+
+    }
+
+    .nombreDelJuego {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -734,7 +742,7 @@ footer {
         margin-top: 5px;
     }
 
-  
+
 
     #menu_usuario {
         background-color: #2F3237;
@@ -870,7 +878,6 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 48px;
         gap: 11px;
     }
 
@@ -880,9 +887,9 @@ footer {
         padding: 40px 60px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
         align-items: center;
-        margin-top: 179px;
+        gap: 12rem;
+        text-align: center;
 
     }
 
@@ -891,6 +898,7 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-right: 60px;
     }
 
     .footer-logo img {
@@ -900,7 +908,6 @@ footer {
 
     .footer-logo h3 {
         font-size: 18px;
-        margin: 0;
     }
 
     .redes-sociales {
@@ -917,7 +924,14 @@ footer {
 
     .footer-Sección {
         text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
         margin-top: 10px;
+        margin-left: 60px;
+
+
+
     }
 
     .footer-Sección h4 {
