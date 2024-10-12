@@ -216,7 +216,7 @@ header>div {
     row-gap: 20px;
     top: 70px;
     width: 100px;
-    height: 699px;
+    height: -100px;
     flex-direction: column;
     z-index: 1000;
 }
