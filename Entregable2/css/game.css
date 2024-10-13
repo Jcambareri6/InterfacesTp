@@ -221,6 +221,11 @@ h3 {
 
 }
 
+nav .categorias {
+  height: 2701px;
+
+}
+
 .ContenedorDescripcion {
   grid-area: "descripcion";
   margin-left: 180px;

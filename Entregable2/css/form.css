@@ -1,12 +1,14 @@
-
-footer{
+footer {
     margin-top: 0;
 }
-.ContenedorForm{
+
+.ContenedorForm {
     display: flex;
-    
+
 }
-.contenedor_menuCarrito,.barra_busqueda{
+
+.contenedor_menuCarrito,
+.barra_busqueda {
     display: none;
 }
 
@@ -17,23 +19,25 @@ footer{
     margin-left: 125px;
     margin-right: 125px;
 }
-.form_inicio>h1{
+
+.form_inicio>h1 {
     margin-left: 17px;
 }
-.imagen{
-   height: 1300px;
+
+.imagen {
+    height: 1300px;
     background-image: url(../img/FondoForm.jpg);
     width: 100%;
-    
-   
+
+
 }
+
 label {
     margin-top: 20px;
     margin-left: 20PX;
 }
 
-form
-.a_inicio,
+form .a_inicio,
 .a_registro {
     margin-top: 20px;
     margin-left: 128px;
@@ -64,7 +68,8 @@ form>input {
     margin-left: 20PX;
     margin-right: 20px;
 }
-form>input::placeholder{
+
+form>input::placeholder {
     position: absolute;
     margin-left: 15px;
 }
@@ -90,58 +95,73 @@ form>input::placeholder{
     overflow: hidden;
     position: relative;
 }
-.boton_inicio::before, .boton_inicio::after {
+
+.boton_inicio::before,
+.boton_inicio::after {
     content: '';
     position: absolute;
-    left: -370px; 
-    top: 50%; /* Centra el rectángulo verticalmente */
+    left: -370px;
+    top: 50%;
+    /* Centra el rectángulo verticalmente */
     width: 40%;
     height: 80%;
-    background-color: rgba(255, 255, 255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     opacity: 0.2;
     transform: rotate(45deg);
     transition: all ease 0.5s;
-   
+
+}
+
+nav .categorias {
+    height: 1299px;
 }
 
 .boton_inicio::after {
     transition-delay: 0.2s;
 }
 
-.boton_inicio:hover::before, .boton_inicio:hover::after {
-    left: 100%; 
+.boton_inicio:hover::before,
+.boton_inicio:hover::after {
+    left: 100%;
 }
-.contenedor_socialmedia{
- display: flex;
- flex-direction: row;
- justify-content: center;
 
- gap: 10px;
- width: 430px;
- margin-bottom: 26px;
- margin-top: 49px;
- margin-left: 20PX;
+.contenedor_socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 10px;
+    width: 430px;
+    margin-bottom: 26px;
+    margin-top: 49px;
+    margin-left: 20PX;
 }
-.contenedor_socialmedia>button{
+
+.contenedor_socialmedia>button {
     height: 55px;
     width: 93px;
     border-radius: 8px;
-    border:none;
+    border: none;
 }
-.barraEspacio{
+
+.barraEspacio {
     margin-left: 20PX;
 }
-.btn_fb{
+
+.btn_fb {
     background-color: #1877F2;
-    
+
 }
-.btn_Apple{
+
+.btn_Apple {
     background-color: #10141A;
 }
-.btnDiscord{
+
+.btnDiscord {
     background-color: #5865F2;
 }
-.contenedor_socialmedia>button:hover{
+
+.contenedor_socialmedia>button:hover {
     border: 1.5px solid #f7ba1f;
     transition: 0.4s ease-in;
 }
