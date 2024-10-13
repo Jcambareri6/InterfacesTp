@@ -77,26 +77,51 @@ h3 {
   background-color: #7b62cb;
   border-radius: 32px;
   width: 267px;
-  z-index: 1000;
   height: 69px;
   gap: 10px;
-  padding: 10px;
+  padding: 15px 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 15px 30px;
   border: none;
   cursor: pointer;
   font-size: 1.5em;
+  transition: all 0.3s linear;
+  animation: shrink 1.5s infinite;
+  transform-origin: center;
+}
+
+.play-button:hover {
+  color: rgba(255, 255, 255, 0.92);
+  background: #694FBB;
+  /* Mantener la animación para que no se detenga */
+  animation: shrink 1.5s infinite;
+  transform: translate(-50%, -50%);
+  animation: none;
 
 }
 
 .play-button>span,
 .fa-circle-play {
+  color: #fff;
   font-weight: 500;
   font-size: 32px;
   cursor: pointer;
+}
+
+@keyframes shrink {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  49% {
+    transform: translate(-50%, -50%) scale(1.05, 1.05);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .BarraAyuda {
