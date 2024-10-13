@@ -643,18 +643,7 @@ footer {
     border-radius: 10px;
     margin-top: 5px;
 }
-     /* acomodando el carrito de arriba */
-    
-     
-
-.card_chica>.baseJuego>.carritoSeccionAutos{
-   display: flex;
-    width: 100%;
-}
-.card_chica>.baseJuego>.carritoSeccionAutos>.carrito{
-    top: 1165px;
-  
-}
+ 
  .nombreDelJuego {
         white-space: nowrap;
         overflow: hidden;
