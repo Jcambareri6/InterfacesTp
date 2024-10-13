@@ -550,7 +550,7 @@ footer {
         background-color: #2F3237;
         top: 70px;
         width: 100%;
-        height: max-content;
+        height: 1810px;
         flex-direction: column;
         z-index: 1000;
     }
