@@ -109,102 +109,113 @@
 .nombreDelJuego {
   font-size: 12px;
 }
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-container {
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-overlay {
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(47, 50, 55, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+
+
+#progress-text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  position: absolute;
+  top: 48%;
+  right: 50%;
+  left: 46%;
+}
+
+
+
+.loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  margin: auto;
+  background: rgba(47, 50, 55, 0.8);
+}
+
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  margin: auto;
+  background: #7B62CB;
+  animation: diamondLoader 1.3s linear infinite;
+}
+
+@keyframes diamondLoader {
+
+  0%,
+  10% {
+    transform: translate(-64px, -64px) rotate(-45deg)
+  }
+
+  90%,
+  100% {
+    transform: translate(0px, 0px) rotate(-45deg)
+  }
+}
 
 /* desktop */
 @media (min-width: 900px) {
-  .loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  .loading-container {
-    text-align: center;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .loading-overlay {
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(47, 50, 55, 0.8);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  .loading-container {
-    text-align: center;
-  }
-
-
-
-  #progress-text {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFFFFF;
-    position: absolute;
-    top: 48%;
-    right: 49%;
-    left: 49%;
-  }
-
-
-
-  .loader {
-    position: relative;
-    width: 64px;
-    height: 64px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transform: rotate(45deg);
-    overflow: hidden;
-  }
-
-  .loader:after {
-    content: '';
-    position: absolute;
-    inset: 8px;
-    margin: auto;
-    background: rgba(47, 50, 55, 0.8);
-  }
-
-  .loader:before {
-    content: '';
-    position: absolute;
-    inset: -15px;
-    margin: auto;
-    background: #7B62CB;
-    animation: diamondLoader 1.3s linear infinite;
-  }
-
-  @keyframes diamondLoader {
-
-    0%,
-    10% {
-      transform: translate(-64px, -64px) rotate(-45deg)
-    }
-
-    90%,
-    100% {
-      transform: translate(0px, 0px) rotate(-45deg)
-    }
-  }
+  
+#progress-text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  position: absolute;
+  top: 48%;
+  right: 45%;
+  left: 45%;
+}
 
   .contenedor_row {
     width: auto;

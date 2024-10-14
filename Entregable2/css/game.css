@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden;
+}
 .contenedor_juego {
 
   display: flex;
@@ -294,16 +297,16 @@ h3 {
 .presentacionDelJuego {
   margin-top: 30px;
   width: 100%;
-  height: 689px;
+  height: 750px;
   background-color: #2f3237;
   border-radius: 10px;
   display: grid;
   grid-template-areas: "descripcion multimedia"
     "FotosDelJuego";
-  grid-template-columns: 391px 872px;
+  grid-template-columns: 391px 972px;
   grid-template-rows: 387px 300px;
-  column-gap: 120px;
-  row-gap: 30px;
+  column-gap: 30px;
+  row-gap: 50px;
 
 
 
@@ -316,7 +319,7 @@ nav .categorias {
 
 .ContenedorDescripcion {
   grid-area: "descripcion";
-  margin-left: 180px;
+  margin-left: 120px;
   margin-top: 39px;
 }
 
@@ -372,7 +375,7 @@ nav .categorias {
 
 .fotoDelJuego {
 
-  margin-left: 150px;
+  margin-left: 100px;
   margin-top: 17px;
   grid-area: "FotosDelJuego";
   width: 1400px;
@@ -408,7 +411,7 @@ nav .categorias {
 
 .seccionRecomendado>.SubtituloSeccion {
   margin-top: 42px;
-
+  margin-left: 45px;
   font-style: Medium;
   font-weight: 500;
   font-size: 24px;
@@ -420,6 +423,7 @@ nav .categorias {
   margin-top: 15px;
   gap: 45px;
   display: flex;
+  margin-left: 40px;
   margin-bottom: 70PX;
 }
 
@@ -429,17 +433,20 @@ nav .categorias {
   display: flex;
   flex-direction: column;
   height: 877px;
+  width: 1318px;
 }
 
 .encabezadoComentarios {
   display: flex;
-  width: 1559px;
+  width: 100%; /* Ajusta al 100% del contenedor */
+  max-width: 1400px; /* Máximo de 1400px si necesitas limitar el tamaño */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   border-bottom: #FFFFFF solid 1px;
   margin-top: 82px;
   margin-bottom: 48px;
+  padding: 0 10px; /* Agrega padding para ajustar el contenido */
 }
 
 .encabezadoComentarios>p {
@@ -457,7 +464,7 @@ nav .categorias {
 }
 
 .box-comentarios {
-  width: 1559px;
+  width: inherit;
   height: 210px;
   background-color: #101216;
 }
@@ -495,9 +502,9 @@ nav .categorias {
 
 .box-comentarios>form,
 .input-area {
-  width: 1500px;
+  width: 95%;
   height: 210px;
-  margin-left: 65px;
+  margin-left: 55px;
   border-radius: 8px;
   background-color: #2f3237;
 
@@ -511,7 +518,7 @@ nav .categorias {
   height: 160px;
   margin-left: 0px;
   background-color: #2f3237;
-  width: 1500px;
+  width: 100%;
 
 
 }
@@ -552,9 +559,9 @@ nav .categorias {
 }
 
 .box-comentarios>form>.configuracionDeTexto>.btnSubmit>button {
-  margin-left: 1112px;
+  margin-left: 870px;
   margin-top: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   background-color: #7b62cb;
   width: 135px;
   height: 36px;
@@ -564,9 +571,7 @@ nav .categorias {
 }
 
 .box-comentarios>form>.configuracionDeTexto>.btnSubmit>button:hover {
-  margin-left: 553px;
-  margin-top: 6px;
-  margin-bottom: 8px;
+  
   background-color: #7b62cb;
   width: 135px;
   height: 36px;
