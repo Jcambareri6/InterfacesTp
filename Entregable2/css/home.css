@@ -189,12 +189,12 @@
   background: #7B62CB;
   animation: diamondLoader 1.3s linear infinite;
 }
-/* .carrouselGrandeMobile{
+.carrouselGrandeMobile{
   visibility: hidden;
   height: 0;
   width: 0;
   margin: 0;
-} */
+}
 
 
 @keyframes diamondLoader {
@@ -469,7 +469,7 @@
    
   }
   .carrouselGrandeMobile{
-     display: block;
+     visibility: visible;
   }
 
  

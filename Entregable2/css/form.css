@@ -171,7 +171,7 @@ nav .categorias {
     background-color: #101216;
     border-radius: 10px;
     animation: bounceIn 0.6s ease;
-    position: sticky;
+    position: STI;
     top: 50%;
     left: 35%;
     right: 50%;
