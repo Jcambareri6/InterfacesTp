@@ -642,15 +642,32 @@ footer {
     }
 
     .carritoCard:hover {
-        color: #000;
         background-color: #fff;
         box-shadow: 0 0 10px 0 #000000, 0 0 10px 4px #000000;
-
-        svg>path {
-            stroke: #00A455;
-        }
+        color: #00A455;
+        transform: rotate(360deg) scale(1.2);
     }
 
+    .carritoCard svg>path {
+        stroke: #fff;
+        transition: stroke 400ms ease-in-out;
+    }
+
+    .carritoCard:hover svg>path {
+        stroke: #00A455;
+    }
+
+    /* Keyframe para hacer una rotación suave del carrito en hover */
+    @keyframes rotateCart {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
 
     .nombreDelJuego {
         white-space: nowrap;
