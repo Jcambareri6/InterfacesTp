@@ -21,26 +21,84 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, interval);
 });
-const carrouselGrande = document.querySelector('.carrousel_grande');
-const nextButton = document.querySelector('.flecha_der');
-const prevButton = document.querySelector('.flecha_izq');
+const flechasIzquierda = document.querySelectorAll('.flechaIzqAnimacion');
+const flechasDerecha = document.querySelectorAll('.flechaDerAnimacion');
+const carousels = document.querySelectorAll('.carrousel_grande');
 
-let scrollAmount = 0;
+let currentIndex = 0;
+console.log(flechasDerecha)
+// Inicializa la visualización del carrusel
+showCarousel(currentIndex);
+updateArrowVisibility(currentIndex); // Verifica la visibilidad de las flechas al inicio
 
-nextButton.addEventListener('click', () => {
-    console.log("hola")
-    carrouselGrande.scrollBy({
-        top: 0,
+function showCarousel(index) {
+    carousels.forEach((carousel, i) => {
+        if (i === index) {
+            console.log("hola")
+            carousel.classList.add('active');
+            carousel.classList.remove('out');
+        } else {
+            carousel.classList.remove('active');
+            carousel.classList.add('out');
+        }
+    });
+    updateArrowVisibility(index); // Actualiza la visibilidad de las flechas después de mostrar el carrusel
+}
 
-        left: carrouselGrande.clientWidth, // Mueve el carrusel al ancho completo de una tarjeta
-        behavior: 'smooth' // Transición suave
+function updateArrowVisibility(index) {
+    // Ocultar la flecha izquierda si estamos en el primer carrusel
+    if (index === 0) {
+        flechasIzquierda.forEach(flecha => flecha.classList.add('displayNone'));
+    } else {
+        flechasIzquierda.forEach(flecha => flecha.classList.remove('displayNone'));
+    }
+
+    // Ocultar la flecha derecha si estamos en el último carrusel
+    if (index === carousels.length - 1) {
+        flechasDerecha.forEach(flecha => flecha.classList.add('displayNone'));
+    } else {
+        flechasDerecha.forEach(flecha => flecha.classList.remove('displayNone'));
+    }
+}
+
+flechasDerecha.forEach(button => {
+    button.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % carousels.length; // Incrementar índice
+        showCarousel(currentIndex);
     });
 });
 
-prevButton.addEventListener('click', () => {
-    carrouselGrande.scrollBy({
-        top: 0,
-        left: -carrouselGrande.clientWidth, // Mueve hacia la izquierda al ancho completo de una tarjeta
-        behavior: 'smooth' // Transición suave
+flechasIzquierda.forEach(button => {
+    button.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + carousels.length) % carousels.length; // Decrementar índice
+        showCarousel(currentIndex);
     });
 });
+
+const popOverRegistro= document.querySelector("#registroExistoso")
+const formRegistro = document.querySelector("#form_registro");
+let overlay = document.querySelector('#overlay');
+formRegistro.addEventListener('submit', (e)=>{
+
+    e.preventDefault();
+    console.log(popOverRegistro);
+    popOverRegistro.showPopover();
+    mostrarOverlay();
+})
+
+function mostrarOverlay() {
+  overlay.classList.remove("hidden"); 
+  overlay.classList.add("show"); 
+
+  overlay.addEventListener('click', ocultarRegistroExitoso);
+  popover.addEventListener('click', ocultarRegistroExitoso);
+}
+
+
+function ocultarRegistroExitoso() {
+  overlay.classList.add("hidden");
+  popover.classList.remove("show");
+
+ 
+}
+registro.addEventListener('click', mostrarOverlay);
