@@ -880,7 +880,7 @@ footer {
         padding: 40px 60px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        gap: 267.1px;
         align-items: center;
         margin-top: 179px;
 
@@ -921,6 +921,7 @@ footer {
     }
 
     .footer-Sección h4 {
+        align-items: center;
         margin-bottom: 10px;
     }
 
@@ -930,7 +931,8 @@ footer {
     }
 
     .footer-Sección li {
-        margin-bottom: 8px;
+        white-space: nowrap;
+        margin-bottom: 9px;
     }
 
     .footer-Sección ul,
