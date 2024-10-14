@@ -423,7 +423,7 @@ nav .categorias {
   margin-top: 15px;
   gap: 45px;
   display: flex;
-  margin-left: 40px;
+  margin-left: 25px;
   margin-bottom: 70PX;
 }
 
@@ -434,6 +434,7 @@ nav .categorias {
   flex-direction: column;
   height: 877px;
   width: 1318px;
+  margin-left: -10px;
 }
 
 .encabezadoComentarios {
