@@ -618,7 +618,6 @@ footer {
 
     }
 
-<<<<<<< HEAD
    
 }
 .carritoCard{
@@ -643,7 +642,6 @@ footer {
 
 
  .nombreDelJuego {
-=======
     .card_chica>.baseJuego>.contenedorParrafoCarrito {
         display: flex;
 
@@ -655,15 +653,6 @@ footer {
 
     }
 
-    .carritoCard {
-        background-color: #00A455;
-        margin-right: 30px;
-        width: 32px;
-        height: 30px;
-        padding: 5px;
-        border-radius: 10px;
-        margin-top: 5px;
-    }
 
     /* acomodando el carrito de arriba */
 
@@ -680,7 +669,6 @@ footer {
     }
 
     .nombreDelJuego {
->>>>>>> pruebas
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
