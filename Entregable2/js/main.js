@@ -15,8 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (progress >= 100) {
             clearInterval(loadingInterval);
-            loadingOverlay.style.display = 'none'; // Ocultar el overlay
-            content.style.filter = 'blur(0)'; // Quitar el desenfoque
+            loadingOverlay.style.display = 'none'; 
+            
+            
         }
     }, interval);
+});
+const carrouselGrande = document.querySelector('.carrousel_grande');
+const nextButton = document.querySelector('.flecha_der');
+const prevButton = document.querySelector('.flecha_izq');
+
+let scrollAmount = 0;
+
+nextButton.addEventListener('click', () => {
+    console.log("hola")
+    carrouselGrande.scrollBy({
+        top: 0,
+
+        left: carrouselGrande.clientWidth, // Mueve el carrusel al ancho completo de una tarjeta
+        behavior: 'smooth' // Transición suave
+    });
+});
+
+prevButton.addEventListener('click', () => {
+    carrouselGrande.scrollBy({
+        top: 0,
+        left: -carrouselGrande.clientWidth, // Mueve hacia la izquierda al ancho completo de una tarjeta
+        behavior: 'smooth' // Transición suave
+    });
 });
