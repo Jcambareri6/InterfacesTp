@@ -1,6 +1,8 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
+
 .contenedor_juego {
 
   display: flex;
@@ -313,7 +315,7 @@ h3 {
 }
 
 nav .categorias {
-  height: 2704px;
+  height: 2945px;
 
 }
 
@@ -439,15 +441,18 @@ nav .categorias {
 
 .encabezadoComentarios {
   display: flex;
-  width: 100%; /* Ajusta al 100% del contenedor */
-  max-width: 1400px; /* Máximo de 1400px si necesitas limitar el tamaño */
+  width: 100%;
+  /* Ajusta al 100% del contenedor */
+  max-width: 1400px;
+  /* Máximo de 1400px si necesitas limitar el tamaño */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   border-bottom: #FFFFFF solid 1px;
   margin-top: 82px;
   margin-bottom: 48px;
-  padding: 0 10px; /* Agrega padding para ajustar el contenido */
+  padding: 0 10px;
+  /* Agrega padding para ajustar el contenido */
 }
 
 .encabezadoComentarios>p {
@@ -572,7 +577,7 @@ nav .categorias {
 }
 
 .box-comentarios>form>.configuracionDeTexto>.btnSubmit>button:hover {
-  
+
   background-color: #7b62cb;
   width: 135px;
   height: 36px;
