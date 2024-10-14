@@ -543,11 +543,10 @@ footer {
         background-color: #2F3237;
         top: 70px;
         width: 100%;
-        height: 1872;
+        height: 100vh;
         flex-direction: column;
         z-index: 1000;
-        overflow: hidden;
-
+        ov
     }
 
     .categorias>button {
@@ -559,8 +558,6 @@ footer {
         gap: 33px;
         border: none;
         padding-left: 10px;
-        text-align: left;
-        color: #fff;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-sizing: border-box;
     }
