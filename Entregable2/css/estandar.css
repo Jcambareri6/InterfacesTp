@@ -617,33 +617,36 @@ footer {
         gap: 14px;
 
     }
-.card_chica>.baseJuego>.contenedorParrafoCarrito{
-    display: flex;
-   
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid black;
-    width: 100%;
 
-   
-}
-.carritoCard{
-    background-color: #00A455;
-    margin-right: 30px; 
-    width: 32px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 10px;
-    margin-top: 5px;
-    box-shadow: 0 0 5px 5px #00A455, 0 0 0 0 #00A455;
-    transition: all 150ms ease-in-out;
-}
-.carritoCard:hover {
-    box-shadow: 0 0 10px 0 #000000, 0 0 10px 4px #000000;
-}
+    .card_chica>.baseJuego>.contenedorParrafoCarrito {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid black;
+        width: 100%;
 
 
- .nombreDelJuego {
+    }
+
+    .carritoCard {
+        background-color: #00A455;
+        margin-right: 30px;
+        width: 32px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 5px;
+        box-shadow: 0 0 5px 5px #00A455, 0 0 0 0 #00A455;
+        transition: all 150ms ease-in-out;
+    }
+
+    .carritoCard:hover {
+        box-shadow: 0 0 10px 0 #000000, 0 0 10px 4px #000000;
+    }
+
+
+    .nombreDelJuego {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -660,7 +663,7 @@ footer {
     .parrafoJuego>p {
         color: #000;
         margin-left: 14px;
-        
+
 
 
     }
@@ -706,7 +709,7 @@ footer {
     }
 
     .parrafoJuego {
-      
+
         border-top: none;
 
     }
