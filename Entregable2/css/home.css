@@ -114,6 +114,7 @@
 .nombreDelJuego {
   font-size: 12px;
 }
+
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -194,7 +195,8 @@
   background: #7B62CB;
   animation: diamondLoader 1.3s linear infinite;
 }
-.carrouselGrandeMobile{
+
+.carrouselGrandeMobile {
   visibility: hidden;
   height: 0;
   width: 0;
@@ -217,17 +219,17 @@
 
 /* desktop */
 @media (min-width: 900px) {
-  
-#progress-text {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #FFFFFF;
-  position: absolute;
-  top: 48%;
-  right: 45%;
-  left: 45%;
-}
+
+  #progress-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    top: 48%;
+    right: 45%;
+    left: 45%;
+  }
 
   .contenedor_row {
     width: auto;
@@ -262,7 +264,9 @@
   }
 
   .carrousel_grande {
+    pointer-events: all;
     margin-bottom: 100px;
+
   }
   .carrousel_grande>.card_grande>a>.baseJuegoCardGrande{
     width: 100%;
@@ -321,6 +325,7 @@
 
   .flecha_der,
   .flecha_izq {
+    pointer-events: all;
     display: block;
   }
 
@@ -420,7 +425,7 @@
     background: rgba(253, 253, 253, 0.212);
   }
 
-  
+
   .carrousel_grande {
     display: flex;
     position: absolute;
@@ -492,7 +497,78 @@
      visibility: visible;
   }
 
- 
+  .card_grande>a {
+    z-index: 999;
+  }
+
+  .carrousel_grande.active {
+    opacity: 1;
+    animation: fadeInBounce 1s forwards;
+  }
+
+
+  .carrousel_grande.out {
+    animation: fade-out 1s forwards;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateX(-30px);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+  }
+
+  @keyframes fadeInBounce {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+      /* Comienza fuera de la vista a la derecha */
+    }
+
+    50% {
+      opacity: 0.15;
+      transform: translateX(-20px);
+      /* Rebota hacia la izquierda */
+    }
+
+    70% {
+      transform: translateX(10px);
+      /* Rebota ligeramente a la derecha */
+    }
+
+    100% {
+      transform: translateX(0);
+      /* Posición final centrada */
+    }
+  }
+
+  .displayNone {
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .contenedor_carrouseles>.titulo_carrouselA {
+    margin-top: 400px;
+
+  }
+
+  .carrouselGrandeMobile {
+    visibility: visible;
+  }
+
+
 
 
 }
