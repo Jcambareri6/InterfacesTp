@@ -261,7 +261,9 @@
   .carrousel_grande {
     pointer-events: all;
     margin-bottom: 100px;
+
   }
+
 
   .carrousel_grande>.card_grande>.baseJuegoCardGrande,
   .carrousel_grande>.card_grande2>.baseJuegoCardGrande {
@@ -414,16 +416,16 @@
     top: 33%;
     right: 1%;
     left: 0.30%;
+  }
 
-
+  .card_grande>a {
+    z-index: 999;
   }
 
   .carrousel_grande.active {
     opacity: 1;
     animation: fadeInBounce 1s forwards;
   }
-
-
 
 
   .carrousel_grande.out {
