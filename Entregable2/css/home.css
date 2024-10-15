@@ -48,7 +48,6 @@
   display: none;
 }
 
-.card_grande_fuminado,
 .card_chica2,
 .card_chica_ultima {
   display: none;
@@ -298,11 +297,17 @@
 
   }
 
-  .card_grande_fuminado,
   .card_chica2,
   .card_chica_ultima,
-  .card_grande2 {
+  .card_grande2, .card_grande , .card_chica {
     display: block;
+    transition:  transform 0.3s ease;;
+  }
+  .card_chica2:hover,
+  .card_chica_ultima:hover,
+  .card_grande2:hover, .card_grande:hover , .card_chica:hover {
+    transform:scale(1.1); 
+    box-shadow: 0 0 30px grey;
   }
 
   .flecha_der,
