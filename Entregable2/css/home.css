@@ -259,12 +259,12 @@
   }
 
   .carrousel_chico {
-    margin-bottom: 130px;
+    margin-bottom: 60px;
   }
 
   .carrousel_grande {
     pointer-events: all;
-    margin-bottom: 100px;
+    margin-top: 30px;
 
   }
   .carrousel_grande>.card_grande>a>.baseJuegoCardGrande{
@@ -276,9 +276,6 @@
     top: -40px;
     display: flex;
     justify-content: center;
-  }
-  .carrousel_grande>.card_grande>a>.baseJuegoCardGrande>p{
-    
   }
   .carrousel_grande>.card_grande>.baseJuegoCardGrande,
   .carrousel_grande>.card_grande2>.baseJuegoCardGrande
@@ -318,6 +315,7 @@
   .card_chica2,
   .card_chica_ultima,
   .card_grande2, .card_grande , .card_chica {
+    cursor: pointer;
     display: block;
     transition:  transform 0.3s ease;;
   }
@@ -407,6 +405,7 @@
 
   .flecha_der,
   .flecha_izq {
+    cursor: pointer;
     margin-top: 80px;
     width: 58px;
     height: 113px;
