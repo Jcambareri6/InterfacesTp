@@ -51,6 +51,7 @@ form .a_inicio,
 
 .a_inicio:hover,
 .a_registro:hover {
+    cursor: pointer;
     color: #f7ba1f;
 }
 
@@ -77,6 +78,7 @@ form>input::placeholder {
 
 
 .boton_inicio {
+    cursor: pointer;
     height: 55px;
     width: 430px;
     font-family: 'Roboto', sans-serif;
@@ -139,6 +141,7 @@ nav .categorias {
 }
 
 .contenedor_socialmedia>button {
+    cursor: pointer;
     height: 55px;
     width: 93px;
     border-radius: 8px;
@@ -155,6 +158,7 @@ nav .categorias {
 }
 
 .btn_Apple {
+
     background-color: #10141A;
 }
 
