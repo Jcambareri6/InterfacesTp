@@ -34,12 +34,13 @@ updateArrowVisibility(currentIndex); // Verifica la visibilidad de las flechas a
 function showCarousel(index) {
     carousels.forEach((carousel, i) => {
         if (i === index) {
-            console.log("hola")
+    
             carousel.classList.add('active');
             carousel.classList.remove('out');
         } else {
             carousel.classList.remove('active');
             carousel.classList.add('out');
+            
         }
     });
     updateArrowVisibility(index); // Actualiza la visibilidad de las flechas después de mostrar el carrusel
