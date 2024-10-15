@@ -298,7 +298,9 @@ display: none;
     display: flex;
     justify-content: center;
   }
-
+  .carrousel_grande>.card_grande>a>.baseJuegoCardGrande>p {
+    display: block;
+  }
   .carrousel_grande>.card_grande>.baseJuegoCardGrande>p,
   .carrousel_grande>.card_grande2>.baseJuegoCardGrande>p,
   .carrousel_grande>.card_grande>a>.baseJuegoCardGrande>p {
