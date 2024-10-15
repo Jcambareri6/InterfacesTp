@@ -202,6 +202,15 @@
   width: 0;
   margin: 0;
 }
+.carrouselGrandeMobile>a>.baseJuegoCardGrande>p {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+.card_grande>a>.baseJuegoCardGrande>p{
+display: none;
+}
 
 
 @keyframes diamondLoader {
