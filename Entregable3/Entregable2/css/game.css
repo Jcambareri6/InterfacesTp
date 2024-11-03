@@ -855,9 +855,21 @@ nav .categorias {
   right: 7%;
 }
 
-.containerPlayer {
+.containerPlayer, .turnoPlayer {
   display: flex;
   align-items: center;
+}
+
+.turnoPlayer {
+  position: absolute;
+  top: 96%;
+  left: 75%;
+  font-size: 24px;
+  font-family: 'Roboto Mono';
+  color: #FFFFFF;
+  border-radius: 10px;
+  background-color: rgba(14, 10, 10, 0.7);
+  display: none;
 }
 
 .namePlayer1 > .containerPlayer > img, .namePlayer2 > .containerPlayer > img {

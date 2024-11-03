@@ -1,6 +1,7 @@
 let canvas = document.getElementById("canvasP");
 let ctx = canvas.getContext('2d');
 
+
 dibujarTablero();
 ctx.beginPath();
 let btnJugar= document.getElementById('btnJugar')

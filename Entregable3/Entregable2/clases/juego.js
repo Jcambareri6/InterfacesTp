@@ -1,3 +1,5 @@
+let turnoJugador = document.querySelector(".turnoPlayer");
+
 class Juego {
     constructor(Modalidad,canvas, fichaElegidaAliens,fichaElegidaHumanos) {
         this.canvas=canvas;
@@ -115,8 +117,15 @@ class Juego {
         return tablero;
     }
     play() {
+
+        turnoJugador.innerHTML=`
+        <h3>Turno de : ${this.currentPlayer}</h3>
+        `
+        turnoJugador.style.display='flex';
+
         
         this.tablero.drawTablero();
+        
         // this.iniciarFichas()
       
     }
@@ -133,6 +142,15 @@ class Juego {
             //else { finishGame()}
         }
 
+
+    }
+    actualizarturnoJugador(){
+        return `
+        <div class="turnoPlayer">
+          <h1>Turno de :</h1>
+          <h3>${this.currentPlayer}</h3>
+        </div>
+        `
     }
     MouseDown(e) {
         let mouseX= this.canvas.offsetLeft;
@@ -188,6 +206,9 @@ class Juego {
                                 }
                                 //si no quedan fichas o lugares empate
                                 this.gestionarTurnos();
+                                turnoJugador.innerHTML=`
+                                <h3>Turno de : ${this.currentPlayer}</h3>
+                                `
                                 this.selectedFicha=null;
                                 console.log("ganador?: " + this.tablero.hayGanador(this.currentPlayer,this.Modalidad,FilafichaPosicionada,columna-1));
                                 
