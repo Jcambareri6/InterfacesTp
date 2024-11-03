@@ -19,11 +19,29 @@ let fichaAliensElegida=undefined;
  console.log(containerPlayer2);
  console.log(nameJugadorAliens);
  console.log(nameJugadorHumano);
-// let btn_reinicar = document.querySelector(".btn_reinicar");
-// btn_reinicar.addEventListener('click',reinicarJuego());
-// let menu = document.querySelector(".menu");
-// menu.addEventListener('click',volverMenu());
-btnJugar.addEventListener("click",()=>{
+
+ let btn_return = document.querySelector(".btn_return");
+ btn_return.addEventListener('click',()=>{
+    console.log("entre a reinicar")
+    borrarTablero();
+    dibujarTablero();
+})
+
+ let btn_menu = document.querySelector(".btn_home ");
+ btn_menu.addEventListener('click',()=>{
+    console.log("entre a menu")
+    borrarTablero();
+    dibujarTablero();
+    contenedorJuego.classList.remove('none')
+    contenedorJuego.classList.add('contenedorJuego')
+    menuJuego.style.display="none";
+    containerPlayer1.classList.remove('namePlayer1')
+    containerPlayer2.classList.remove('namePlayer2')
+    containerPlayer1.classList.add('none')
+    containerPlayer2.classList.add('none')
+})
+ 
+ btnJugar.addEventListener("click",()=>{
    btnJugar.classList.add('none');
    contenedorJuego.classList.remove('none')
    contenedorJuego.classList.add('contenedorJuego')
@@ -134,24 +152,12 @@ function dibujarTablero(){
         ctx.drawImage(img,62, 0, canvas.width-124, canvas.height);
     };
 }
-// let juego1 = new Juego(6, canvas, ctx);
-// juego1.play();
+
   function iniciarJuego(){
     contenedorJuego.classList.add('none');
-    // btn_reinicar.classList.add('block');
-    // menu.classList.add('block');
+    menuJuego.style.display="flex";
  }
-  function reinicarJuego() {
-    borrarTablero();
-    dibujarTablero();
-    iniciarJuego();
- }
-  function volverMenu(){
-    borrarTablero();
-    contenedorJuego.classList.add('block');
-    btn_reinicar.classList.add('none');
-    menu.classList.add('none');
-  }
+
  
 
 
