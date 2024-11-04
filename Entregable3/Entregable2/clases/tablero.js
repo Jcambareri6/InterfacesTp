@@ -17,14 +17,14 @@ class Tablero {
 
     GenerarMatriz() {
         this.matriz = [];
-        for (let i = 1; i <this.tamañoTableroX; i++) {
+        for (let i = 1; i < this.tamañoTableroX; i++) {
             let fila = [];
             for (let j = 0; j < this.tamañoTableroY; j++) {
                 let posiciones = this.calcularPosCasilleros(i, j);
                 if (j != 0) {
-                    fila.push(new casillero(posiciones.posx, posiciones.posY, this.ctx, this.widthCelda, this.heightCelda, './img/casillero2.webp', i));
+                    fila.push(new casillero(posiciones.posx, posiciones.posY, this.ctx, this.widthCelda, this.heightCelda, './img/casillero.png', i));
                 } else {
-                    fila.push(new casillero(posiciones.posx, posiciones.posY, this.ctx, this.widthCelda, this.heightCelda, './img/variant2.png', i));
+                    fila.push(new casillero(posiciones.posx, posiciones.posY, this.ctx, this.widthCelda, this.heightCelda, './img/dropzone.png', i));
                 }
             }
             this.matriz.push(fila);
@@ -48,7 +48,7 @@ class Tablero {
     posicionarFicha(col, ficha) {
         console.log(`columna ${col} `)
         for (let i = this.tamañoTableroY - 1; i > 0; i--) {
-            
+
             let casillero = this.matriz[col][i];
             if (casillero.getFicha() == null) {
                 casillero.setFicha(ficha);
@@ -146,15 +146,15 @@ class Tablero {
             return acumulado;
         };
 
-        
+
         let totalFichasDiagonal1 =
-            contarFichasEnDireccion(1, 1) +  
-            contarFichasEnDireccion(-1, -1) - 1; 
+            contarFichasEnDireccion(1, 1) +
+            contarFichasEnDireccion(-1, -1) - 1;
 
 
         let totalFichasDiagonal2 =
-            contarFichasEnDireccion(1, -1) +  
-            contarFichasEnDireccion(-1, 1) - 1; 
+            contarFichasEnDireccion(1, -1) +
+            contarFichasEnDireccion(-1, 1) - 1;
 
         return totalFichasDiagonal1 >= nFichas || totalFichasDiagonal2 >= nFichas;
     }
