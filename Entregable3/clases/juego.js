@@ -47,8 +47,11 @@ class Juego {
                   
                 this.generarFichas((tamañoX*tamañoY)/2)
 
-                break;
-
+             break;
+             case '7':
+                tamañoX=9;
+                this.generarFichas(tamañoX*tamañoY/2);
+            break;
 
         }
       
@@ -111,6 +114,7 @@ class Juego {
             case "7":
               
                 tablero = new Tablero(485, 70, this.ctx, 9, 8, null);
+                break;
         }
     
         console.log(tablero);
@@ -186,15 +190,15 @@ class Juego {
                         let FilafichaPosicionada= this.tablero.posicionarFicha(columna-1,this.selectedFicha);
                         if (FilafichaPosicionada!= -1 ){
                             if(this.selectedFicha.getIsDraggin()==true && this.selectedFicha.getSeleccionada()==true){
-                             
-                                this.selectedFicha.setPosicionada(true);
+                                this.tablero.animarCaidaFicha(this,columna-1,FilafichaPosicionada,this.selectedFicha)
+                               
                              
                                
-                                this.tablero.animarCaidaFicha(this,columna-1,FilafichaPosicionada,this.selectedFicha)
+                                this.selectedFicha.setPosicionada(true);
                                 this.selectedFicha.setIsDraggin(false);
                            
-                                this.reDrawCanvas();
-                                this.redibujarFichas()
+                                 this.reDrawCanvas();
+                               
                               
                                
                                 // this.eliminarFicha(this.currentPlayer);

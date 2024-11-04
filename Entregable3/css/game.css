@@ -780,6 +780,10 @@ p {
   border-radius: 8px;
   border: none;
   margin-top: 10px;
+
+    color: #000; /* Asegúrate de que el color sea visible, por ejemplo, negro */
+    background-color: #fff; /* Asegúrate de que el fondo sea blanco para mayor contraste */
+
 }
 
 .containerFichas {

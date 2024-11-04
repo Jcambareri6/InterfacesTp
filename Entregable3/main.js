@@ -17,6 +17,10 @@ let fichaAliensElegida=undefined;
  let containerPlayer1 = document.querySelector('#nombreJugador1')
  let containerPlayer2= document.querySelector('#nombreJugador2')
  let menuJuego = document.querySelector('.menu-game');
+ let Timer = document.querySelector('.timer-display')
+ let timerSeconds = 80;
+  let interval = null;
+  let isPaused = false;
  console.log(containerPlayer2);
  console.log(nameJugadorAliens);
  console.log(nameJugadorHumano);
@@ -59,7 +63,7 @@ fichasHumanos.forEach(btn => {
     let ruta = btn.src
      let explodeSrc = ruta.split("/")
      console.log(explodeSrc[4])
-    fichaHumanoElegida= `${explodeSrc[4]}/${explodeSrc[5]}`
+    fichaHumanoElegida= `${explodeSrc[3]}/${explodeSrc[4]}`
     console.log(fichaHumanoElegida);
 
     btn.classList.add('elegida');
@@ -79,7 +83,7 @@ fichasAliens.forEach(btn => {
           let ruta = btn.src
          let explodeSrc = ruta.split("/")
          console.log(explodeSrc[4])
-         fichaAliensElegida= `${explodeSrc[4]}/${explodeSrc[5]}`
+         fichaAliensElegida= `${explodeSrc[3]}/${explodeSrc[4]}`
   
 
     btn.classList.add('elegida');
@@ -109,6 +113,7 @@ fichasAliens.forEach(btn => {
         containerPlayer1.classList.add('namePlayer1')
         containerPlayer2.classList.add('namePlayer2')
         menuJuego.style.display="flex";
+      
         containerPlayer1.innerHTML=generarHtml(fichaHumanoElegida,nameJugadorHumano.value);
         containerPlayer2.innerHTML=generarHtml(fichaAliensElegida,nameJugadorAliens.value)
         console.log(generarHtml(fichaAliensElegida,nameJugadorAliens.value))
@@ -117,8 +122,9 @@ fichasAliens.forEach(btn => {
         dibujarTablero();
         iniciarJuego();
         const juego = new Juego(modalidad,canvas,fichaAliensElegida,fichaHumanoElegida);
-       
+        startTimer();
         juego.play();
+        
         
 
        
@@ -129,6 +135,13 @@ fichasAliens.forEach(btn => {
     
     });
 });
+
+
+// Función para iniciar el temporizador
+function startTimer() {
+      timerInterval = setInterval(updateTimer, 1000); // Actualiza cada segundo
+
+}
 function generarHtml(ficha,name){
     let html = `
     <div class="containerPlayer">
@@ -158,18 +171,27 @@ function dibujarTablero(){
     contenedorJuego.classList.add('none');
     menuJuego.style.display="flex";
  }
+ function updateTimer() {
+  const minutes = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+  const seconds = String(timerSeconds % 60).padStart(2, '0');
+  Timer.textContent = `${minutes}:${seconds}`;
+}
 
- 
+function startTimer() {
+  if (interval) return; 
 
+  interval = setInterval(() => {
+      if (!isPaused) {
+          timerSeconds--;
+          updateTimer();
 
-
-
-
-
-
-
-
-
+          if (timerSeconds <= 0) {
+              clearInterval(interval);
+              interval = null;
+          }
+      }
+  }, 1000);
+}
 
 
 
