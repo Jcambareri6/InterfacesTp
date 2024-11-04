@@ -65,7 +65,7 @@ fichasHumanos.forEach(btn => {
 
      let explodeSrc = ruta.split("/")
      console.log(explodeSrc)
-    fichaHumanoElegida= `${explodeSrc[3]}/${explodeSrc[4]}`
+    fichaHumanoElegida= `${explodeSrc[5]}/${explodeSrc[6]}`
     console.log(fichaHumanoElegida);
 
     btn.classList.add('elegida');
