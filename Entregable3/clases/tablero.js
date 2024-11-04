@@ -68,7 +68,20 @@ class Tablero {
         return layerX >= inicioX + this.widthCelda && layerX <= finX + this.widthCelda && layerY >= inicioY && layerY <= finY;
 
     }
-
+    /* hayEmpate(nFichas, tiempoRestante) {
+         const tiempoRestante = parseInt(document.getElementById('.timer-display').textContent, 10);
+         if (nFichas <= 0 || tiempoRestante <= 0) {
+             return true;
+         }
+         for (let columna = 0; columna < this.matrizLogica.length; columna++) {
+             for (let fila = 0; fila < this.matrizLogica[columna].length; fila++) {
+                 if (this.matrizLogica[columna][fila].getFicha() == null) {
+                     return false;
+                 }
+             }
+         }
+         return true;
+     }*/
     hayGanador(jugador, nFichas, fila, columna) {
         const columnas = this.matrizLogica.length - 1;
         const filas = this.matrizLogica[0].length - 1;
@@ -172,56 +185,56 @@ class Tablero {
         ficha.draw();
     }
     animarCaidaFicha(juego, columna, filaFinal, ficha) {
-      
+
         let yActual = -this.heightCelda;
         const yDestino = this.matriz[columna][filaFinal].posY + (this.heightCelda / 2);
-    
+
         const animar = () => {
-          
+
             this.ctx.clearRect(
                 this.matriz[columna][filaFinal].posX,
                 yActual - this.heightCelda / 2,
                 this.widthCelda,
                 this.heightCelda
             );
-    
-           
-             juego.reDrawCanvas();
-         
+
+
+            juego.reDrawCanvas();
+
             ficha.setPosX(this.matriz[columna][filaFinal].posX + (this.widthCelda / 2));
             ficha.setPosY(yActual);
             ficha.draw()
-    
-        
+
+
             ficha.setPosX(this.matriz[columna][filaFinal].posX + (this.widthCelda / 2));
             ficha.setPosY(yActual);
             juego.redibujarFichas();
-          
+
             yActual += 10;
-    
-         
+
+
             if (yActual < yDestino) {
                 requestAnimationFrame(animar);
             } else {
-                
+
                 juego.reDrawCanvas(juego);
                 ficha.setPosY(yDestino);
-             
+
                 juego.redibujarFichas();
             }
         };
-    
+
         animar();
     }
-  reDrawCanvas(juego) {
-      
-       
-    let img = new Image();
-  img.src = "./img/fondoCanvasPresentacion.png"
-  
-      ctx.drawImage(img,62, 0, canvas.width-124, canvas.height);
-      juego.redibujarFichas()
-   
-    
-  }
+    reDrawCanvas(juego) {
+
+
+        let img = new Image();
+        img.src = "./img/fondoCanvasPresentacion.png"
+
+        ctx.drawImage(img, 62, 0, canvas.width - 124, canvas.height);
+        juego.redibujarFichas()
+
+
+    }
 }
