@@ -1,9 +1,9 @@
 let canvas = document.getElementById("canvasP");
 let ctx = canvas.getContext('2d');
 
-
-dibujarTablero();
 ctx.beginPath();
+dibujarTablero();
+
 let btnJugar= document.getElementById('btnJugar')
 let fichaHumanoElegida = undefined;
 let fichaAliensElegida=undefined;

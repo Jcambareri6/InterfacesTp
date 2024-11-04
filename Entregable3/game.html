@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/estandar.css">
     <script src="https://kit.fontawesome.com/5bbc4115cb.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <title>Juego</title>
 </head>
 
@@ -332,21 +335,97 @@
             </div>
            
         </nav>
+        <div class="breadcumbs">
+            <h2>
+                <a href="index.html">home</a>
 
+                >
+                <a href="#">aliens vs humanos</a>
+            </h2>
+        </div>
+        <canvas id="canvasP" class="pantallajuego" height="600" width="1510"></canvas>
         <section class="contenedor_juego">
-            <div class="breadcumbs">
-                <h2>
-                    <a href="index.html">home</a>
 
-                    >
-                    <a href="#">aliens vs humanos</a>
-                </h2>
-            </div>
-            <div class="pantallajuego">
-                <div class="background-blur">
+            
+           
+                   
+            <div class="none" id="contenedorJuego">
+               
+                            
+                <div class="form-containerPlayer  ">
+                    <h2>Jugador 2</h2>
+                    <form class="formPlayer">
+                       <p>nombre del jugador 2</p>
+                      <input type="text" placeholder="nombre" id="inputHumanos" class="input-nombre" required>
+                      <div class="containerFichas">
+                        <p>Seleccione su ficha</p>
+                        <div class="ficha-selection">
+                          <img class="fichaHumano" src="img/ficha_Humano.png" alt="Ficha 1" ficha="humano1">
+                          <img class="fichaHumano" src="img/fichaHumanoide2.png" alt="Ficha 2" ficha="humano2">
+                          <img class="fichaHumano" src="img/fichaHumanoide3.png" alt="Ficha 3" ficha="humano3">
+                        </div>
+                      </div>                     
+                
+                    </form>
 
+                  </div>
+                <div class="btonesModalidad">
+                    <button class="btnModalidad" modalidad="4">4 en Linea</button>
+                    <button class="btnModalidad" modalidad="5">5 en linea</button>
+                    <button class="btnModalidad" modalidad="6">6 en linea </button>
+                    <button class="btnModalidad" modalidad="7"> 7 en linea </button>
                 </div>
-                <button class="play-button">
+                <div class="form-containerPlayer player2">
+                    <h2>Jugador 1</h2>
+                    <form class="formPlayer">
+                       <p>nombre del jugador 1</p>
+                      <input type="text" placeholder="nombre"  id="inputAliens"  class="input-nombre" required>
+                      <div class="containerFichas">
+                        <p>Seleccione su ficha</p>
+                        <div class="ficha-selection">
+                          <img class="fichaAlien" src="img/fichaAliens1.png" alt="Ficha 1">
+                          <img class="fichaAlien"src="img/fichaAliens2.png" alt="Ficha 2">
+                          <img class="fichaAlien"src="img/fichasAliens3.png" alt="Ficha 3">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+            <div class="turnoPlayer">
+                <h1>AAAAAAAAAA</h1>
+            </div>
+            <div  class="menu-game">
+                <div class="btn_return">
+                    <button><svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.766569 15.741L16.8379 15.6916C18.7323 15.6858 20.5468 14.9277 21.8822 13.584C23.2177 12.2403 23.9646 10.4212 23.9588 8.52683C23.953 6.63243 23.1948 4.81794 21.8512 3.48252C20.5075 2.1471 18.6884 1.40014 16.794 1.40596L11.4369 1.42243"
+                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.10712 10.3674L0.766467 15.741L6.14005 21.0817" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <div class="timer-display">00:00</div>
+                <button class="btn_home">
+                    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="25" height="24" transform="translate(0.265625 0.823486)" fill="#1C3AA9" />
+                        <path
+                            d="M3.39062 9.82349L12.7656 2.82349L22.1406 9.82349V20.8235C22.1406 21.3539 21.9211 21.8626 21.5304 22.2377C21.1397 22.6128 20.6098 22.8235 20.0573 22.8235H5.47396C4.92142 22.8235 4.39152 22.6128 4.00082 22.2377C3.61012 21.8626 3.39063 21.3539 3.39062 20.8235V9.82349Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.64062 22.8235V12.8235H15.8906V22.8235" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+    
+                </button>
+            </div>
+                <div class=" none  " id="nombreJugador1"></div>
+                <div class="  none " id="nombreJugador2"></div>
+    
+        </div>
+
+                
+                <button class="play-button" id="btnJugar">
                     <i class="fa-regular fa-circle-play"></i>
                     <span>Jugar</span>
                 </button>
@@ -355,6 +434,10 @@
                         <img src="./img/LogoPagina.png" class="imgLogo" alt="Logo de la pagina">
                         <h2>Aliens vs Humanos</h2>
                     </div>
+                    
+
+                
+                    <div class="contenedor">
                     <div class="MenuAyudaUser">
 
                         <button popovertarget="menuCompartir">
@@ -917,5 +1000,12 @@
     </footer>
 </body>
 <script src="js/menu.js"></script>
+<script src="./clases/ficha.js""></script>
+<script src="./clases/casillero.js"></script>
+<script src="./clases/tablero.js"></script>
+<script src="./clases/juego.js"></script>
+<script src="./main.js"></script>
+
+
 
 </html>

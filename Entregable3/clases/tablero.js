@@ -171,4 +171,49 @@ class Tablero {
         ficha.setPosY(fichaPosY);
         ficha.draw();
     }
+    animarCaidaFicha(juego,columna, filaFinal, ficha) {
+        // Posición inicial de la ficha en la parte superior del tablero
+        let yActual = this.posY - this.heightCelda;
+        const yDestino = this.matriz[columna][filaFinal].posY + (this.heightCelda / 2)+10;
+    
+        const animar = () => {
+            // Limpiamos el área de la ficha para borrar la posición anterior
+            this.ctx.clearRect(
+                this.matriz[columna][filaFinal].posX,
+                yActual - this.heightCelda / 2,
+                this.widthCelda,
+                this.heightCelda
+            );
+    
+            // Dibujamos el fondo nuevamente para que no queden estelas
+            juego.reDrawCanvas();
+            juego.redibujarFichas();
+    
+            // Dibujamos la ficha en la nueva posición
+            ficha.setPosX(this.matriz[columna][filaFinal].posX + (this.widthCelda / 2));
+            ficha.setPosY(yActual);
+            // ficha.draw();
+    
+            // Actualizamos la posición y
+            yActual += 8; // Ajusta la velocidad de la caída aquí
+    
+            // Continuamos animando hasta que la ficha alcance su destino
+            if (yActual <=yDestino) {
+                requestAnimationFrame(animar);
+            } 
+        };
+    
+        // Iniciamos la animación
+        animar();
+    }
+
+  reDrawCanvas() {
+      
+       
+    let img = new Image();
+  img.src = "./img/fondoCanvasPresentacion.png"
+  
+      ctx.drawImage(img,62, 0, canvas.width-124, canvas.height);
+    
+  }
 }

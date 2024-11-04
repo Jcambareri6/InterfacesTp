@@ -190,7 +190,7 @@ class Juego {
                                 this.selectedFicha.setPosicionada(true);
                              
                                
-                                this.tablero.dibujarCasillero(columna-1,FilafichaPosicionada, this.selectedFicha);
+                                this.tablero.animarCaidaFicha(this,columna-1,FilafichaPosicionada,this.selectedFicha)
                                 this.selectedFicha.setIsDraggin(false);
                            
                                 this.reDrawCanvas();
@@ -199,10 +199,10 @@ class Juego {
                                
                                 // this.eliminarFicha(this.currentPlayer);
                                 if(this.tablero.hayGanador( this.currentPlayer,this.Modalidad,FilafichaPosicionada,columna-1)){
-                                    if(this.selectedFicha.getIsDraggin()==false && this.selectedFicha.getSeleccionada()==false){
-                                        
-                                    }
-                                    alert(`ganador ${this.currentPlayer}`)
+                                    setTimeout(()=>{
+                                        alert(`ganador ${this.currentPlayer}`)
+                                    }, 1000)
+                                    
                                 }
                                 //si no quedan fichas o lugares empate
                                 this.gestionarTurnos();
@@ -271,7 +271,7 @@ class Juego {
         }
     }
     reDrawCanvas() {
-        // Borra todo el canvas
+      
        
       let img = new Image();
     img.src = "./img/fondoCanvasPresentacion.png"

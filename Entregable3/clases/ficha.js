@@ -19,7 +19,7 @@ class ficha  {
         this.img.onload = () => {
             this.draw(); 
         };
-        console.log("instanciado")
+    
       
     }
     
@@ -117,7 +117,11 @@ class ficha  {
     getEquipo() {
         return this.equipo;
     }
-   
-
+    getPosX(){
+        return this.posX
+    }
+    getPosY(){
+        return this.posY
+    }
 
 }

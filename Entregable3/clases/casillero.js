@@ -37,5 +37,8 @@ class casillero {
     setImagen(src){
         this.img.src = src;
     }
+    getPosY(){
+        return this.posY
+    }
     
 }
