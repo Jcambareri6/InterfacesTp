@@ -128,17 +128,14 @@ class Juego {
     }
     mostrarPopoverGanador(jugador) {
         const popoverGanador = document.querySelector('.ganador');
-        let  h1Ganador =  popoverGanador.querySelector('#nombreGanador');
+
         popoverGanador.style.display = 'flex';  
+        
 
-
-        if (jugador=='humanos'){
-            console.log("humanos ganador")
-            popoverGanador.querySelector('#nombreGanador').innerText = `¡${jugadorHumano.value} ha ganado!`;
-       
-            
+        if (jugador=='aliens'){
+            popoverGanador.innerText += ` ${jugadorHumano.value} ha ganado!`;
             }else{
-            popoverGanador.querySelector('#nombreGanador').innerText = `¡${jugadorAliens.value} ha ganado!`;
+            popoverGanador.innerText += ` ${jugadorAliens.value} ha ganado!`;
          }
     }
 
@@ -179,6 +176,9 @@ class Juego {
                         setTimeout(() => {
                             this.mostrarPopoverGanador(this.currentPlayer);
                         }, 1000);
+                        setTimeout(() => {
+                            this.reset();
+                        }, 5000);
                     }/*
                         // Verificar si hay empate
                     if (this.tablero.hayEmpate(this.fichasAliens.length + this.fichasHumanos.length)) {
