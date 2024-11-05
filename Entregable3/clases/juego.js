@@ -86,13 +86,16 @@ class Juego {
 
         switch (Modalidad) {
             case "4":
-                tablero = new Tablero(570, 70, this.ctx, 6, 8, null);
+                tablero = new Tablero(545, 70, this.ctx, 6, 8, null);
                 break;
             case "5":
-                tablero = new Tablero(545, 70, this.ctx, 7, 8, null);
+                tablero = new Tablero(515, 70, this.ctx, 7, 8, null);
                 break;
             case "6":
-                tablero = new Tablero(515, 70, this.ctx, 8, 8, null);
+                tablero = new Tablero(485, 70, this.ctx, 8, 8, null);
+                break;
+            case "7":
+                tablero = new Tablero(475, 70, this.ctx, 8, 9, null);
                 break;
         }
 
