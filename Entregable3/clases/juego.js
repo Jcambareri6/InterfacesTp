@@ -1,4 +1,7 @@
 let turnoJugador = document.querySelector(".turnoPlayer");
+let jugadorHumano= document.querySelector('#inputHumanos');
+let jugadorAliens=document.querySelector('#inputAliens');
+
 
 class Juego {
     constructor(Modalidad, canvas, fichaElegidaAliens, fichaElegidaHumanos) {
@@ -97,7 +100,11 @@ class Juego {
     }
 
     actualizarTurnoJugador() {
-        turnoJugador.innerHTML = `<h3>Turno de: ${this.currentPlayer}</h3>`;
+        if (this.currentPlayer=='humanos'){
+        turnoJugador.innerHTML = `<h3>Turno de: ${jugadorHumano.value}</h3>`;
+        }else{
+        turnoJugador.innerHTML = `<h3>Turno de: ${jugadorAliens.value}</h3>`;
+        }
     }
 
     mostrarTurno() {
