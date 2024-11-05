@@ -191,6 +191,11 @@ class Tablero {
 
         const animar = () => {
 
+            let yActual = -this.heightCelda;
+        const yDestino = this.matriz[columna][filaFinal].posY + (this.heightCelda / 2);
+
+        const animar = () => {
+
             this.ctx.clearRect(
                 this.matriz[columna][filaFinal].posX,
                 yActual - this.heightCelda / 2,
@@ -223,6 +228,9 @@ class Tablero {
                 juego.redibujarFichas();
             }
         };
+
+        animar();
+    }
 
         animar();
     }
