@@ -23,7 +23,6 @@ let menuReiniciar = document.querySelector('.btn_return');
 
  let timerSeconds = 80;
   let interval = null;
-
  console.log(containerPlayer2);
  console.log(nameJugadorAliens);
  console.log(nameJugadorHumano);
@@ -32,18 +31,7 @@ let menuReiniciar = document.querySelector('.btn_return');
  
 
  let btn_menu = document.querySelector(".btn_home ");
- btn_menu.addEventListener('click',()=>{
-    console.log("entre a menu")
-    borrarTablero();
-    dibujarTablero();
-    contenedorJuego.classList.remove('none')
-    contenedorJuego.classList.add('contenedorJuego')
-    menuJuego.style.display="none";
-    containerPlayer1.classList.remove('namePlayer1')
-    containerPlayer2.classList.remove('namePlayer2')
-    containerPlayer1.classList.add('none')
-    containerPlayer2.classList.add('none')
-})
+
  
  btnJugar.addEventListener("click",()=>{
    btnJugar.classList.add('none');
@@ -137,6 +125,7 @@ fichasAliens.forEach(btn => {
     });
 });
 
+
 btn_return.addEventListener('click',()=>{
   if(juego!=null){
     juego.reset();
@@ -228,5 +217,3 @@ function startTimer() {
   , 10);
  
 }
-
-

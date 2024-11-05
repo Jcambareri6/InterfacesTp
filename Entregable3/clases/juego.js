@@ -27,73 +27,55 @@ class Juego {
         this.canvas.addEventListener('mouseup', this.MouseUp.bind(this));
         this.canvas.addEventListener('mousemove', this.Move.bind(this));
     }
-  
+
     iniciarFichas() {
-        
-        let tamañoX=0;
-        let tamañoY=7;
+        let tamañoX = 0;
+        let tamañoY = 7;
+
         switch (this.Modalidad) {
-          
             case '4':
                 tamañoX = 6;
-            
-                this.generarFichas((tamañoX*tamañoY)/2)
+                this.generarFichas((tamañoX * tamañoY) / 2);
                 break;
             case '5':
-                tamañoX=7;
-                 
-                this.generarFichas((tamañoX*tamañoY)/2)
+                tamañoX = 7;
+                this.generarFichas((tamañoX * tamañoY) / 2);
+                break;
             case '6':
-
-                 tamañoX=8;
-                  
-                this.generarFichas((tamañoX*tamañoY)/2)
-
-             break;
-             case '7':
-                tamañoX=9;
-                this.generarFichas(tamañoX*tamañoY/2);
-            break;
-
+                tamañoX = 8;
+                this.generarFichas((tamañoX * tamañoY) / 2);
+                break;
         }
-      
     }
+
     generarFichas(cantFichas) {
-        
-        const posYMin = 100;           // Inicio de la altura del tablero
-        const posYMax = 500;          // Fin de la altura del tablero
-    
-        // Anchos y posiciones para cada modalidad de tablero
+        const posYMin = 100;
+        const posYMax = 500;
+
         const tableroConfig = {
-            4: { posX: 575, ancho: 360, margen: 150 }, // Ajuste para modalidad 4 en línea
-            5: { posX: 545, ancho: 420, margen: 180 }, // Ajuste para modalidad 5 en línea
-            6: { posX: 515, ancho: 480, margen: 200 }, // Ajuste para modalidad 6 en línea
-            7: { posX: 485, ancho: 540, margen: 220 }  // Ajuste para modalidad 7 en línea
+            4: { posX: 575, ancho: 360, margen: 150 },
+            5: { posX: 545, ancho: 420, margen: 180 },
+            6: { posX: 515, ancho: 480, margen: 200 },
+            7: { posX: 485, ancho: 540, margen: 220 }
         };
-    
-        // Obtiene la configuración del tablero actual
+
         const tablero = tableroConfig[this.Modalidad];
-    
-        // Función para generar posiciones aleatorias en un rango específico
+
         const getRandomPosition = (minX, maxX, minY, maxY) => {
             const x = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
             const y = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
             return { x, y };
         };
-    
-        
+
         for (let i = 0; i < cantFichas; i++) {
             const alienPos = getRandomPosition(tablero.posX + tablero.ancho + tablero.margen, tablero.posX + tablero.ancho + 100, posYMin, posYMax);
-   
             let fichaAlien = new ficha(alienPos.x, alienPos.y, this.ctx, 35, this.fichaElegidaAliens, 'aliens');
             fichaAlien.setPosicionInicial(alienPos.x, alienPos.y);
             this.fichasAliens.push(fichaAlien);
         }
-    
-      
+
         for (let i = 0; i < cantFichas; i++) {
             const humanoPos = getRandomPosition(tablero.posX - 100, tablero.posX - tablero.margen, posYMin, posYMax);
-            
             let fichaHumano = new ficha(humanoPos.x, humanoPos.y, this.ctx, 35, this.fichaElegidaHumanos, 'humanos');
             fichaHumano.setPosicionInicial(humanoPos.x, humanoPos.y);
             this.fichasHumanos.push(fichaHumano);
@@ -165,6 +147,15 @@ class Juego {
         // this.iniciarFichas()
       
     }
+
+    mostrarTurno() {
+        turnoJugador.style.display = "flex";
+    }
+
+    ocultarTurno() {
+        turnoJugador.style.display = "none";
+    }
+
     gestionarTurnos() {
         if (this.currentPlayer === 'humanos') {
             this.currentPlayer = 'aliens';
@@ -185,26 +176,17 @@ class Juego {
             }
     }
     MouseDown(e) {
-        let mouseX= this.canvas.offsetLeft;
         this.fichasHumanos.forEach(ficha => {
-        
-          
-            if ( !ficha.getPosicionada()  && ficha.isMouseOver((e.layerX), e.layerY)) {
-
-                this.configurarDrag("humanos",ficha)
+            if (!ficha.getPosicionada() && ficha.isMouseOver(e.layerX, e.layerY)) {
+                this.configurarDrag("humanos", ficha);
             }
-           
-        })
+        });
 
         this.fichasAliens.forEach(ficha => {
-
-            if ( !ficha.getPosicionada() && ficha.isMouseOver((e.layerX), e.layerY)) {
-                this.configurarDrag("aliens",ficha)
+            if (!ficha.getPosicionada() && ficha.isMouseOver(e.layerX, e.layerY)) {
+                this.configurarDrag("aliens", ficha);
             }
-           
-        })
-
-      
+        });
     }
     actualizarTurnoJugador() {
         if (this.currentPlayer=='humanos'){
@@ -288,42 +270,82 @@ mostrarPopoverGanador(jugador) {
     
             }
         }
-        
-        
-     
     }
-    
-    eliminarFicha(equipo){ 
-        console.log(`entre ${equipo} `)
-        if(equipo=="humanos"){
-            let posf=this.fichasHumanos.indexOf(this.selectedFicha);
-            console.log(`posicion en arreglo ${posf}`)
 
-            this.fichasHumanos.splice(posf,1);
-            console.log(`size ${this.fichasHumanos.length()}`)
-        }else{
-            let posf=this.fichasAliens.indexOf(this.selectedFicha);
-            this.fichasAliens.splice(posf,1);
+    Move(e) {
+        if (this.selectedFicha && this.selectedFicha.getIsDraggin() && this.selectedFicha.getSeleccionada()) {
+            let newX = e.layerX - this.canvas.offsetLeft;
+            let newY = e.layerY;
+            this.selectedFicha.setPosX(newX);
+            this.selectedFicha.setPosY(newY);
+            this.reDrawCanvas();
+            this.selectedFicha.draw();
+            this.redibujarFichas();
         }
-        console.log("fichas humanos "+ this.fichasHumanos.length())
     }
-    configurarDrag(turno,ficha){
-        if (this.currentPlayer == turno) {
+    finish(){
+       // Deshabilita interacciones en el canvas
+       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        
+        
+    }
+
+    reDrawCanvas() {
+        // Cargar la imagen de fondo
+        let img = new Image();
+        img.src = "./img/fondoCanvasPresentacion.png";
+
+        // Redibujar el canvas después de cargar la imagen
+        img.onload = () => {
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Limpia el canvas
+            this.ctx.drawImage(img, 62, 0, this.canvas.width - 124, this.canvas.height); // Dibuja la imagen de fondo
+
+            this.tablero.drawTablero();
+            this.redibujarFichas();     
+        };
+    }
+
+    reset() {
+        // Reiniciar el estado del tablero
+        this.tablero = this.setTablero(this.Modalidad);
+    
+   
+        this.fichasAliens = [];
+        this.fichasHumanos = [];
+        this.iniciarFichas();
+    
+        // Reiniciar el turno al jugador inicial (puedes modificar según sea necesario)
+        this.currentPlayer = "humanos"; 
+        this.actualizarTurnoJugador(); // Actualizar el mensaje de turno
+    
+        // Redibujar el canvas
+        this.reDrawCanvas();
+        
+        // Limpiar la ficha seleccionada
+        this.selectedFicha = null;
+    
+        // Ocultar cualquier popover de ganador o empate
+        const popoverGanador = document.querySelector('.ganador');
+        const popoverEmpate = document.querySelector('.empate');
+        popoverGanador.style.display = 'none';  
+        popoverEmpate.style.display = 'none';  
+    }
+
+    redibujarFichas() {
+        this.fichasAliens.forEach(ficha => ficha.draw());
+        this.fichasHumanos.forEach(ficha => ficha.draw());
+    }
+
+    configurarDrag(turno, ficha) {
+        if (this.currentPlayer === turno) {
             this.selectedFicha = ficha;
             this.selectedFicha.setSeleccionada(true);
             this.selectedFicha.setIsDraggin(true);
         }
     }
-    reDrawCanvas() {
-      
-       
-      let img = new Image();
-    img.src = "./img/fondoCanvasPresentacion.png"
     
-        ctx.drawImage(img,62, 0, canvas.width-124, canvas.height);
- 
-        this.play();
-    }
+      
    
     
     redibujarFichas() {

@@ -593,6 +593,9 @@ nav .categorias {
 
 
 }
+.breadcumbs {
+  margin-left: 62px;
+}
 
 .btn_Texto {
   margin-left: 33px;
@@ -781,8 +784,10 @@ p {
   border: none;
   margin-top: 10px;
 
-    color: #000; /* Asegúrate de que el color sea visible, por ejemplo, negro */
-    background-color: #fff; /* Asegúrate de que el fondo sea blanco para mayor contraste */
+  color: #000;
+  /* Asegúrate de que el color sea visible, por ejemplo, negro */
+  background-color: #fff;
+  /* Asegúrate de que el fondo sea blanco para mayor contraste */
 
 }
 
@@ -881,15 +886,102 @@ p {
 }
 
 .turnoPlayer {
+  display: none;
   position: absolute;
-  top: 76%;
-  left: 75.5%;
+  justify-content: center;
+  top: 50%;
+  left: 42.5%;
   font-size: 24px;
   font-family: 'Roboto Mono';
   color: #e8e8e8;
   border-radius: 10px;
   background-color: rgba(14, 10, 10, 0.7);
+  animation: bounceIn 0.8s ease;
+  /* Agrega la animación de rebote */
+}
+
+/* Definición de la animación de rebote */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    /* Inicia oculto */
+    transform: scale(0.5) translateY(-200px);
+    /* Se hace pequeño y se mueve hacia arriba */
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(10px);
+    /* Rebota hacia abajo y se agranda un poco */
+  }
+
+  70% {
+    transform: scale(0.95) translateY(-5px);
+    /* Rebota ligeramente hacia arriba */
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    /* Vuelve a su tamaño y posición normales */
+  }
+}
+
+.ganador,
+.empate {
   display: none;
+  /* Los popovers están ocultos por defecto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  animation: bounceIn 0.8s ease;
+  /* Agrega la animación de rebote */
+}
+
+/* Definición de la animación de rebote */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    /* Inicia oculto */
+    transform: scale(0.5) translateY(-200px);
+    /* Se hace pequeño y se mueve hacia arriba */
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(10px);
+    /* Rebota hacia abajo y se agranda un poco */
+  }
+
+  70% {
+    transform: scale(0.95) translateY(-5px);
+    /* Rebota ligeramente hacia arriba */
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    /* Vuelve a su tamaño y posición normales */
+  }
+}
+
+
+.ganador>.btnhome,
+.empate>.btnhome {
+  color: white;
+  border-radius: 10;
+  background-color: #1C3AA9;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+
 }
 
 .namePlayer1>.containerPlayer>img,
