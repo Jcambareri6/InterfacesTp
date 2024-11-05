@@ -1,29 +1,31 @@
 let turnoJugador = document.querySelector(".turnoPlayer");
-
+let jugadorHumano= document.querySelector('#inputHumanos');
+let jugadorAliens=document.querySelector('#inputAliens');
+let menu1 = document.querySelector('.btn_home');
+let menuReiniciar1 = document.querySelector('.btn_return');
+let timer2 =  document.querySelector('.timer-display');
 class Juego {
-    constructor(Modalidad,canvas, fichaElegidaAliens,fichaElegidaHumanos) {
-        this.canvas=canvas;
-        console.log(this.canvas.width-124)
-        this.ctx= canvas.getContext('2d');
-     
+    constructor(Modalidad, canvas, fichaElegidaAliens, fichaElegidaHumanos) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
 
         this.Modalidad = Modalidad;
-        this.fichaElegidaAliens=fichaElegidaAliens;
-        this.fichaElegidaHumanos=fichaElegidaHumanos;
-        console.log(`fichas humanos ${this.fichaElegidaHumanos}`)
-        console.log(`fichas aliens ${this.fichaElegidaAliens}`)
+        this.fichaElegidaAliens = fichaElegidaAliens;
+        this.fichaElegidaHumanos = fichaElegidaHumanos;
         this.currentPlayer = "humanos";
         this.selectedFicha = null;
         this.tablero = this.setTablero(this.Modalidad);
         this.fichasAliens = [];
         this.fichasHumanos = [];
-        
-        this.iniciarFichas()
-       
-        this.canvas.addEventListener('mousedown', (e) => this.MouseDown(e));
-        this.canvas.addEventListener('mouseup', (e) => this.MouseUp(e));
-        this.canvas.addEventListener('mousemove', (e) => this.Move(e));
 
+        this.iniciarFichas();
+        this.actualizarTurnoJugador();  // Actualiza el texto al jugador actual
+        this.mostrarTurno();
+        setTimeout(() => this.ocultarTurno(), 2000);
+
+        this.canvas.addEventListener('mousedown', this.MouseDown.bind(this));
+        this.canvas.addEventListener('mouseup', this.MouseUp.bind(this));
+        this.canvas.addEventListener('mousemove', this.Move.bind(this));
     }
   
     iniciarFichas() {
@@ -97,35 +99,65 @@ class Juego {
             this.fichasHumanos.push(fichaHumano);
         }
     }
-    setTablero(Modalidad) {
+    reset() {
+        // Reiniciar el estado del tablero
+        this.tablero = this.setTablero(this.Modalidad);
+
+
+        this.fichasAliens = [];
+        this.fichasHumanos = [];
+        this.iniciarFichas();
+
+        // Reiniciar el turno al jugador inicial (puedes modificar según sea necesario)
+        this.currentPlayer = "humanos"; 
+      
+
+        // Redibujar el canvas
+        this.reDrawCanvas();
+
+        // Limpiar la ficha seleccionada
+        this.selectedFicha = null;
+
+        // Ocultar cualquier popover de ganador o empate
+        const popoverGanador = document.querySelector('.ganador');
+       
+        popoverGanador.style.display = 'none';
+     
+        menu.style.display = 'flex'
+         menuReiniciar.style.display='flex'
+         timer2.style.display = 'flex'
+        
+    }
+   
       // Use Modalidad, not this.Modalidad
+      setTablero(Modalidad) {
         let tablero;
-    
+
         switch (Modalidad) {
             case "4":
-                tablero = new Tablero(570,70, this.ctx, 6, 8, null);
-                break; 
+                tablero = new Tablero(545, 70, this.ctx, 6, 8, null);
+                break;
             case "5":
-                tablero = new Tablero(545, 70, this.ctx, 7, 8, null); 
+                tablero = new Tablero(515, 70, this.ctx, 7, 8, null);
                 break;
             case "6":
-                tablero = new Tablero(515, 70, this.ctx, 8, 8, null);
+                tablero = new Tablero(485, 70, this.ctx, 8, 8, null);
                 break;
             case "7":
-              
-                tablero = new Tablero(485, 70, this.ctx, 9, 8, null);
+                tablero = new Tablero(475, 70, this.ctx, 8, 8, null);
                 break;
         }
-    
-        console.log(tablero);
+
         return tablero;
     }
+      
+    
     play() {
 
         turnoJugador.innerHTML=`
         <h3>Turno de : ${this.currentPlayer}</h3>
         `
-        turnoJugador.style.display='flex';
+        
 
         
         this.tablero.drawTablero();
@@ -134,27 +166,23 @@ class Juego {
       
     }
     gestionarTurnos() {
-        console.log("cambiando el turno.....")
- 
-        if (this.currentPlayer == 'humanos'){
-            //if (aliens.lenght > 0) {
+        if (this.currentPlayer === 'humanos') {
             this.currentPlayer = 'aliens';
-            //else { finishGame()}
-        } else{
-            //if (humanos.lenght > 0) {
+        } else {
             this.currentPlayer = 'humanos';
-            //else { finishGame()}
         }
 
-
+        this.actualizarTurnoJugador();
+        this.mostrarTurno();
+        setTimeout(() => this.ocultarTurno(), 2000);
     }
     actualizarturnoJugador(){
-        return `
-        <div class="turnoPlayer">
-          <h1>Turno de :</h1>
-          <h3>${this.currentPlayer}</h3>
-        </div>
-        `
+        if (this.currentPlayer=='humanos'){
+            
+            turnoJugador.innerHTML = `<h3>Turno de: ${jugadorHumano.value}</h3>`;
+            }else{
+            turnoJugador.innerHTML = ` <h3>Turno de: ${jugadorAliens.value}</h3>`;
+            }
     }
     MouseDown(e) {
         let mouseX= this.canvas.offsetLeft;
@@ -178,56 +206,68 @@ class Juego {
 
       
     }
+    actualizarTurnoJugador() {
+        if (this.currentPlayer=='humanos'){
+        turnoJugador.innerHTML = `<h3>Turno de: ${jugadorHumano.value}</h3>`;
+        }else{
+        turnoJugador.innerHTML =` <h3>Turno de: ${jugadorAliens.value}</h3>`;
+        }
+    }
+
+mostrarPopoverGanador(jugador) {
+        const popoverGanador = document.querySelector('.ganador');
+
+        btn_menu.style.display='none';
+        popoverGanador.style.display = 'flex';
+        menuReiniciar.style.display='none'
+        timer2.style.display = 'none'
+        
+
+
+        if (jugador=='aliens'){
+            popoverGanador.innerText = `${jugadorHumano.value} ha ganado!`;
+            }else{
+            popoverGanador.innerText += `${jugadorAliens.value}  ha ganado! `;
+         }
+    }
     
     MouseUp(e) {
+        if (this.selectedFicha && this.selectedFicha.getIsDraggin() && this.selectedFicha.getSeleccionada()) {
+            if (this.tablero.dropZone(e.layerX, e.layerY)) {
+                const columna = Math.floor((e.layerX - this.tablero.posX) / this.tablero.widthCelda);
+                let filaFichaPosicionada = this.tablero.posicionarFicha(columna - 1, this.selectedFicha);
 
-        if (this.selectedFicha.getIsDraggin() == true && this.selectedFicha.getSeleccionada()==true){
-                if(this.selectedFicha!=null){
-                    if(this.tablero.dropZone(e.layerX,e.layerY)){
-                     
-                        const columna = Math.floor((e.layerX - this.tablero.posX) / this.tablero.widthCelda);
-                    
-                        let FilafichaPosicionada= this.tablero.posicionarFicha(columna-1,this.selectedFicha);
-                        if (FilafichaPosicionada!= -1 ){
-                            if(this.selectedFicha.getIsDraggin()==true && this.selectedFicha.getSeleccionada()==true){
-                                this.tablero.animarCaidaFicha(this,columna-1,FilafichaPosicionada,this.selectedFicha)
-                               
-                             
-                               
-                                this.selectedFicha.setPosicionada(true);
-                                this.selectedFicha.setIsDraggin(false);
-                           
-                                 this.reDrawCanvas();
-                               
-                              
-                               
-                                // this.eliminarFicha(this.currentPlayer);
-                                if(this.tablero.hayGanador( this.currentPlayer,this.Modalidad,FilafichaPosicionada,columna-1)){
-                                    setTimeout(()=>{
-                                        alert(`ganador ${this.currentPlayer}`)
-                                    }, 1000)
-                                    
-                                }
-                                //si no quedan fichas o lugares empate
-                                this.gestionarTurnos();
-                                turnoJugador.innerHTML=`
-                                <h3>Turno de : ${this.currentPlayer}</h3>
-                                `
-                                this.selectedFicha=null;
-                                console.log("ganador?: " + this.tablero.hayGanador(this.currentPlayer,this.Modalidad,FilafichaPosicionada,columna-1));
-                                
-                            }
-                           
-                        }else{
-                            this.reset()
-                        }
-                    }else{
-                      
-                        this.reset()
+                if (filaFichaPosicionada != -1) {
+                    this.selectedFicha.setPosicionada(true);
+                    this.tablero.animarCaidaFicha(this, columna - 1, filaFichaPosicionada, this.selectedFicha);
+                    this.selectedFicha.setIsDraggin(false);
+                    this.reDrawCanvas();
+                    this.redibujarFichas();
+
+                    if (this.tablero.hayGanador(this.currentPlayer, this.Modalidad, filaFichaPosicionada, columna - 1)) {
+                        setTimeout(() => {
+                            this.mostrarPopoverGanador(this.currentPlayer);
+                        }, 1000);
+                        setTimeout(() => {
+                            this.reset();
+                        }, 5000);
+                    }/*
+                        // Verificar si hay empate
+                    if (this.tablero.hayEmpate(this.fichasAliens.length + this.fichasHumanos.length)) {
+                       mostrarPopoverEmpate();
+                        return;  // Evita que el turno cambie si hay empate
                     }
-                    
+                    */
+
+                    this.gestionarTurnos();
+                    this.selectedFicha = null;
+                } else {
+                    this.reset();
                 }
-        }      
+            } else {
+                this.reset();
+            }
+        }
     }
     Move(e) {
         //  console.log(this.selectedFicha)
@@ -284,19 +324,19 @@ class Juego {
  
         this.play();
     }
-    reset(){
-        this.selectedFicha.setIsDraggin(false);
-        this.selectedFicha.setSeleccionada(false);
-        this.selectedFicha.resetPosicionInicial();
-        this.reDrawCanvas();
-        this.redibujarFichas();
-        this.selectedFicha=null;
-    }
+   
     
     redibujarFichas() {
         // Redibuja todas las fichas de ambos jugadores
         this.fichasAliens.forEach(ficha => ficha.draw());
         this.fichasHumanos.forEach(ficha => ficha.draw());
+    }
+    mostrarTurno() {
+        turnoJugador.style.display = "flex";
+    }
+
+    ocultarTurno() {
+        turnoJugador.style.display = "none";
     }
 
 }

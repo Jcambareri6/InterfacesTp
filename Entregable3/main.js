@@ -18,19 +18,18 @@ let fichaAliensElegida=undefined;
  let containerPlayer2= document.querySelector('#nombreJugador2')
  let menuJuego = document.querySelector('.menu-game');
  let Timer = document.querySelector('.timer-display')
+ let menu = document.querySelector('.btn_home');
+let menuReiniciar = document.querySelector('.btn_return');
+
  let timerSeconds = 80;
   let interval = null;
-  let isPaused = false;
+
  console.log(containerPlayer2);
  console.log(nameJugadorAliens);
  console.log(nameJugadorHumano);
 
  let btn_return = document.querySelector(".btn_return");
- btn_return.addEventListener('click',()=>{
-    console.log("entre a reinicar")
-    borrarTablero();
-    dibujarTablero();
-})
+ 
 
  let btn_menu = document.querySelector(".btn_home ");
  btn_menu.addEventListener('click',()=>{
@@ -123,7 +122,7 @@ fichasAliens.forEach(btn => {
         borrarTablero();
         dibujarTablero();
         iniciarJuego();
-        const juego = new Juego(modalidad,canvas,fichaAliensElegida,fichaHumanoElegida);
+         juego = new Juego(modalidad,canvas,fichaAliensElegida,fichaHumanoElegida);
         startTimer();
         juego.play();
         
@@ -138,7 +137,11 @@ fichasAliens.forEach(btn => {
     });
 });
 
-
+btn_return.addEventListener('click',()=>{
+  if(juego!=null){
+    juego.reset();
+  }
+})
 // Función para iniciar el temporizador
 function startTimer() {
       timerInterval = setInterval(updateTimer, 1000); // Actualiza cada segundo
@@ -177,23 +180,53 @@ function dibujarTablero(){
   const minutes = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
   const seconds = String(timerSeconds % 60).padStart(2, '0');
   Timer.textContent = `${minutes}:${seconds}`;
+  if (timerSeconds <= 0) {
+    empate()
+    juego.reset();
+    clearInterval(interval);
+    interval = null;
+   empate();
+   setTimeout (()=>{
+    btn_menu.style.display = 'flex';
+    const popoverGanador = document.querySelector('.ganador');
+    menuReiniciar.style.display = 'flex';
+    Timer.style.display = 'flex';
+    popoverGanador.style.display = 'none';
+   
+   },1000)
+
+  
+ ;
 }
+}
+function empate() {
+  const popoverGanador = document.querySelector('.ganador');
+ // Asegúrate de que el selector sea correcto
+
+  btn_menu.style.display = 'none';
+  popoverGanador.style.display = 'flex';
+  menuReiniciar.style.display = 'none';
+  Timer.style.display = 'none';
+
+ popoverGanador.innerHTML=`Empate!`
+ 
+ 
+}
+
 
 function startTimer() {
   if (interval) return; 
 
   interval = setInterval(() => {
-      if (!isPaused) {
+
+   
           timerSeconds--;
           updateTimer();
 
-          if (timerSeconds <= 0) {
-              clearInterval(interval);
-              interval = null;
-          }
+         
       }
-  }, 1000);
+  , 10);
+ 
 }
-
 
 

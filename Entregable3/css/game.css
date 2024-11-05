@@ -906,3 +906,78 @@ p {
   margin: 0;
   /* Asegura que el texto esté centrado */
 }
+.turnoPlayer {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 42.5%;
+    font-size: 24px;
+    font-family: 'Roboto Mono';
+    color: #e8e8e8;
+    border-radius: 10px;
+    background-color: rgba(14, 10, 10, 0.7);
+    animation: bounceIn 0.8s ease;
+}
+.ganador,.empate{
+  position: absolute;
+  top: 70%;
+}
+
+.ganador h1,
+.empate h1 {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5) translateY(-200px);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    padding: 80px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.ganador.show,
+.empate.show {
+    opacity: 1;
+    animation: bounceIn 0.8s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-200px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(10px);
+    }
+
+    70% {
+        transform: scale(0.95) translateY(-5px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+.ganador>.btn_home,
+.empate>.btn_home {
+    display: none;
+    color: white;
+    border-radius: 10px;
+    background-color: #1C3AA9;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
