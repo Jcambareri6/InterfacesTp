@@ -103,11 +103,12 @@ class Juego {
         // Ocultar cualquier popover de ganador o empate
         const popoverGanador = document.querySelector('.ganador');
        
-        popoverGanador.style.display = 'none';
      
-        menu.style.display = 'flex'
-         menuReiniciar.style.display='flex'
-         timer2.style.display = 'flex'
+     
+        menu1.style.display='flex';
+        popoverGanador.style.display = 'none';
+        menuReiniciar1.style.display='flex'
+        timer2.style.display = 'flex'
         
     }
    
@@ -306,31 +307,7 @@ mostrarPopoverGanador(jugador) {
         };
     }
 
-    reset() {
-        // Reiniciar el estado del tablero
-        this.tablero = this.setTablero(this.Modalidad);
-    
    
-        this.fichasAliens = [];
-        this.fichasHumanos = [];
-        this.iniciarFichas();
-    
-        // Reiniciar el turno al jugador inicial (puedes modificar según sea necesario)
-        this.currentPlayer = "humanos"; 
-        this.actualizarTurnoJugador(); // Actualizar el mensaje de turno
-    
-        // Redibujar el canvas
-        this.reDrawCanvas();
-        
-        // Limpiar la ficha seleccionada
-        this.selectedFicha = null;
-    
-        // Ocultar cualquier popover de ganador o empate
-        const popoverGanador = document.querySelector('.ganador');
-        const popoverEmpate = document.querySelector('.empate');
-        popoverGanador.style.display = 'none';  
-        popoverEmpate.style.display = 'none';  
-    }
 
     redibujarFichas() {
         this.fichasAliens.forEach(ficha => ficha.draw());

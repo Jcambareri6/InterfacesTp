@@ -181,6 +181,7 @@ function dibujarTablero(){
     menuReiniciar.style.display = 'flex';
     Timer.style.display = 'flex';
     popoverGanador.style.display = 'none';
+    
    
    },1000)
 
@@ -198,6 +199,8 @@ function empate() {
   Timer.style.display = 'none';
 
  popoverGanador.innerHTML=`Empate!`
+ resetTimer();
+ startTimer();
  
  
 }
@@ -214,6 +217,19 @@ function startTimer() {
 
          
       }
-  , 10);
+  , 1500);
  
+}
+function resetTimer() {
+  // Detener el temporizador si está corriendo
+  if (interval) {
+    clearInterval(interval);
+    interval = null;
+  }
+
+  // Restablecer el tiempo al valor inicial
+  timerSeconds = 80;
+
+  // Actualizar el temporizador en la pantalla
+  updateTimer();
 }
