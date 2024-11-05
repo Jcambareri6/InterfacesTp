@@ -20,31 +20,18 @@ let fichaAliensElegida=undefined;
  let Timer = document.querySelector('.timer-display')
  let timerSeconds = 80;
   let interval = null;
-  let isPaused = false;
+let juego = null;
  console.log(containerPlayer2);
  console.log(nameJugadorAliens);
  console.log(nameJugadorHumano);
 
  let btn_return = document.querySelector(".btn_return");
  btn_return.addEventListener('click',()=>{
-    console.log("entre a reinicar")
-    borrarTablero();
-    dibujarTablero();
+    juego.reset();
 })
 
  let btn_menu = document.querySelector(".btn_home ");
- btn_menu.addEventListener('click',()=>{
-    console.log("entre a menu")
-    borrarTablero();
-    dibujarTablero();
-    contenedorJuego.classList.remove('none')
-    contenedorJuego.classList.add('contenedorJuego')
-    menuJuego.style.display="none";
-    containerPlayer1.classList.remove('namePlayer1')
-    containerPlayer2.classList.remove('namePlayer2')
-    containerPlayer1.classList.add('none')
-    containerPlayer2.classList.add('none')
-})
+
  
  btnJugar.addEventListener("click",()=>{
    btnJugar.classList.add('none');
@@ -123,7 +110,7 @@ fichasAliens.forEach(btn => {
         borrarTablero();
         dibujarTablero();
         iniciarJuego();
-        const juego = new Juego(modalidad,canvas,fichaAliensElegida,fichaHumanoElegida);
+         juego = new Juego(modalidad,canvas,fichaAliensElegida,fichaHumanoElegida);
         startTimer();
         juego.play();
         
@@ -137,7 +124,23 @@ fichasAliens.forEach(btn => {
     
     });
 });
+btn_menu.addEventListener('click',()=>{
 
+  borrarTablero();
+  juego.finish();
+  dibujarTablero();
+  juego=null
+  console.log(juego)
+  contenedorJuego.classList.remove('none')
+  contenedorJuego.classList.add('contenedorJuego')
+  menuJuego.style.display="none";
+  containerPlayer1.classList.remove('namePlayer1')
+  containerPlayer2.classList.remove('namePlayer2')
+  containerPlayer1.classList.add('none')
+  containerPlayer2.classList.add('none')
+ 
+  
+})
 
 // Función para iniciar el temporizador
 function startTimer() {

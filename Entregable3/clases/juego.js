@@ -128,9 +128,18 @@ class Juego {
     }
     mostrarPopoverGanador(jugador) {
         const popoverGanador = document.querySelector('.ganador');
-        // Actualiza el contenido del popover
-        popoverGanador.querySelector('h1').innerText = `¡${jugador} ha ganado!`;
-        popoverGanador.style.display = 'flex';  // Muestra el popover
+        let  h1Ganador =  popoverGanador.querySelector('#nombreGanador');
+        popoverGanador.style.display = 'flex';  
+
+
+        if (jugador=='humanos'){
+            console.log("humanos ganador")
+            popoverGanador.querySelector('#nombreGanador').innerText = `¡${jugadorHumano.value} ha ganado!`;
+       
+            
+            }else{
+            popoverGanador.querySelector('#nombreGanador').innerText = `¡${jugadorAliens.value} ha ganado!`;
+         }
     }
 
     mostrarPopoverEmpate() {
@@ -168,7 +177,7 @@ class Juego {
 
                     if (this.tablero.hayGanador(this.currentPlayer, this.Modalidad, filaFichaPosicionada, columna - 1)) {
                         setTimeout(() => {
-                            this.mostrarPopoverGanador(this.currentPlayer);//muestra popoverganador
+                            this.mostrarPopoverGanador(this.currentPlayer);
                         }, 1000);
                     }/*
                         // Verificar si hay empate
@@ -200,6 +209,13 @@ class Juego {
             this.redibujarFichas();
         }
     }
+    finish(){
+       // Deshabilita interacciones en el canvas
+       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        
+        
+    }
 
     reDrawCanvas() {
         // Cargar la imagen de fondo
@@ -211,19 +227,35 @@ class Juego {
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Limpia el canvas
             this.ctx.drawImage(img, 62, 0, this.canvas.width - 124, this.canvas.height); // Dibuja la imagen de fondo
 
-            // Redibuja el tablero y las fichas después de la imagen de fondo
-            this.tablero.drawTablero();  // Dibuja el tablero
-            this.redibujarFichas();      // Redibuja las fichas
+            this.tablero.drawTablero();
+            this.redibujarFichas();     
         };
     }
 
     reset() {
-        this.selectedFicha.setIsDraggin(false);
-        this.selectedFicha.setSeleccionada(false);
-        this.selectedFicha.resetPosicionInicial();
+        // Reiniciar el estado del tablero
+        this.tablero = this.setTablero(this.Modalidad);
+    
+   
+        this.fichasAliens = [];
+        this.fichasHumanos = [];
+        this.iniciarFichas();
+    
+        // Reiniciar el turno al jugador inicial (puedes modificar según sea necesario)
+        this.currentPlayer = "humanos"; 
+        this.actualizarTurnoJugador(); // Actualizar el mensaje de turno
+    
+        // Redibujar el canvas
         this.reDrawCanvas();
-        this.redibujarFichas();
+        
+        // Limpiar la ficha seleccionada
         this.selectedFicha = null;
+    
+        // Ocultar cualquier popover de ganador o empate
+        const popoverGanador = document.querySelector('.ganador');
+        const popoverEmpate = document.querySelector('.empate');
+        popoverGanador.style.display = 'none';  
+        popoverEmpate.style.display = 'none';  
     }
 
     redibujarFichas() {
@@ -238,4 +270,5 @@ class Juego {
             this.selectedFicha.setIsDraggin(true);
         }
     }
+    
 }
