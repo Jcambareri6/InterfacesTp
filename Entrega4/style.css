@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container-grid {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.central-content {
+    margin: 0 auto;
+}
+
+/*header*/
+header {
+    width: 100%;
+    max-width: 1200px;
+    height: 103px;
+    background-color: #00D1D5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 889px;
+
+
+}
+
+.btn-compartir {
+    width: 114px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #83C252;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    border: 5px solid white;
+    border-radius: 111px;
+    box-shadow: 4px 5px 0px #0047AB;
+    padding: 16px 43px 15px 43px;
+    margin-right: 100px;
+    margin-bottom: 37px;
+    margin-top: 20px;
+
+
+}
+
+.btn-compartir button {
+    font-size: 20px;
+    border: none;
+    background-color: #83C252;
+    color: #ffffff;
+}
+
+
+.menu-hamburgesa {
+    top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    /* Elimina margen innecesario */
+
+}
+
+.menu-hamburgesa button {
+    width: 34px;
+    height: 26px;
+    background-color: transparent;
+    /* Fondo transparente ya que el SVG tiene color */
+    border: none;
+    padding: 0;
+    /* Elimina padding extra */
+}
+
+/* Ajuste del SVG en el menú hamburguesa */
+.menu-hamburgesa svg {
+    width: 36px;
+    height: 26px;
+}
+
+/* Ocultar el logo si no se necesita */
+header>.logo {
+    display: none;
+}
+
+
+/* Fondo adicional para sector1, si se necesita */
+.sector1 {
+    width: 1180x;
+    height: 959px;
+    background-image: url('img/sector1/fondo-sector1.png');
+}
+
+.sector2 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox=\'0 0 1280 1157\' fill=\'none\'><path d=\'M0 0C499.868 48.2939 780.13 47.017 1280 0V1157H0V0Z\' fill=\'%235829BF\'/></svg>');
+}
+
+.sector3 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox=\'0 0 1280 894\' fill=\'none\'><path d=\'M0 742.37C183.201 870.171 655 790.5 655 790.5C655 790.5 1037.37 755.612 1280 894V0H0V742.37Z\' fill=\'url(%23paint0_linear_1_41)\' /><defs><linearGradient id=\'paint0_linear_1_41\' x1=\'640\' y1=\'0\' x2=\'640\' y2=\'894\' gradientUnits=\'userSpaceOnUse\'><stop stop-color=\'%2388DE7F\' /><stop offset=\'0.46\' stop-color=\'%23A8EBEC\' /></linearGradient></defs></svg>');
+}
