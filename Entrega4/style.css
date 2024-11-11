@@ -94,12 +94,13 @@ header>.logo {
 }
 
 
-/*sector 1*/
+/*sector 1  marginleft 152.82*/
 .sector1 {
     width: 1180x;
     height: 959px;
     background-image: url('img/sector1/fondo-sector1.png');
 }
+
 
 .sector1 > #logo {
     position: absolute;
@@ -113,8 +114,6 @@ header>.logo {
 
 .sector1 > #imagen1 {
     position: absolute;
-    width: 240.4px;
-    height: 314.48px;
     left: 411px;
     top: 527.28px;
     /*background: url(11.png);*/
@@ -122,8 +121,6 @@ header>.logo {
 }
 .sector1 > #imagen2 {
     position: absolute;
-    width: 197px;
-    height: 270px;
     left: 536px;
     top: 426.04px;
     /*background: url(22.png);*/
@@ -131,8 +128,6 @@ header>.logo {
 }
 .sector1 > #imagen3 {
     position: absolute;
-    width: 174px;
-    height: 384px;
     left: 752.25px;
     top: 338px;
     /*background: url(33.png);*/
@@ -140,32 +135,24 @@ header>.logo {
 }
 .sector1 > #arbol1 {
     position: absolute;
-    width: 560.1px;
-    height: 867.75px;
     left: -153px;
     top: -1px;
     /*background: url(arbol.png);*/
 }
 .sector1 > #arbol2 {
     position: absolute;
-    width: 434.21px;
-    height: 672.52px;
     left: 881.03px;
     top: 106.71px;
     /*background: url(arbol.png);*/
 }
 .sector1 > #arbol3 {
     position: absolute;
-    width: 278.03px;
-    height: 430.85px;
     left: 1080.97px;
     top: 278.38px;
     /*background: url(arbol.png);*/
 }
 .sector1 > #arbusto4 {
     position: absolute;
-    width: 249.76px;
-    height: 114.44px;
     left: 161.38px;
     top: 717.97px;
     /*background: radial-gradient(98.53% 98.53% at 49.87% 41.76%, #5FAF64 50%, #28492A 100%);*/
@@ -173,8 +160,6 @@ header>.logo {
 }
 .sector1 > #arbusto2 {
     position: absolute;
-    width: 155.51px;
-    height: 102.33px;
     left: 197.06px;
     top: 821.65px;
     /*background: radial-gradient(98.53% 98.53% at 49.87% 41.76%, #5FAF64 50%, #28492A 100%);*/
@@ -183,8 +168,6 @@ header>.logo {
 }
 .sector1 > #piedra1{
     position: absolute;
-    width: 145.41px;
-    height: 78.09px;
     left: 129.07px;
     top: 793.37px;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%, rgba(0, 0, 0, 0.12) 92.14%), 
@@ -194,8 +177,6 @@ header>.logo {
 }
 .sector1 > #piedra2{
     position: absolute;
-    width: 113.77px;
-    height: 74.05px;
     left: 1072.22px;
     top: 737.5px;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%,
@@ -205,8 +186,6 @@ header>.logo {
 }
 .sector1 > #piedra3{
     position: absolute;
-    width: 66.65px;
-    height: 56.55px;
     left: 1101.84px;
     top: 737.5px;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%,
@@ -218,8 +197,6 @@ header>.logo {
 }
 .sector1 > #piedra4{
     position: absolute;
-    width: 59.24px;
-    height: 35.01px;
     left: 1101.84px;
     top: 786.64px;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%,
