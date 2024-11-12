@@ -14,7 +14,7 @@ body {
 
 .container-grid {
     max-width: 1280px;
-    width: 1280px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
@@ -60,7 +60,6 @@ header {
 }
 
 .btn-compartir button {
-    margin-top: 20px;
     font-size: 20px;
     border: none;
     background-color: #83C252;
@@ -221,25 +220,57 @@ header>.logo {
 /*sector 2*/
 .sector2 {
     width: 1280px;
-    height: 2746px;
-    background-image: url(' data:image/svg+xml, %3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 894" %3E%3Cpath d="M0 742.37C183.201 870.171 655 790.5 655 790.5C655 790.5 1037.37 755.612 1280 894V0H0V742.37Z" fill="url(%23paint0_linear_1_41)" /%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_1_41" x1="640" y1="0" x2="640" y2="894" gradientUnits="userSpaceOnUse" %3E%3Cstop stop-color="%2388DE7F" /%3E%3Cstop offset="0.46" stop-color="%23A8EBEC" /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E');
+    margin: 0 auto;
+    background-image: url('data:image/svg+xml, %3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 894" %3E%3Cpath d="M0 742.37C183.201 870.171 655 790.5 655 790.5C655 790.5 1037.37 755.612 1280 894V0H0V742.37Z" fill="url(%23paint0_linear_1_41)" /%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_1_41" x1="640" y1="0" x2="640" y2="894" gradientUnits="userSpaceOnUse" %3E%3Cstop stop-color="%2388DE7F" /%3E%3Cstop offset="0.46" stop-color="%23A8EBEC" /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E');
     background-repeat: no-repeat;
     background-position: center top;
-    margin-bottom: 50px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     z-index: 1000;
+    padding-top: 50px;
+}
+
+
+
+.sector2 .img4 {
+    width: 601.64px;
+    height: 603px;
+    margin-left: 48px;
+    position: relative;
+    top: -127px;
+    margin-bottom: 80px;
+}
+
+.sector2 .cardP {
+    width: 576.38px;
+    height: 324.35;
+    margin-top: 30px;
+    margin-left: 236px;
+}
+
+.sector2 .img5 {
+    width: 572px;
+    height: 1259px;
+    position: relative;
+    top: -1400px;
+    left: 780px;
+    right: 23px;
+
+
 }
 
 .sector2 .cards {
+    width: 1280px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap: 40.56px;
-    margin-top: 48px;
+    top: 80px;
 }
 
-.sector2 .card1,
-.sector2 .card2,
-.sector2 .card3 {
+.section2 .card1,
+.section2 .card2,
+.section2 .card3 {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -251,10 +282,9 @@ header>.logo {
 .sector2 .card2 img,
 .sector2 .card3 img {
     width: 332.96px;
-    /* Ajusta el ancho de la imagen */
     height: 302.69px;
-    /* Limita el tamaño máximo de la imagen */
 }
+
 
 .sector2 .cards p {
     margin-top: 23.31px;
@@ -262,6 +292,7 @@ header>.logo {
     height: 218px;
     line-height: 1.2;
     color: #000000;
+
 }
 
 .sector2 h1 {
@@ -276,9 +307,11 @@ header>.logo {
     /* Ajuste de interlineado */
     letter-spacing: 0%;
     z-index: 1000;
+    margin-left: 100px;
 }
 
 .sector2 p {
+    margin-left: 100px;
     margin-top: 22px;
     width: 704px;
     height: 154px;
