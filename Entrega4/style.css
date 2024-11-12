@@ -14,15 +14,17 @@ body {
 
 .container-grid {
     max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
+    width: 1280px;
+    margin-left: 100px;
+    margin-right: 100px;
+
     padding: 20px;
     background-color: #ffffff;
 }
 
 .central-content {
-    width: 1080px;
-    margin: 0 auto;
+    width: 1280px;
+
 }
 
 /*header*/
@@ -106,7 +108,8 @@ header>.logo {
     position: absolute;
     width: 560px;
     height: 320px;
-    left: calc(50% - 560px/2);
+    right: 359px;
+    left: 400px;
     top: 55px;
     /*background: url(logo.png);*/
 
@@ -114,52 +117,69 @@ header>.logo {
 
 .sector1>#imagen1 {
     position: absolute;
-    left: 411px;
-    top: 527.28px;
+    left: 450px;
+    top: 501px;
     /*background: url(11.png);*/
     /*transform: rotate(-6.51deg);*/
 }
 
 .sector1>#imagen2 {
     position: absolute;
-    left: 536px;
-    top: 426.04px;
+    left: 576px;
+    top: 404px;
     /*background: url(22.png);*/
     /*transform: rotate(-6.72deg);*/
 }
 
 .sector1>#imagen3 {
     position: absolute;
-    left: 752.25px;
-    top: 338px;
+    left: 734px;
+    top: 339px;
     /*background: url(33.png);*/
     /*transform: rotate(8.73deg);*/
 }
 
 .sector1>#arbol1 {
     position: absolute;
-    left: -153px;
-    top: -1px;
+    left: 152.82;
+    top: 0px;
+    z-index: 3;
     /*background: url(arbol.png);*/
 }
 
 .sector1>#arbol2 {
     position: absolute;
-    left: 881.03px;
+    right: -20px;
     top: 106.71px;
+    z-index: 4;
     /*background: url(arbol.png);*/
 }
 
 .sector1>#arbol3 {
     position: absolute;
-    left: 1080.97px;
+    left: 1132.97px;
     top: 278.38px;
+    z-index: 3;
     /*background: url(arbol.png);*/
+}
+
+.sector1>#arbusto1 {
+    position: absolute;
+    left: 1078px;
+    top: 630px;
+    z-index: 2;
+}
+
+.sector1>#arbusto3 {
+    position: absolute;
+    top: 662px;
+    left: 1132px;
+    z-index: 3;
 }
 
 .sector1>#arbusto4 {
     position: absolute;
-    left: 161.38px;
+    left: 211.38px;
     top: 717.97px;
     /*background: radial-gradient(98.53% 98.53% at 49.87% 41.76%, #5FAF64 50%, #28492A 100%);*/
     /*box-shadow: inset -6.73197px 6.73197px 3.36598px rgba(255, 255, 255, 0.63);*/
@@ -167,8 +187,9 @@ header>.logo {
 
 .sector1>#arbusto2 {
     position: absolute;
-    left: 197.06px;
+    left: 237.06px;
     top: 821.65px;
+    z-index: 4;
     /*background: radial-gradient(98.53% 98.53% at 49.87% 41.76%, #5FAF64 50%, #28492A 100%);*/
     /*box-shadow: inset -6.73197px 6.73197px 3.36598px rgba(255, 255, 255, 0.63);*/
 
@@ -176,8 +197,9 @@ header>.logo {
 
 .sector1>#piedra1 {
     position: absolute;
-    left: 129.07px;
+    left: 189.07px;
     top: 793.37px;
+    z-index: 3;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%, rgba(0, 0, 0, 0.12) 92.14%), 
     radial-gradient(28.88% 48.16% at 78.24% 23.71%,
      rgba(255, 255, 255, 0.64) 0%,
@@ -186,8 +208,9 @@ header>.logo {
 
 .sector1>#piedra2 {
     position: absolute;
-    left: 1072.22px;
+    left: 1122.22px;
     top: 737.5px;
+    z-index: 4;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%,
     rgba(0, 0, 0, 0.12) 92.14%),
     radial-gradient(28.88% 48.16% at 78.24% 23.71%,
@@ -196,8 +219,9 @@ header>.logo {
 
 .sector1>#piedra3 {
     position: absolute;
-    left: 1101.84px;
+    left: 1081.84px;
     top: 737.5px;
+    z-index: 4;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%,
      rgba(0, 0, 0, 0.12) 92.14%),
       radial-gradient(68.76% 47.62% at 34.85% 36.9%,
@@ -208,8 +232,9 @@ header>.logo {
 
 .sector1>#piedra4 {
     position: absolute;
-    left: 1101.84px;
+    left: 1091.84px;
     top: 786.64px;
+    z-index: 4;
     /*background: linear-gradient(185.83deg, rgba(0, 0, 0, 0) 86.84%,
      rgba(0, 0, 0, 0.12) 92.14%),
       radial-gradient(68.76% 47.62% at 34.85% 36.9%,
@@ -329,6 +354,52 @@ header>.logo {
     background-image: url('data:image/svg+xml,%3Csvg%20width%3D%221280%22%20height%3D%221157%22%20viewBox%3D%220%200%201280%201157%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200C499.868%2048.2939%20780.13%2047.017%201280%200V1157H0V0Z%22%20fill%3D%22%235829BF%22/%3E%3C/svg%3E');
     background-repeat: no-repeat;
     background-position: center top;
+}
+
+.sector3>div {
+    height: 400px;
+}
+
+.sector3>div>h1 {
+    position: absolute;
+    width: 950px;
+    height: 153px;
+    left: calc(50% - 950px/2);
+    top: 4055px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 61.14px;
+    line-height: 110%;
+    /* or 67px */
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.sector3>div>img {
+    z-index: 1;
+}
+
+.sector3>div>button {
+
+    position: absolute;
+    width: 540px;
+    height: 66px;
+    left: calc(50% - 540px/2);
+    top: 4280px;
+    background: #83C252;
+    border: 8px solid #FFFFFF;
+    /* Drop Shadow */
+    box-shadow: 4px 5px 0px #02187E;
+    border-radius: 111px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31.14px;
+
 }
 
 /*sector 4*/
