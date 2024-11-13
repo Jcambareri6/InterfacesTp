@@ -457,14 +457,40 @@ header>.logo {
 
 /*sector 5*/
 
+.sector5 {
+    width: 1280px;
+    height: 1443.83px;
+    background-color: #EFB71E;
+    clip-path: path('M-83 56.0049C135 -108.5 905.5 152.502 1346 56.0049V1444C776.18 1413.21 444.167 1363.12 -83 1444V56.0049Z');
+}
+
 .sector5>img {
     position: absolute;
     left: 731px;
-    top: 10760px;
+    top: 11250px;
 }
 
+.sector5 h1 {
+    color: #ffffff;
+    font-size: 60px;
+    margin-left: 100px;
+    margin-top: 300px;
+}
 
-
+.sector5 iframe {
+    width: 804px;
+    /* Ajustar tamaño del iframe si es necesario */
+    height: 452px;
+    /* Aspecto 16:9 de video estándar */
+    display: block;
+    margin-left: 100px;
+    margin-top: 206px;
+    /* Centrado horizontalmente */
+    border-radius: 45px;
+    /* Radios diferentes en cada esquina (Mixed) */
+    border: 29px solid white;
+    /* Borde blanco */
+}
 
 /*footer*/
 footer {
