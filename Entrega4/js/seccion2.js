@@ -16,12 +16,12 @@ window.addEventListener('scroll', () => {
     let scrollPosition = window.scrollY;
 
     // Animación de los elementos generales
-    titulo.style.transform = `translateY(${scrollPosition * 0.1}px)`; 
-    parrafo.style.transform = `translateY(${scrollPosition * 0.1}px)`; 
-    partes.style.transform = `translateY(${scrollPosition * 0.1}px) translateX(${scrollPosition * -0.1}px)`; 
+    titulo.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+    parrafo.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+    partes.style.transform = `translateY(${scrollPosition * 0.1}px) translateX(${scrollPosition * -0.1}px)`;
 
-    figura4.style.transform = `translateY(${scrollPosition * 0.06}px) translateX(${scrollPosition * -0.03}px)`; 
-    figura5.style.transform = `translateY(${scrollPosition * 0.14}px)`; 
+    figura4.style.transform = `translateY(${scrollPosition * 0.06}px) translateX(${scrollPosition * -0.03}px)`;
+    figura5.style.transform = `translateY(${scrollPosition * 0.14}px)`;
 
     // Verifica si seccion6 está visible en el viewport
     const seccionRect = seccion6.getBoundingClientRect();

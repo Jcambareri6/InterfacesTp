@@ -116,20 +116,20 @@ function mover(scrollY, initScroll, limitScroll, elemento) {
 
     }
 }
-let currentImage = ""; 
+let currentImage = "";
 
 function animarSeccionTextos(scrollY) {
     let img = document.getElementById("imagenDinamica");
     let seccionesTxt = document.querySelectorAll("[data-img]");
-    
+
     seccionesTxt.forEach(seccion => {
         const rect = seccion.getBoundingClientRect();
-        const sectionTop = seccion.offsetTop-200;
+        const sectionTop = seccion.offsetTop - 200;
         const sectionHeight = seccion.offsetHeight;
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             const newImage = seccion.getAttribute('data-img');
-            
+
             // Solo cambia la imagen si es diferente de la actual
             if (currentImage !== newImage) {
                 currentImage = newImage; // Actualiza la imagen activa

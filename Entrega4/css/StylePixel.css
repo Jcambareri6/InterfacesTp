@@ -860,7 +860,7 @@ body {
 .seccion8 {
   margin-top: 54px;
   height: 729px;
-  background-image: url('/img/sector6/455.png');
+  background-image: url('/Entrega4/img/sector6/455.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -966,7 +966,7 @@ body {
 
 .formulario>form>.inputForm:focus,
 .formulario>form>.inputForm:disabled {
-  border: none;
+  border-radius: none;
   /* Desactiva el borde */
 }
 
@@ -987,6 +987,11 @@ form>.btnSubmit>p {
   box-shadow: -4px -5px #02187E;
   border-radius: 50px 0px 0px 50px;
   z-index: 1;
+  transition: all 3s ease-in-out;
+}
+
+.formulario>form>.btnSubmit:hover {
+  background: #345c15;
 }
 
 form>.btnSubmit>p {
