@@ -26,13 +26,13 @@ function animarHeader(scrollY) {
     let anchoActual = anchoInicial - (anchoInicial - anchoFinal) * (scrollTop / scrollLimite); // calcula porc para achicar img
     let topActual = Math.min(scrollTop, 150);
 
-    // Aplicar los nuevos valores al logo
+   
     logoHeader.style.width = `${anchoActual}px`;
     logoHeader.style.transform = `translateY(-${topActual}px)`;
 
     if (window.scrollY >= scrollLimite) {
 
-        // Asegurarte de que tenga 'headerScroll'
+       
         header.classList.add('headerScroll');
     }
 };
@@ -62,17 +62,25 @@ const imgFondo = document.getElementById('img-fondo');
 let indiceActual = 0;
 
 function cambiarFondo() {
-    imgFondo.style.backgroundImage = `url(${imagenes[indiceActual]})`;
-    indiceActual = (indiceActual + 1) % imagenes.length; // Ciclar el índice
+  
+    const nuevaImagen = new Image();
+    nuevaImagen.src = imagenes[indiceActual];
+    
+    
+    nuevaImagen.onload = () => {
+        imgFondo.style.backgroundImage = `url(${nuevaImagen.src})`;
+    };
+
+   
+    indiceActual = (indiceActual + 1) % imagenes.length;
 }
 
 setInterval(cambiarFondo, 3000);
 cambiarFondo();
 
-// Sección 5: Cambio de imágenes en scroll sincronizado con textos
 
 
-// Función para cambiar la imagen activa
+
 function cambiarImagenActiva(index) {
     imag.forEach((img, i) => {
         if (i === index) {
@@ -85,21 +93,10 @@ function cambiarImagenActiva(index) {
     });
 }
 
-
-function animarSeccionTextos() {
-    textos.forEach((texto, index) => {
-        const rect = texto.getBoundingClientRect();
-        const visible = rect.top < window.innerHeight && rect.bottom > 0;
-
-        if (visible) {
-            cambiarImagenActiva(index);
-        }
-    });
-}
 function animarParallaxSeccion1(scrollY) {
     let elementos = document.querySelectorAll("[data-velocidad]");
 
-    let initScroll = 170
+    let initScroll = 190
     let limitScroll = 270
 
     elementos.forEach(elementoPrimerPlano => {
@@ -111,10 +108,14 @@ function mover(scrollY, initScroll, limitScroll, elemento) {
 
     if (scrollY >= initScroll && scrollY <= limitScroll) {
         let velocidad = parseFloat(elemento.getAttribute("data-velocidad"));
-        let movimiento = (scrollY - initScroll) * velocidad
-        elemento.style.transform = `translateY(${movimiento}px)`;
-
+        let direccion= parseFloat(elemento.getAttribute("data-direccion"));
+        let movimiento = ((scrollY - initScroll) * velocidad)
+      
+        elemento.style.transform = `translateY(${movimiento}px) translateX(${movimiento * direccion}px)`;
+      
+    
     }
+    
 }
 let currentImage = "";
 
@@ -124,24 +125,24 @@ function animarSeccionTextos(scrollY) {
 
     seccionesTxt.forEach(seccion => {
         const rect = seccion.getBoundingClientRect();
-        const sectionTop = seccion.offsetTop - 200;
+        const sectionTop = seccion.offsetTop - 400;
         const sectionHeight = seccion.offsetHeight;
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             const newImage = seccion.getAttribute('data-img');
 
-            // Solo cambia la imagen si es diferente de la actual
+      
             if (currentImage !== newImage) {
-                currentImage = newImage; // Actualiza la imagen activa
+                currentImage = newImage; 
                 img.classList.remove('img-animada');
 
                 setTimeout(() => {
                     img.src = newImage;
                     img.classList.add('img-animada');
-                }, 150);
+                }, 200);
             }
         }
     });
 }
-// Inicializar la primera imagen como activa
+
 cambiarImagenActiva(0);

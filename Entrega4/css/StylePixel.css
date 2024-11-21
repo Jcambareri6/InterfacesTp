@@ -438,6 +438,9 @@ body {
   z-index: 2;
   clip-path: inset(0 47px 0 0);
 }
+.arbustofondoMovimiento{
+  clip-path: inset(0 37px 0 0);
+}
 
 .seccion2 {
   height: 894px;
@@ -1100,16 +1103,16 @@ form>.btnSubmit>p {
   left: 962px;
   animation: mover-nube-irregular-derecha 20s ease-in-out infinite;
   z-index: 0;
-  /* Las nubes quedan detrás */
+  
   pointer-events: none;
-  /* Las nubes no interfieren con el mouse */
+ 
 }
 
 .nubes>.nubederecha1>img {
   width: 265px;
   height: 124px;
   z-index: 0;
-  /* Las nubes quedan detrás */
+ 
 }
 
 .nubes>.nubederecha1 {
@@ -1134,73 +1137,100 @@ form>.btnSubmit>p {
   z-index: 0;
   pointer-events: none;
 }
-
 @keyframes mover-nube {
   0% {
-    left: 0%;
-    /* Comienza fuera del contenedor a la izquierda */
+    left: 0px; 
+    opacity: 0; 
+  }
+
+  10% {
+    opacity: 1; 
+  }
+
+  90% {
+    opacity: 1; 
   }
 
   100% {
-    left: 100%;
-    /* Sale completamente del contenedor por la derecha */
+    left: 1000px; 
+    opacity: 0;
   }
 }
 
 @keyframes mover-nube-diagonal {
   0% {
-    left: 200%;
-    top: 100px;
-    /* Posición inicial en la parte superior */
+    left: 900px; 
+    top: 100px; 
+    opacity: 0; 
+  }
+
+  10% {
+    opacity: 1; 
   }
 
   50% {
-    left: 640px;
-    top: 200px;
-    /* Mitad del recorrido, más abajo */
+    left: 640px; 
+    top: 200px; 
     z-index: 0;
+    opacity: 1; 
+  }
+
+  90% {
+    opacity: 1; 
   }
 
   100% {
-    left: -100%;
-    top: 100px;
-    z-index: 0;
-    /* Finaliza regresando a la parte superior */
+    left: 200px; 
+    top: 100px; 
+    opacity: 0; 
   }
 }
 
 @keyframes mover-nube-irregular-derecha {
   0% {
-    left: 100%;
+    left: 900px; 
     top: 50px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
   }
 
   20% {
-    left: 500px;
+    left: 900px;
     top: 300px;
+    opacity: 1; 
   }
 
   40% {
-    left: 800px;
+    left: 600px;
     top: 50px;
+    opacity: 1; 
   }
 
   60% {
-    left: 600px;
+    left: 400px;
     top: 150px;
+    opacity: 1; 
   }
 
   80% {
-    left: 300px;
+    left: 100px;
     top: 100px;
+    opacity: 1; 
+  }
+
+  90% {
+    opacity: 0.5; 
   }
 
   100% {
-    left: -100%;
+    left: 0px; 
     top: 50px;
+    opacity: 0; 
   }
 }
-
 /*footer*/
 footer {
   position: absolute;

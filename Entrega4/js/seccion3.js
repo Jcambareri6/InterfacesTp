@@ -9,19 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardTop = card.getBoundingClientRect().top;
       const cardBottom = card.getBoundingClientRect().bottom;
 
-      // Verifica si la tarjeta está visible en la ventana
+    
       if (cardTop < triggerBottom && cardBottom > triggerTop) {
         setTimeout(() => {
           card.classList.add('visible');
-        }, index * 600); // Retraso entre tarjetas
+        }, index * 600); 
       } else {
         setTimeout(() => {
           card.classList.remove('visible');
-        }, index * 300); // Elimina la clase al salir
+        }, index * 300);
       }
     });
   };
 
   window.addEventListener('scroll', checkCards);
-  checkCards(); // Ejecuta al cargar la página
+  checkCards(); 
 });
