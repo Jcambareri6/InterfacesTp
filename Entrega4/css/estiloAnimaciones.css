@@ -82,3 +82,75 @@
   animation: changeImage 1.5s infinite;
   animation-delay: 1.25s;
 }
+.spritesheet{
+  position: relative;
+}
+
+#muñeco-violeta {
+    position: absolute;
+    right: 130px;
+}
+
+#muñeco-rojo {
+    position: absolute;
+    right: -100px;
+    top: 200px;
+}
+
+#muñeco-rosa {
+    position: absolute;
+    top:200px;
+    right: 80px;
+}
+
+
+
+
+
+/* Animación para el sprite */
+@keyframes bailar {
+    0% {
+        background-position: 0px; 
+    }
+    100% {
+        background-position: -20000px; 
+    }
+}
+
+#muñeco-rojo {
+    background: url("../img/sector9/spriteSheet1.png");
+    width: 480px; 
+    height: 270px; 
+    background-repeat: no-repeat;
+    animation: bailarRojo 1.8s steps(40)infinite; 
+    margin-bottom: 1%;
+}
+
+
+@keyframes bailarRojo {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -19200px; 
+    }
+}
+
+#muñeco-rosa {
+    background: url("../img/sector9/spriteSheet2.png");
+    width: 480px; 
+    height: 270px; 
+    background-repeat: no-repeat;
+    animation: bailarRosa 1.8s steps(40)infinite;
+    margin-bottom: 1%;
+}
+
+
+@keyframes bailarRosa {
+    0% {
+        background-position: 0px; 
+    }
+    100% {
+        background-position: -19200px;
+    }
+}
