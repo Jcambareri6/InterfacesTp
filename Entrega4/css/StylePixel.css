@@ -208,6 +208,10 @@ body {
   background-color: transparent;
 }
 
+.btnMenu {
+  cursor: pointer;
+}
+
 .presentacion1>.arbolGrande {
   position: absolute;
   top: 20px;
@@ -286,6 +290,7 @@ body {
   border-radius: 8px;
   /* Bordes redondeados */
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .menuItems.open {
